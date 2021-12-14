@@ -1,37 +1,24 @@
 const express = require('express');
-const mongoose= require('mongoose');
+require('dotenv').config();
 
-
-// create express app
+// create a app
 const app = express();
 
+app.use(express.json());
 
-// parse requests of content-type - application/json
-app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+// Listen a request
+app.listen(process.env.PORT, () => console.log("Server is listening SuccessFully !!!"));
+
+//Define a Simple Route
+app.get('/', (req, res) => res.json({ "message": "Welcome to Fundoo Note Application" }))
+
+//Require Notes routes
+require('./app/routers/note.router.js')(app);
 
 // Configuring the database
 const dbConfig = require('./config/database.config.js');
+dbConfig.connection();
 
-// Connecting to the database
-
-mongoose.connect(dbConfig.url, {
-    useNewUrlParser: true
-}).then(() => {
-    console.log("Successfully connected to the database");    
-}).catch(err => {
-    console.log('Could not connect to the database. Exiting now...', err);
-    process.exit();
-});
-
-// define a simple route
-app.get('/', (req, res) => {
-    res.json({ "message": "Welcome to fundooNotes application. Take notes quickly. Organize and keep track of all your notes." });
-});
-// Require Notes routes
-require('./app/routers/note.router.js')(app);
-
-// listen for requests
-app.listen(3000, () => {
-    console.log("Server is listening");
-});
-module.exports = app
+module.exports = app;

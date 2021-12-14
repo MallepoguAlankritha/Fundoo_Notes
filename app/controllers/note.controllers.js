@@ -1,6 +1,6 @@
-const userService = require('../service/service.js')
+const userService = require('../service/note.service')
 const validation = require('../utilities/validation')
-
+const encryption = require('../utilities/encryption')
 
 class Controller {
 
@@ -65,13 +65,18 @@ class Controller {
                       error
                   });
               }
-              return res.status(200).json({
-                  success: true,
-                  message: 'user log in successfully.',
-                  data: data
-              });
-          });
-      }
+              else {
+                console.log("data", data);
+               
+               
+                return res.status(200).json({
+                    success: true,
+                    message: 'User logged in successfully',
+                    data: data
+                });
+            }                
+        });
+    }
       catch (error) {
           return res.status(500).json({
               success: false,

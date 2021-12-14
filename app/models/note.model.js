@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const utilities = require('../utilities/encryption');
 const Registeruser = new mongoose.Schema({
     firstName: {
         type: String,
@@ -25,20 +26,34 @@ const Registeruser = new mongoose.Schema({
 const User = mongoose.model('Registeruser',Registeruser)
 class userModel {
 
-    registerUser = (userDetails,callback) => {
-        const newUser = new User();
-            newUser.firstName = userDetails.firstName;
-            newUser.lastName = userDetails.lastName;
-            newUser.email = userDetails.email;
-            newUser.password = userDetails.password;
-            newUser.save((error, data) => {
-              if (error) {
-              callback(error, null);
-              } else {
-              callback(null, data);
-              }
-            });
-          };
+  registerUser = (userDetails, callback) => {
+    const newUser = new User({
+      firstName: userDetails.firstName,
+      lastName: userDetails.lastName,
+      email: userDetails.email,
+      password: userDetails.password
+    });
+    try {
+      utilities.hashing(userDetails.password, (error, hash) => {
+      if (hash) {
+      newUser.password = hash;
+      newUser.save((error, data) => {
+        if (error) {
+          callback(error, null);
+        } else {
+          callback(null, data);
+        }
+      });
+    } else {
+      throw error;
+    }
+  });
+  }
+  catch (error) {
+    logger.error('Find error in model');
+      return callback('Internal Error', null)
+  }
+}  
           loginModel = (loginData, callBack) => {
             //To find a user email in the database
             User.findOne({ email: loginData.email }, (error, data) => {

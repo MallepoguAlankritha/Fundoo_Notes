@@ -1,4 +1,5 @@
 const userModel = require('../models/note.model')
+const bcrypt = require('bcrypt');
 class userService {
     registerUser = (user, callback) => {
         userModel.registerUser(user, (err, data) => {
@@ -13,16 +14,17 @@ class userService {
     userLogin = (InfoLogin, callback) => {
       userModel.loginModel(InfoLogin, (error, data) => {
         if (data) {
-          if(data.password==InfoLogin.password){
-            return callback(null,data);
-          }else{
-            return callback("password does not match",null)
-          }
+          bcrypt.compare(InfoLogin.password, data.password, (error, validate) => {
+            if (!validate) {
+              return callback(error + 'Invalid Password', null);
+            } else {
+              return callback(null, data);
+            }
+          });
         } else {
-          return callback(error,null);
-        }
-      });
-    }
-
+          return callback(error);
+      }
+    });
+  }
 }
 module.exports = new userService();
