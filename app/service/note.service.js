@@ -1,5 +1,7 @@
 const userModel = require('../models/note.model')
+const utilities = require('../utilities/encryption')
 const bcrypt = require('bcrypt');
+
 class userService {
     registerUser = (user, callback) => {
         userModel.registerUser(user, (err, data) => {
@@ -18,13 +20,14 @@ class userService {
             if (!validate) {
               return callback(error + 'Invalid Password', null);
             } else {
-              return callback(null, data);
+              const token = utilities.token(data);
+              return callback(null, token);
             }
           });
         } else {
           return callback(error);
-      }
-    });
-  }
+        }
+      });
+    }
 }
 module.exports = new userService();
