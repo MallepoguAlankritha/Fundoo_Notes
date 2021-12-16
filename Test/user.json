@@ -1,0 +1,25 @@
+{
+    "user": {
+        "correctRegister": {
+            "firstName":"Sushma",
+            "lastName":"Pinky",
+            "email":"sushma123@gmail.com",
+            "password":"Pinky^@123"
+        },
+        "registrationWithImproperDetails": {
+            "firstName": "Rahul",
+            "email": "rahulsharmah@gmail.com",
+            "password": "rahuls$123#"
+        },
+        "registrationWithOutEmail": {
+            "firstName": "abhi",
+            "lastName": "ab",
+            "password": "abhisk$123"
+        },
+        "registrationWithOutfirstName": {
+            "lastName": "mounika",
+            "email": "mounika@gmail.com",
+            "password": "mounika$123"
+        }
+    }
+} 
