@@ -7,13 +7,14 @@ class Validation {
                 .min(3)
                 .max(30)
                 .required()
-                .pattern(new RegExp('^[A-Z]{1}[a-z]{3,}$')),
+                .pattern(new RegExp("^([A-Z]?[a-zA-Z]{1,30}[ ]?[.]?[']?[ ]?[a-zA-Z]{1,30}[ ]?[.]?[']?[ ]?[a-zA-Z]{0,30}[ ]?[a-zA-Z]{0,30}?)")),
 
             lastName: Joi.string()
                 .min(2)
                 .max(30)
                 .required()
-                .pattern(new RegExp('^[A-Z]{1}[a-z]{1,}$')),
+                .pattern(new RegExp("^([A-Z]?[a-zA-Z]{1,30}[ ]?[.]?[']?[ ]?[a-zA-Z]{1,30}[ ]?[.]?[']?[ ]?[a-zA-Z]{0,30}[ ]?[a-zA-Z]{0,30}?)")),
+
 
 
             email: Joi.string()
@@ -21,7 +22,7 @@ class Validation {
                 .required(),
 
             password: Joi.string()
-                .pattern(new RegExp('[A-Za-z0-9]{4,}[$&+,:;=?@#|<>.^*()%!-]{2,}'))
+                .pattern(new RegExp('(?=^.{8,}$)((?=.*\\d)|(?=.*\\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$'))
                 .required()
         });
 
@@ -34,7 +35,7 @@ class Validation {
 
                       password: Joi.string()
                       .required()
-                      .pattern(new RegExp('[A-Za-z0-9]{4,}[$&+,:;=?@#|<>.^*()%!-]{2,}'))
+                      .pattern(new RegExp('(?=^.{8,}$)((?=.*\\d)|(?=.*\\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$'))
                   });
   }
    

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const controllers = require('../controllers/note.controllers');
 module.exports = (app) => {
   // api for registration

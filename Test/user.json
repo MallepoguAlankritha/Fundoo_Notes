@@ -1,10 +1,10 @@
 {
     "user": {
         "correctRegister": {
-            "firstName":"Sushma",
-            "lastName":"Pinky",
-            "email":"sushma123@gmail.com",
-            "password":"Pinky^@123"
+            "firstName":"Taruvu",
+            "lastName":"Pooja",
+            "email":"mallepogual123@gmail.com",
+            "password":"Alankritha^@123"
         },
         "registrationWithImproperDetails": {
             "firstName": "Rahul",
@@ -17,9 +17,19 @@
             "password": "abhisk$123"
         },
         "registrationWithOutfirstName": {
-            "lastName": "mounika",
-            "email": "mounika@gmail.com",
-            "password": "mounika$123"
-        }
+            "lastName": "abhinav",
+            "email": "abhinav@gmail.com",
+            "password": "mafka$123"
+        },
+        "login": {
+            "email": "mallepogualankritha@gmail.com",
+            "password": "Alankritha^@123"
+        },
+        "loginWithImproperDetails": {
+            "email": "ansh123@gmail.com",
+            "password": "Anshas12@$"
+
+
     }
 } 
+}
