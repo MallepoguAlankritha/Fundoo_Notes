@@ -17,12 +17,10 @@ describe('registartion', () => {
       .send(registartionDetails)
       .end((err, res) => {
         if (err) {
-          // return done(err);
           console.log('Please check details again and re-enter the details with proper format');
           done()
         }
         res.should.have.status(200);
-        // res.body.should.have.property('message')
         console.log('Test Cases passes for the proper registration details');
         done()
       });
@@ -36,7 +34,6 @@ describe('registartion', () => {
       .send(registartionDetails)
       .end((err, res) => {
         if (err) {
-          // return done(err);
           console.log('Please check details again and re-enter the details with proper format');
           done();
         }

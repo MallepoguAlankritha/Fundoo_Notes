@@ -36,10 +36,8 @@ class userModel {
     try {
       utilities.hashing(userDetails.password, (error, hash) => {
       if (hash) {
-        console.log("in model1",userDetails.password);
       newUser.password = hash;
       newUser.save((error, data) => {
-        console.log("in model",data);
         if (error) {
           callback(error, null);
         } else {
