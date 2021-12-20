@@ -1,15 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt=require('jsonwebtoken');
 class Helper {
-    hashing = (password, callback) => {
-      bcrypt.hash(password, 10, function (err, hash) {
-        if (err) {
-          return callback(err,null);
-        } else {
-          return callback(null, hash);
-        }
-      });
-    }
+    
     token = (data) => {
         const dataForToken = {
           id: data._id,
@@ -19,6 +11,9 @@ class Helper {
         };
         return jwt.sign({ dataForToken }, process.env.JWT_SECRET, { expiresIn: '24H' });
       };
+      comparePassword = (password, result) => {
+        return bcrypt.compareSync(password, result);
+      }
 }
 
 module.exports = new Helper();

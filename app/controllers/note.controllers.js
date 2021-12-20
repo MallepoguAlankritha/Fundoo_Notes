@@ -1,6 +1,5 @@
 const userService = require('../service/note.service')
 const validation = require('../utilities/validation')
-const encryption = require('../utilities/encryption')
 
 class Controller {
 
@@ -37,7 +36,7 @@ class Controller {
           }
         });
       } catch (error) {
-        console.log('Internal server error');
+        console.log(error);
         return res.status(500).json({
           success: false, message: "Error While Registering",
           data: null,
@@ -65,19 +64,15 @@ class Controller {
                       error
                   });
               }
-              else {
-                console.log("data", data);
-               
-               
-                return res.status(200).json({
-                    success: true,
-                    message: 'User logged in successfully',
-                    data: data
-                });
-            }                
-        });
-    }
+            return res.status(200).json({
+              success: true,
+              message: 'User logged in successfully',
+              data: data
+            }); 
+          });              
+        }
       catch (error) {
+
           return res.status(500).json({
               success: false,
               message: 'Error while Login', error,

@@ -1,5 +1,6 @@
+var Promise = require("bluebird");
+const bcrypt = Promise.promisifyAll(require("bcrypt"));
 const mongoose = require('mongoose');
-const utilities = require('../utilities/encryption');
 const Registeruser = new mongoose.Schema({
     firstName: {
         type: String,
@@ -22,40 +23,39 @@ const Registeruser = new mongoose.Schema({
     {
       timestamps: true
 })
+Registeruser.pre('save', async function (next) { // this line
+  const user = this;
+  console.log(user);
+  console.log(user.isModified);
+  console.log(user.isModified());
+  console.log(user.isModified('password'));
+  if (!user.isModified('password')) return next();
+  console.log('just before saving...');
+  user.password = await bcrypt.hashSync(user.password, 8);
+  console.log('just before saving...');
+  next();
+});
 
 const User = mongoose.model('Registeruser',Registeruser)
 class userModel {
 
   registerUser = (userDetails, callback) => {
-    const newUser = new User({
-      firstName: userDetails.firstName,
-      lastName: userDetails.lastName,
-      email: userDetails.email,
-      password: userDetails.password
-    });
-    try {
-      utilities.hashing(userDetails.password, (error, hash) => {
-      if (hash) {
-      newUser.password = hash;
-      newUser.save((error, data) => {
-        if (error) {
+    const newUser = new User();
+    newUser.firstName = userDetails.firstName;
+    newUser.lastName = userDetails.lastName;
+    newUser.email = userDetails.email;
+    newUser.password = userDetails.password;
+    newUser.save((error, data) => {
+      if (error) {
           callback(error, null);
-        } else {
-          callback(null, data);
-        }
-      });
-    } else {
-      throw error;
-    }
+      }else{
+        callback(null,data);
+      } 
   });
-  }
-  catch (error) {
-      return callback('Internal Error', null)
-  }
-}  
+} ; 
           loginModel = (loginData, callBack) => {
             //To find a user email in the database
-            User.findOne({ email: loginData.email }, (error, data) => {
+            user.findOne({ email: loginData.email }, (error, data) => {
                 if (error) {
                     return callBack(error, null);
                 } else if (!data) {

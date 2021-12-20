@@ -5,11 +5,11 @@ chai.use(chaiHttp);
 const registrationData = require('./user.json');
 const loginData = require('./user.json');
 const faker = require('faker');
-
 chai.should();
 
 describe('registartion', () => {
   it('givenRegistrationDetails_whenProper_shouldSaveInDB', (done) => {
+    const registartionDetails = registrationData.user.correctRegister;
     // const registartionDetails = registrationData.user.correctRegister;
     const registerfaker = {
       firstName: faker.name.firstName(),
@@ -17,10 +17,11 @@ describe('registartion', () => {
       email: faker.internet.email(),
       password: faker.internet.password()
     };
-    
+
     chai
       .request(server)
       .post('/registeruser')
+      .send(registartionDetails)
       .send(registerfaker)
       .end((err, res) => {
         if (err) {
@@ -28,12 +29,12 @@ describe('registartion', () => {
           done()
         }
         res.should.have.status(200);
+        console.log('Test Cases passes for the proper registration details');
         res.body.should.have.property('success').eql(true);
         res.body.should.have.property('message').eql('User Registered');
         done()
       });
   });
-
   it('givenRegistrationDetails_whenImpProper_shouldNotSaveInDB', (done) => {
     const registartionDetails = registrationData.user.registrationWithImproperDetails;
     chai
@@ -47,6 +48,7 @@ describe('registartion', () => {
           done();
         }
         res.should.have.status(400);
+        console.log('Test Cases passes for the Improper registration details ');
         res.body.should.have.property('success').eql(false);
         res.body.should.have.property('message').eql('Wrong Input Validations');
         done();
@@ -78,16 +80,14 @@ describe('registartion', () => {
       .send(registartionDetails)
       .end((err, res) => {
         if (err) {
-          return done(err);
-        }
         res.should.have.status(400);
         res.body.should.have.property('success').eql(false);
         res.body.should.have.property('message').eql('Wrong Input Validations');
-        done();
+         }
+          done();
       });
   });
 });
-
 describe('login', () => {
   it('givenLoginDetails_whenProper_shouldAbleToLogin', (done) => {
     const loginDetails = loginData.user.login;
