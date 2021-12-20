@@ -55,7 +55,7 @@ class userModel {
 } ; 
           loginModel = (loginData, callBack) => {
             //To find a user email in the database
-            user.findOne({ email: loginData.email }, (error, data) => {
+            User.findOne({ email: loginData.email }, (error, data) => {
                 if (error) {
                     return callBack(error, null);
                 } else if (!data) {
