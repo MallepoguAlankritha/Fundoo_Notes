@@ -106,6 +106,15 @@ class Controller {
         const userCredential = {
           email: req.body.email
         };
+        const validationforgotPassword =
+        validation.authenticateLogin.validate(userCredential);
+        if (validationforgotPassword.error) {
+          return res.status(400).send({
+            success: false,
+            message: 'Wrong Input Validations',
+            data: validationforgotPassword
+          });
+        }
 
         userService.forgotPassword(userCredential, (error, result) => {
           if (error) {
