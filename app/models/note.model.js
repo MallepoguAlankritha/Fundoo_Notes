@@ -81,6 +81,21 @@ class userModel {
                 }
             });
         }
+        /**
+     * @description mongoose function for forgot password
+     * @param {*} email
+     * @param {*} callback
+     */
+  forgotPassword = (data, callback) => {
+    User.findOne({ email: data.email }, (err, data) => {
+     if (data) {
+       return callback(null,data);
+     } else {
+       return callback(err,null);
+     }
+   });
+ };
+
     
     }
 module.exports = new userModel();
