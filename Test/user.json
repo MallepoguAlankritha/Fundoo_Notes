@@ -28,8 +28,14 @@
         "loginWithImproperDetails": {
             "email": "ansh123@gmail.com",
             "password": "Anshas12@$"
+        },
+        "userForgotPasswordPos": {
+            "email": "mallepogualankritha@gmail.com"
+        },
+        "userForgotPasswordNegNonRegistered": {
+            "email": "akanshaaa@gmail.com"
+        }
 
 
     }
 } 
-}

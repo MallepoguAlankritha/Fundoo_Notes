@@ -4,6 +4,7 @@ const server = require('../server');
 chai.use(chaiHttp);
 const registrationData = require('./user.json');
 const loginData = require('./user.json');
+const userInputs = require('./user.json');
 const faker = require('faker');
 chai.should();
 
@@ -123,4 +124,30 @@ describe('login', () => {
       });
   });
 });
-
+describe('forgotPassword', () => {
+  it.only('givenValidData_whenProper_souldAbleToSendEmailToUserEmail', (done) => {
+    const forgotPasswordDetails = userInputs.user.userForgotPasswordPos;
+    chai.request(server)
+      .post('/forgotPassword')
+      .send(forgotPasswordDetails)
+      .end((error, res) => {
+        if (error) {
+          return done('Invalid details received instead of valid');
+        }
+        res.should.have.status(200);
+        return done();
+      });
+  });
+  it.only('givenInValidEmail_shouldNotAbleToSendEmailToUserEmail', (done) => {
+    const forgotPasswordDetails = userInputs.user.userForgotPasswordNegNonRegistered;
+    chai.request(server)
+      .post('/forgotPassword')
+      .send(forgotPasswordDetails)
+      .end((error, res) => {
+        if (error) {
+          return done('email-id is empty or unable to fetch details');
+        }
+        return done();
+      });
+  });
+});
