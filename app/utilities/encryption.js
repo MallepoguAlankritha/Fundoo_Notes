@@ -1,3 +1,9 @@
+/**
+ * @module       utilities
+ * @file         encryption.js
+ * @description  it contains the Hashing and Token
+ * @author       Alankritha
+ */
 const bcrypt = require('bcrypt');
 const jwt=require('jsonwebtoken');
 class Helper {

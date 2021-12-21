@@ -1,7 +1,17 @@
+/**
+ * @description   : Taking the request from the client and gives the response 
+ * @author        : Alankritha 
+*/
 const userService = require('../service/note.service')
 const validation = require('../utilities/validation')
 
 class Controller {
+   /**
+     * @description Create and save user and sending response to service
+     * @method register to save the user
+     * @param req,res for service
+     */
+
 
     register = (req, res) => {
       try {
@@ -43,6 +53,11 @@ class Controller {
         });
       }
     }
+     /**
+     * @description retrieving login info from user by email and password
+     * @method login
+     * @param req,res for service
+     */
     login = (req, res) => {
       try {
           const userLoginInfo = {

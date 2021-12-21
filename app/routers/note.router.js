@@ -1,4 +1,9 @@
-/* eslint-disable no-undef */
+/**
+ * @module       routes
+ * @file         note.router.js
+ * @description  API Routing
+ * @author       Alankritha
+ */
 const controllers = require('../controllers/note.controllers');
 module.exports = (app) => {
   // api for registration

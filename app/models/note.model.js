@@ -1,3 +1,9 @@
+/**
+ * @module       Models
+ * @file         note.model.js
+ * @description Taking the request from the client and gives the response
+ * @author       Alankritha
+ */
 var Promise = require("bluebird");
 const bcrypt = Promise.promisifyAll(require("bcrypt"));
 const mongoose = require('mongoose');
@@ -23,7 +29,7 @@ const Registeruser = new mongoose.Schema({
     {
       timestamps: true
 })
-Registeruser.pre('save', async function (next) { // this line
+Registeruser.pre('save', async function (next) { 
   const user = this;
   console.log(user);
   console.log(user.isModified);
@@ -38,6 +44,11 @@ Registeruser.pre('save', async function (next) { // this line
 
 const User = mongoose.model('Registeruser',Registeruser)
 class userModel {
+  /**
+     * @description register user in the database
+     * @param user
+     * @param callback 
+     */
 
   registerUser = (userDetails, callback) => {
     const newUser = new User();
@@ -53,6 +64,11 @@ class userModel {
       } 
   });
 } ; 
+/**
+     * @description login user from the database
+     * @param loginData 
+     * @param callback for service
+     */
           loginModel = (loginData, callBack) => {
             //To find a user email in the database
             User.findOne({ email: loginData.email }, (error, data) => {
