@@ -51,7 +51,7 @@ class userService {
         if (error) {
           return callback(error, null);
         } else {
-          return callback(null, data);
+          return callback(null,nodemailer.sendEmail(data));
         }
       });
     };

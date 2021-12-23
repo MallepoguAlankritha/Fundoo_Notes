@@ -85,7 +85,15 @@ class userModel {
       });
   }
   forgotPassword = (data, callback) => {
-    callback(null, data);
-  };
+    User.findOne({ email: data.email }, (err, data) => {
+      if (err) {
+        return callback(err, null);
+      } else if (!data) {
+        return callback("Invalid Credential", null);
+      } else {
+        return callback(null,data);
+    }
+  });
+};
 }
 module.exports = new userModel();

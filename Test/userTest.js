@@ -182,4 +182,33 @@ describe("Forgot Password API", () => {
         return done();
       });
   });
+  it.only(" given email is present in DB then send mail, should return appropriate response", (done) => {
+    chai
+      .request(server)
+      .post("/forgotPassword")
+      .send({ email: "mallepogualankritha@gmail.com" })
+      .end((err, res) => {
+        if (err) {
+          console.log("please check your credentials");
+          return done();
+        }
+        res.should.have.status(200);
+        return done();
+      });
+  });
+
+  it.only(" given email not exist in DB then send no mail, should return appropriate response", (done) => {
+    chai
+      .request(server)
+      .post("/forgotPassword")
+      .send({ email: "mallepogualankrita@gmail.com" })
+      .end((err, res) => {
+        if (err) {
+          console.log("please check your credentials");
+          return done();
+        }
+        res.should.have.status(400);
+        return done();
+      });
+  });
 });
