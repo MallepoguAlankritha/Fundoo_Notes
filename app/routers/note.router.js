@@ -10,4 +10,6 @@ module.exports = (app) => {
   app.post('/registeruser', controllers.register);
 // api for login
    app.post('/login',controllers.login);
+   // api for forgot password
+  app.post("/forgotPassword",controllers.forgotPassword);
 }

@@ -123,3 +123,21 @@ describe('login', () => {
       });
   });
 });
+// Test Cases for Forgot Password API
+
+describe("Forgot Password API", () => {
+  it.only(" when Forgot password api is called ,should return response status success", (done) => {
+    chai
+      .request(server)
+      .post("/forgotPassword")
+      .send({})
+      .end((err, res) => {
+        if (err) {
+          console.log("please check your credentials");
+          return done();
+        }
+        res.should.have.status(200);
+        return done();
+      });
+  });
+});
