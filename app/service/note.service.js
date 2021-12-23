@@ -60,5 +60,20 @@ class userService {
         }
       });
     };
+    /**
+    * @description it acts as a middleware between controller and model for reset password
+    * @param {*} inputData
+    * @param {*} callback
+    * @returns
+    */
+   
+   resetPassword = (userData, callback) => {
+    userModel.resetPassword(userData)
+      .then((data) => {
+        return callback(null, data);
+      }).catch((error) => {
+        return callback(error, null);
+      });
+  };
 }
 module.exports = new userService();

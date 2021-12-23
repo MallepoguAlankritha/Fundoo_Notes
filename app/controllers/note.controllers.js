@@ -138,6 +138,53 @@ class Controller {
         });
       }
     };
+    /**
+   * description controller function for reset password
+   * @param {*} req
+   * @param {*} res
+   * @returns
+   */
 
+  resetPassword = (req, res) => {
+    try {
+      const userData = {
+        email: req.body.email,
+        password: req.body.password,
+        code: req.body.code
+      };
+
+      const resetVlaidation = validation.validateReset.validate(userData);
+      if (resetVlaidation.error) {
+        logger.error('Invalid password');
+        res.status(400).send({
+          success: false,
+          message: 'Invalid password'
+        });
+        return;
+      }
+
+      userService.resetPassword(userData, (error, userData) => {
+        if (error) {
+          return res.status(400).send({
+            message: error,
+            success: false
+          });
+        } else {
+          return res.status(200).json({
+            success: true,
+            message: 'Password reset succesfully',
+            data: userData
+          });
+        }
+      });
+    } catch (error) {
+      logger.error('Internal server error');
+      return res.status(500).send({
+        success: false,
+        message: 'Internal server error',
+        data: null
+      });
+    }
+  }
 }
 module.exports = new Controller();
