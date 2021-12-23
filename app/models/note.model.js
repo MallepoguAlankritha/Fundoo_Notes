@@ -84,57 +84,5 @@ class userModel {
           }
       });
   }
-
-  /**
-  * @description mongoose function for forgot password
-  * @param {*} email
-  * @param {*} callback
-  */
-  forgotPassword = (data, callback) => {
-      User.findOne({ email: data.email }, (err, data) => {
-          if (err) {
-              
-              return callback(err, null);
-          } else {
-              if (!data) {
-                  
-              } else {
-                  return callback(null, data);
-              }
-          }
-      });
-  };
-
-  /**
-      * @description mongooose method for reseting the password
-      * @param {*} userData
-      * @param {*} callback
-      * @returns
-      */
-  resetPassword = (userData) => {
-      return new Promise((resolve, reject) => {
-          otp.findOne({ code: userData.code })
-              .then((data) => {
-                  if (userData.code == data.code) {
-                      utilities.hashing(userData.password)
-                          .then((hash) => {
-                              userData.password = hash;
-                              User.updateOne({ email: userData.email }, { '$set': { "password": userData.password } })
-                                  .then((data) => {
-                                      resolve(data)
-                                  }).catch((error) => {
-                                      reject(error)
-                                  })
-                          }).catch((error) => {
-                              reject(error)
-                          })
-                  } else {
-                      reject(null)
-                  }
-              }).catch((error) => {
-                  reject("Otp doesnt match", null)
-              });
-      });
-  }
 }
 module.exports = new userModel();

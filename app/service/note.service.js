@@ -45,35 +45,6 @@ class userService {
           return callback(error);
         }
       });
-    }
-    /**
-     * @description sends the code to forgotPasswordAPI in the controller
-     * @method forgotPassword
-     * @param callback callback for controller
-     */ 
-     forgotPassword = (email, callback) => {
-      userModel.forgotPassword(email, (error, data) => {
-        if (error) {
-          return callback(error, null);
-        } else {
-          return callback(null, nodemailer.sendEmail(data));
-        }
-      });
-    };
-    /**
-    * @description it acts as a middleware between controller and model for reset password
-    * @param {*} inputData
-    * @param {*} callback
-    * @returns
-    */
-   
-   resetPassword = (userData, callback) => {
-    userModel.resetPassword(userData)
-      .then((data) => {
-        return callback(null, data);
-      }).catch((error) => {
-        return callback(error, null);
-      });
-  };
+    } 
 }
 module.exports = new userService();
