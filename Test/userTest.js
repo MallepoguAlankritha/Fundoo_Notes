@@ -168,4 +168,18 @@ describe("Forgot Password API", () => {
         return done();
       });
   });
+  it.only(" When ForgotPassword API is called Should return appropriate response from model", (done) => {
+    chai
+      .request(server)
+      .post("/forgotPassword")
+      .send({ email: "mallepogualankritha@gmail.com" })
+      .end((err, res) => {
+        if (err) {
+          console.log("please check your credentials");
+          return done();
+        }
+        res.should.have.status(200);
+        return done();
+      });
+  });
 });

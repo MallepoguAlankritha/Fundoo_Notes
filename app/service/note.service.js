@@ -47,7 +47,13 @@ class userService {
       });
     } 
     forgotPassword = (email, callback) => {
-      callback(null, email);
+      userModel.forgotPassword(email, (error, data) => {
+        if (error) {
+          return callback(error, null);
+        } else {
+          return callback(null, data);
+        }
+      });
     };
 }
 module.exports = new userService();
