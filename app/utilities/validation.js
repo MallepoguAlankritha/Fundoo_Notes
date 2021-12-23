@@ -43,7 +43,11 @@ class Validation {
                       .required()
                       .pattern(new RegExp('(?=^.{8,}$)((?=.*\\d)|(?=.*\\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$'))
                   });
-                  
+        validForgotPassword =
+            Joi.object({
+                      email: Joi.string().required().pattern(new RegExp("^^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"))
+              
+                  });
                 
   }
    

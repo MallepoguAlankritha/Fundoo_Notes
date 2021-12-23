@@ -1,5 +1,6 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
+const { getMaxListeners } = require("../server.js");
 const server = require('../server');
 chai.use(chaiHttp);
 const registrationData = require('./user.json');
@@ -130,7 +131,21 @@ describe("Forgot Password API", () => {
     chai
       .request(server)
       .post("/forgotPassword")
-      .send({})
+      .send({email: "mallepogualankritha@gmail.com"})
+      .end((err, res) => {
+        if (err) {
+          console.log("please check your credentials");
+          return done();
+        }
+        res.should.have.status(200);
+        return done();
+      });
+  });
+  it.only("When ForgotPassword API is called should validate the input and return appropriate response", (done) => {
+    chai
+      .request(server)
+      .post("/forgotPassword")
+      .send({ email: "mallepogualankritha@gmail.com" })
       .end((err, res) => {
         if (err) {
           console.log("please check your credentials");
