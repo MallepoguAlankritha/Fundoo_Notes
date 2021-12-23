@@ -155,7 +155,6 @@ class Controller {
 
       const resetVlaidation = validation.validateReset.validate(userData);
       if (resetVlaidation.error) {
-        logger.error('Invalid password');
         res.status(400).send({
           success: false,
           message: 'Invalid password'
@@ -178,7 +177,6 @@ class Controller {
         }
       });
     } catch (error) {
-      logger.error('Internal server error');
       return res.status(500).send({
         success: false,
         message: 'Internal server error',

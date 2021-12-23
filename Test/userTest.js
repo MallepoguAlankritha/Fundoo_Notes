@@ -5,6 +5,7 @@ chai.use(chaiHttp);
 const registrationData = require('./user.json');
 const loginData = require('./user.json');
 const userInputs = require('./user.json');
+const inputData=require('./user.json');
 const faker = require('faker');
 chai.should();
 
@@ -125,7 +126,7 @@ describe('login', () => {
   });
 });
 describe('forgotPassword', () => {
-  it.only('givenValidData_whenProper_souldAbleToSendEmailToUserEmail', (done) => {
+  it('givenValidData_whenProper_souldAbleToSendEmailToUserEmail', (done) => {
     const forgotPasswordDetails = userInputs.user.userForgotPasswordPos;
     chai.request(server)
       .post('/forgotPassword')
@@ -138,7 +139,7 @@ describe('forgotPassword', () => {
         return done();
       });
   });
-  it.only('givenInValidEmail_shouldNotAbleToSendEmailToUserEmail', (done) => {
+  it('givenInValidEmail_shouldNotAbleToSendEmailToUserEmail', (done) => {
     const forgotPasswordDetails = userInputs.user.userForgotPasswordNegNonRegistered;
     chai.request(server)
       .post('/forgotPassword')
@@ -148,6 +149,35 @@ describe('forgotPassword', () => {
           return done('email-id is empty or unable to fetch details');
         }
         return done();
+      });
+  });
+});
+describe('reset Password API', () => {
+  it.only('givenresetdetails_whenproper_shouldberesetlinkSent', (done) => {
+    const reset = inputData.user.validDetails;
+    chai
+      .request(server)
+      .put('/reset-Password')
+      .send(reset)
+      .end((error, res) => {
+        res.should.have.status(200);
+        res.body.should.have.property('success').eql(true);
+        res.body.should.have.property('message').eql('Password reset succesfully');
+        done();
+      });
+  });
+
+  it.only('givenresetdetails_whenNotproper_shouldberesetlinkSent', (done) => {
+    const reset = inputData.user.invalidDetails;
+    chai
+      .request(server)
+      .put('/reset-Password')
+      .send(reset)
+      .end((error, res) => {
+        res.should.have.status(400);
+        res.body.should.have.property('success').eql(false);
+        res.body.should.have.property('message').eql('Invalid password');
+        done();
       });
   });
 });

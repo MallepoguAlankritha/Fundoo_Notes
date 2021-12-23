@@ -35,7 +35,17 @@
         "userForgotPasswordNegNonRegistered": {
             "email": "akanshaaagmail.com"
         }
+    },
+    "validDetails":{
+        "email":"mallepogualankritha@gmail.com",
+        "password":"Alankrithaaa@12",
+        "code":"e2rqpfbitt"
+    },
+    "invalidDetails":{
+        "email":"utkarsh9@gmailcom",
+        "password":"Akash76727"
+    } 
 
 
     }
-} 
+ 
