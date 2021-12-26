@@ -214,18 +214,46 @@ describe("Forgot Password API", () => {
 // Test cases for RESET Password API
 
 describe("Reset Password API", () => {
-  it.only("when call reset password api, should return appropriate response", (done) => {
+  it("when call reset password api, should return appropriate response", (done) => {
     chai
       .request(server)
       .patch("/resetPassword")
       .send({})
       .end((err, res) => {
         if (err) {
-          console.log("plz check your credential");
+          console.log("please check your credentials");
           return done();
         }
         res.should.have.status(200);
         return done();
       });
   });
+});
+it("should validate the input , return appropriate response", (done) => {
+  chai
+    .request(server)
+    .patch("/resetPassword")
+    .send({ email: "mallepogualankritha@gmail.com", password: "Alana@3456", code: "ufgeyfgef" })
+    .end((err, res) => {
+      if (err) {
+        console.log("please check your credentials");
+        return done();
+      }
+      res.should.have.status(200);
+      return done();
+    });
+});
+it.only("should validate the wrong input of password, return appropriate response", (done) => {
+  chai
+    .request(server)
+    .patch("/resetPassword")
+    .send({ email: "mallepogualankritha@gmail.com", password: "Jdbyesbxuyw", code: "gduygewfyufd" })
+    .end((err, res) => {
+      if (err) {
+        console.log("plz check your credential");
+        return done();
+      }
+      res.should.have.status(400);
+      return done();
+    });
 });
