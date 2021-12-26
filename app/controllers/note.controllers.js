@@ -87,8 +87,10 @@ class Controller {
           });              
         }
       catch (error) {
+        console.log("In Catch", error);
 
           return res.status(500).json({
+            
               success: false,
               message: 'Error while Login', error,
               data: null
@@ -119,6 +121,21 @@ class Controller {
             message: "Email sent successfully"
           });
         }
+      });
+    } catch (error) {
+      console.log("Error", error);
+      return res.status(500).send({
+        success: false,
+        message: "Internal server error",
+        result: null
+      });
+    };
+  }
+  resetPassword = (req, res) => {
+    try {
+      return res.status(200).send({
+        success: true,
+        message: "Email sent successfully"
       });
     } catch (error) {
       console.log("Error", error);

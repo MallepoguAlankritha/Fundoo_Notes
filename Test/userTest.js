@@ -21,7 +21,6 @@ describe('registartion', () => {
     chai
       .request(server)
       .post('/registeruser')
-      .send(registartionDetails)
       .send(registerfaker)
       .end((err, res) => {
         if (err) {
@@ -126,7 +125,7 @@ describe('login', () => {
 // Test Cases for Forgot Password API
 
 describe("Forgot Password API", () => {
-  it.only(" when Forgot password api is called ,should return response status success", (done) => {
+  it(" when Forgot password api is called ,should return response status success", (done) => {
     chai
       .request(server)
       .post("/forgotPassword")
@@ -140,7 +139,7 @@ describe("Forgot Password API", () => {
         return done();
       });
   });
-  it.only("When ForgotPassword API is called should validate the input and return appropriate response", (done) => {
+  it("When ForgotPassword API is called should validate the input and return appropriate response", (done) => {
     chai
       .request(server)
       .post("/forgotPassword")
@@ -154,7 +153,7 @@ describe("Forgot Password API", () => {
         return done();
       });
   });
-  it.only("When ForgotPassword API is called should return appropriate response from service", (done) => {
+  it("When ForgotPassword API is called should return appropriate response from service", (done) => {
     chai
       .request(server)
       .post("/forgotPassword")
@@ -168,7 +167,7 @@ describe("Forgot Password API", () => {
         return done();
       });
   });
-  it.only(" When ForgotPassword API is called Should return appropriate response from model", (done) => {
+  it(" When ForgotPassword API is called Should return appropriate response from model", (done) => {
     chai
       .request(server)
       .post("/forgotPassword")
@@ -182,7 +181,7 @@ describe("Forgot Password API", () => {
         return done();
       });
   });
-  it.only(" given email is present in DB then send mail, should return appropriate response", (done) => {
+  it(" given email is present in DB then send mail, should return appropriate response", (done) => {
     chai
       .request(server)
       .post("/forgotPassword")
@@ -197,7 +196,7 @@ describe("Forgot Password API", () => {
       });
   });
 
-  it.only(" given email not exist in DB then send no mail, should return appropriate response", (done) => {
+  it(" given email not exist in DB then send no mail, should return appropriate response", (done) => {
     chai
       .request(server)
       .post("/forgotPassword")
@@ -208,6 +207,24 @@ describe("Forgot Password API", () => {
           return done();
         }
         res.should.have.status(400);
+        return done();
+      });
+  });
+});
+// Test cases for RESET Password API
+
+describe("Reset Password API", () => {
+  it.only("when call reset password api, should return appropriate response", (done) => {
+    chai
+      .request(server)
+      .patch("/resetPassword")
+      .send({})
+      .end((err, res) => {
+        if (err) {
+          console.log("plz check your credential");
+          return done();
+        }
+        res.should.have.status(200);
         return done();
       });
   });
