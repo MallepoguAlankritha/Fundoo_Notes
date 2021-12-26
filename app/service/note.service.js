@@ -56,7 +56,15 @@ class userService {
       });
     };
     resetPassword = (resetInfo, callback) => {
-      callback(null, resetInfo);
+      userModel.resetPassword(resetInfo, (err, data) => {
+        if (err) {
+          callback(err, null);
+        } else if (!data) {
+          callback("Code not found", null);
+        } else {
+          callback(null, data);
+        }
+      });
     };
 }
 module.exports = new userService();

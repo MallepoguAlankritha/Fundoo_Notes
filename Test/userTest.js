@@ -271,7 +271,21 @@ it("should validate the wrong input of email, return appropriate response", (don
       return done();
     });
 });
-it.only("when reset password api is called it should return appropriate response from reset service", (done) => {
+it("when reset password api is called it should return appropriate response from resetPassword service", (done) => {
+  chai
+    .request(server)
+    .patch("/resetPassword")
+    .send({ email: "mallepogualankritha@gmail.com", password: "Alannnkkk@3456", code: "hfeheruf" })
+    .end((err, res) => {
+      if (err) {
+        console.log("please check your credentials");
+        return done();
+      }
+      res.should.have.status(200);
+      return done();
+    });
+});
+it.only("when reset password api is called it should return appropriate response from resetPassword model", (done) => {
   chai
     .request(server)
     .patch("/resetPassword")
