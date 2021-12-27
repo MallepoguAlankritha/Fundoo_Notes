@@ -194,48 +194,46 @@ describe("Forgot Password API", () => {
         return done();
       });
   });
-
-  it.only(" given email not exist in DB then send no mail, should return appropriate response", (done) => {
-    chai
-      .request(server)
-      .post("/forgotPassword")
-      .send({ email: "mallepogualankrita@gmail.com" })
+it('should give status 200 when otp with email has been sent and is been saved into the database', (done) => {
+  chai.request(server)
+      .post('/forgotPassword')
+      .send({"email": 'mallepogualankritha@gmail.com'})
       .end((err, res) => {
-        if (err) {
-          console.log("please check your credentials");
-          return done();
-        }
-        res.should.have.status(400);
-        return done();
-      });
-  });
-});
+          if (err) {
+              return done();
+          } else {
+              res.should.have.status(200);
+              return done();
+          }
+
+      })
+})
+})
 // Test cases for RESET Password API
 
-describe("Reset Password API", () => {
+describe("Reset Password API", () => {  
   it("when call reset password api, should return appropriate response", (done) => {
     chai
       .request(server)
-      .patch("/resetPassword")
-      .send({})
+      .put("/resetPassword")
+      .send({email: "mallepogualankritha@gmail.com", password: "Jhingalala@3456", code: "jhjdhsjdhs"})
       .end((err, res) => {
         if (err) {
-          console.log("please check your credentials");
+          console.log("plz check your credential");
           return done();
         }
         res.should.have.status(200);
         return done();
       });
   });
-});
 it("should validate the input , return appropriate response", (done) => {
   chai
     .request(server)
-    .patch("/resetPassword")
-    .send({ email: "mallepogualankritha@gmail.com", password: "Alankrithaaaa@3456", code: "ufgeyfgef" })
+    .put("/resetPassword")
+    .send({ email: "mallepogualankritha@gmail.com", password: "Jhingalala@3456", code: "jhjdhsjdhs" })
     .end((err, res) => {
       if (err) {
-        console.log("please check your credentials");
+        console.log("plz check your credential");
         return done();
       }
       res.should.have.status(200);
@@ -245,7 +243,7 @@ it("should validate the input , return appropriate response", (done) => {
 it("should validate the wrong input of password, return appropriate response", (done) => {
   chai
     .request(server)
-    .patch("/resetPassword")
+    .put("/resetPassword")
     .send({ email: "mallepogualankritha@gmail.com", password: "Jdbyesbxuyw", code: "gduygewfyufd" })
     .end((err, res) => {
       if (err) {
@@ -259,8 +257,8 @@ it("should validate the wrong input of password, return appropriate response", (
 it("should validate the wrong input of email, return appropriate response", (done) => {
   chai
     .request(server)
-    .patch("/resetPassword")
-    .send({ email: "mallepogualankrithaail.com", password: "hdweugf0@h12j", code: "ghgfhger" })
+    .put("/resetPassword")
+    .send({ email: "mallepogualankrithagmail.com", password: "hdweugf0@h12j", code: "ghgfhger" })
     .end((err, res) => {
       if (err) {
         console.log("please check your credentials");
@@ -273,7 +271,7 @@ it("should validate the wrong input of email, return appropriate response", (don
 it("when reset password api is called it should return appropriate response from resetPassword service", (done) => {
   chai
     .request(server)
-    .patch("/resetPassword")
+    .put("/resetPassword")
     .send({ email: "mallepogualankritha@gmail.com", password: "Alannnkkk@3456", code: "hfeheruf" })
     .end((err, res) => {
       if (err) {
@@ -287,7 +285,7 @@ it("when reset password api is called it should return appropriate response from
 it("when reset password api is called it should return appropriate response from resetPassword model", (done) => {
   chai
     .request(server)
-    .patch("/resetPassword")
+    .put("/resetPassword")
     .send({ email: "mallepogualankritha@gmail.com", password: "Alannnkkk@3456", code: "hfeheruf" })
     .end((err, res) => {
       if (err) {
@@ -301,7 +299,7 @@ it("when reset password api is called it should return appropriate response from
 it("when reset password api is called then update with new password, should return appropriate response", (done) => {
   chai
     .request(server)
-    .patch("/resetPassword")
+    .put("/resetPassword")
     .send({ email: "mallepogualankritha@gmail.com", password: "Alankkkkk@3456", code: "e6ki81dcc2" })
     .end((err, res) => {
       if (err) {
@@ -311,4 +309,19 @@ it("when reset password api is called then update with new password, should retu
       res.should.have.status(200);
       return done();
     });
+});
+it("when update with new password from wrong OTP, should return appropriate response", (done) => {
+  chai
+    .request(server)
+    .put("/resetPassword")
+    .send({ email: "mallepogualankritha@gmail.com", password: "Jhingalala@3456", code: "b2oo5rddrvy" })
+    .end((err, res) => {
+      if (err) {
+        console.log("plz check your credential");
+        return done();
+      }
+      res.should.have.status(400);
+      return done();
+    });
+  });
 });

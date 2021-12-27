@@ -121,6 +121,7 @@ forgotPassword = (data, callback) => {
                           User.updateOne({ email: userData.email }, { '$set': { "password": userData.password } })
                               .then((data) => {
                                   resolve(data)
+
                               }).catch((error) => {
                                   reject(error)
                               })

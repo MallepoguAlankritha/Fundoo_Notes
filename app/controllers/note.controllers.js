@@ -157,9 +157,8 @@ class Controller {
         
           res.status(400).send({
             success: false,
-            message: 'Invalid password'
+            message: resetVlaidation.error.message
           });
-          return;
         }
   
         userService.resetPassword(userData, (error, data) => {
