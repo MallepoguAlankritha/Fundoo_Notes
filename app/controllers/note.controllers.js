@@ -4,7 +4,7 @@
 */
 const userService = require('../service/note.service')
 const validation = require('../utilities/validation')
-
+const { logger } = require("../../logger/logger");
 class Controller {
    /**
      * @description Create and save user and sending response to service
@@ -23,6 +23,7 @@ class Controller {
         };
         const registerValidation = validation.authRegister.validate(user)
             if (registerValidation.error) {
+              logger.error("Wrong Input Validations");
                 return res.status(400).send({
                     success: false,
                     message: 'Wrong Input Validations',
@@ -30,16 +31,14 @@ class Controller {
                 });
             }
         userService.registerUser(user, (error, data) => {
-          console.log("in controller1",data);
            if (error) {
-           
-            
-            return res.status(400).json({
+            logger.error("User already registered.");
+              return res.status(400).json({
               success: false,
               message: 'User already exist',
             });
           } else {
-            console.log('User registered');
+            logger.info("User registered");
             return res.status(200).json({
               success: true,
               message: "User Registered",
@@ -48,7 +47,7 @@ class Controller {
           }
         });
       } catch (error) {
-        console.log(error);
+        logger.error("Internal server error");
         return res.status(500).json({
           success: false, 
           message: "Error While Registering",
@@ -69,6 +68,7 @@ class Controller {
           };
           const loginValidation = validation.authLogin.validate(userLoginInfo);
             if (loginValidation.error) {
+              logger.error(loginValidation.error);
                 res.status(400).send({
                     success: false,
                     message: loginValidation.error.message
@@ -76,12 +76,14 @@ class Controller {
             }
           userService.userLogin(userLoginInfo, (error, data) => {
               if (error) {
+                logger.error("Wrong Information entered...");
                   return res.status(400).json({
                       success: false,
                       message: 'Unable to login .please enter correct info',
                       error
                   });
               }
+              logger.info("User logged in successfully");
             return res.status(200).json({
               success: true,
               message: 'User logged in successfully',
@@ -90,6 +92,7 @@ class Controller {
           });              
         }
       catch (error) {
+        logger.error("Error while Login");
           return res.status(500).json({
               success: false,
               message: 'Error while Login', error,
@@ -110,6 +113,7 @@ class Controller {
         };
         const validationforgotPassword=validation.validForgotPassword.validate(userCredential);
         if (validationforgotPassword.error) {
+          logger.error(forgotValidation.error);
           return res.status(400).send({
             success: false,
             message: "email is not valid",
@@ -118,11 +122,13 @@ class Controller {
         }
         userService.forgotPassword(userCredential, (error, result) => {
           if (error) {
+            logger.error("Failed to send email. Email not exist....");
             return res.status(400).send({
               success: false,
               message: "failed to send email,email doesnt exist"
             });
           } else {
+            logger.info("Email sent successfully");
             return res.status(200).send({
               success: true,
               message: 'Email sent successfully'
@@ -130,7 +136,7 @@ class Controller {
           }
         });
       } catch (error) {
-        console.log("Error", error);
+        logger.error("Internal server error");
         return res.status(500).send({
           success: false,
           message: 'Internal server error',
@@ -154,6 +160,7 @@ class Controller {
   
         const resetVlaidation = validation.validResetPassword.validate(userData);
         if (resetVlaidation.error) {
+          logger.error(resetValidation.error);
         
           res.status(400).send({
             success: false,
@@ -163,13 +170,13 @@ class Controller {
   
         userService.resetPassword(userData, (error, data) => {
           if (error) {
-            
+            logger.error(err);
             return res.status(400).send({
               message: error,
               success: false
             });
           } else {
-           
+            logger.info("Successfully updated.....");
             return res.status(200).json({
               success: true,
               message: 'Password reset succesfully',
@@ -178,7 +185,7 @@ class Controller {
           }
         });
       } catch (error) {
-        console.log('Internal server error');
+        logger.error("Internal server error");
         return res.status(500).send({
           success: false,
           message: 'Internal server error',

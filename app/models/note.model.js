@@ -7,6 +7,7 @@
  var Promise = require("bluebird");
  const bcrypt = Promise.promisifyAll(require("bcrypt"));
  const otp = require('./otp.js');
+ const { logger } = require("../../logger/logger");
 const mongoose = require('mongoose');
 const encryption = require('../utilities/encryption');
 const Registeruser = new mongoose.Schema({
@@ -60,8 +61,10 @@ class userModel {
     newUser.save((error, data) => {
       console.log("model1",data);
         if (error) {
+            logger.error(error);
             callback(error, null);
         } else {
+            logger.info("success fully registered");
             callback(null, data);
         }
     });
@@ -76,10 +79,13 @@ loginUser = (loginData, callBack) => {
   //To find a user email in the database
   User.findOne({ email: loginData.email }, (error, data) => {
       if (error) {
+        logger.error("Find error while loggin user");
           return callBack(error, null);
       } else if (!data) {
+        logger.error("Invalid User");
           return callBack("Invalid Credential", null);
       } else {
+        logger.info("Email id found");
           return callBack(null, data);
       }
   });
@@ -93,12 +99,13 @@ loginUser = (loginData, callBack) => {
 forgotPassword = (data, callback) => {
   User.findOne({ email: data.email }, (err, data) => {
     if (err) {
-
+        logger.error(err);
         return callback(err, null);
     } else {
         if (!data) {
-
+            logger.error("Invalid Credential");
         } else {
+            logger.info(data);
             return callback(null, data);
         }
     }

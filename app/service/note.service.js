@@ -7,6 +7,7 @@
 const userModel = require('../models/note.model')
 const utilities = require('../utilities/encryption')
 const bcrypt = require('bcrypt');
+const { logger } = require("../../logger/logger");
 const nodemailer = require('../utilities/nodeemailer.js');
 const { deleteOne } = require('../models/otp');
 
@@ -21,9 +22,10 @@ class userService {
           console.log("service1",data);
          
       if (err) {
-        
+        logger.error(err);
             callback(err, null);
           } else {
+            logger.info(data);
             callback(null, data);
           }
         });
@@ -38,13 +40,16 @@ class userService {
         if (data) {
           bcrypt.compare(InfoLogin.password, data.password, (error, validate) => {
             if (!validate) {
+              logger.error("Error occured......");
               return callback(error + 'Invalid Password', null);
             } else {
+              logger.info(data);
               const token = utilities.token(data);
               return callback(null, token);
             }
           });
         } else {
+          logger.error(error);
           return callback(error);
         }
       });
@@ -52,8 +57,10 @@ class userService {
     forgotPassword = (email, callback) => {
       userModel.forgotPassword(email, (error, data) => {
         if (error) {
+          logger.error(error);
           return callback(error, null);
         } else {
+          logger.info(data);
           return callback(null,nodemailer.sendEmail(data));
         }
       });
