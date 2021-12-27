@@ -8,6 +8,7 @@ const userModel = require('../models/note.model')
 const utilities = require('../utilities/encryption')
 const bcrypt = require('bcrypt');
 const nodemailer = require('../utilities/nodeemailer.js');
+const { deleteOne } = require('../models/otp');
 
 class userService {
   /**
@@ -17,8 +18,10 @@ class userService {
      */
     registerUser = (user, callback) => {
         userModel.registerUser(user, (err, data) => {
-      
-          if (err) {
+          console.log("service1",data);
+         
+      if (err) {
+        
             callback(err, null);
           } else {
             callback(null, data);
@@ -55,16 +58,15 @@ class userService {
         }
       });
     };
-    resetPassword = (resetInfo, callback) => {
-      userModel.resetPassword(resetInfo, (err, data) => {
-        if (err) {
-          callback(err, null);
-        } else if (!data) {
-          callback("Code not found", null);
-        } else {
-          callback(null, data);
-        }
-      });
+
+    resetPassword = (userData, callback) => {
+      userModel.resetPassword(userData)
+        .then((data) => {
+          return callback(null, data);
+        }).catch((error) => {
+          
+          return callback(error, null);
+        });
     };
 }
 module.exports = new userService();

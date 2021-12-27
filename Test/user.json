@@ -1,8 +1,8 @@
 {
     "user": {
         "correctRegister": {
-            "firstName":"Taruvu",
-            "lastName":"Pooja",
+            "firstName":"Mallepogu",
+            "lastName":"Alankritha",
             "email":"mallepogual123@gmail.com",
             "password":"Alankritha^@123"
         },
@@ -22,7 +22,7 @@
             "password": "mafka$123"
         },
         "login": {
-            "email": "mallepogualankritha@gmail.com",
+            "email": "mallepogual123@gmail.com",
             "password": "Alankritha^@123"
         },
         "loginWithImproperDetails": {

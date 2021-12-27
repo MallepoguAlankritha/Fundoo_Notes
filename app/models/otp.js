@@ -7,4 +7,4 @@ const otpSchema = mongoose.Schema({
   timestamps:true
 });
 const otp = mongoose.model('otp', otpSchema,'otp');
-module.exports = otp; 
+module.exports = otp;
