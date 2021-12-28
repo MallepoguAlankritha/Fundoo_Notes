@@ -12,5 +12,10 @@ class NoteService {
             }
           });
     }
+    getNote = (id, callback) => {
+        if (id) {
+          callback(null, id.data);
+        }
+      };
 }
 module.exports = new NoteService();
