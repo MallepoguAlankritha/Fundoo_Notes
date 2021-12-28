@@ -38,4 +38,20 @@ describe("Create Note", () => {
         return done();
       });
   });
+  it.only("give valid input, should return appropriate response from controller", (done) => {
+    const token = noteData.notes.validToken;
+    chai
+      .request(server)
+      .post("/createNote")
+      .set({ authorization: token })
+      .send({ title: "google", description: "google is good search engine" })
+      .end((err, res) => {
+        if (err) {
+          console.log("plz check your credential");
+          return done();
+        }
+        res.should.have.status(201);
+        return done();
+      });
+  });
 });
