@@ -4,7 +4,7 @@
  * @description  API Routing
  * @author       Alankritha
  */
-const controllers = require('../controllers/note.controllers');
+const controllers = require('../controllers/user.controllers');
 module.exports = (app) => {
   // api for registration
   app.post('/registeruser', controllers.register);

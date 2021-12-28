@@ -17,7 +17,7 @@ app.listen(process.env.PORT, () => console.log("Server is listening SuccessFully
 app.get('/', (req, res) => res.json({ "message": "Welcome to Fundoo Note Application" }))
 
 //Require Notes routes
-require('./app/routers/note.router.js')(app);
+require('./app/routers/user.router.js')(app);
 
 // Configuring the database
 const dbConfig = require('./config/database.config.js');

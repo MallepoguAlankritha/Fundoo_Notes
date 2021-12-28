@@ -9,7 +9,7 @@
  const otp = require('./otp.js');
  const { logger } = require("../../logger/logger");
 const mongoose = require('mongoose');
-const encryption = require('../utilities/encryption');
+const encryption = require('../utilities/helperclass');
 const Registeruser = new mongoose.Schema({
     firstName: {
         type: String,

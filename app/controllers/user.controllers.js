@@ -2,7 +2,7 @@
  * @description   : Taking the request from the client and gives the response 
  * @author        : Alankritha 
 */
-const userService = require('../service/note.service')
+const userService = require('../service/user.service')
 const validation = require('../utilities/validation')
 const { logger } = require("../../logger/logger");
 class Controller {

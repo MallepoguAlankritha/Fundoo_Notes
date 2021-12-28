@@ -4,8 +4,8 @@
  * @description  Service class holds the callback method for controller 
  * @author       Alankritha
  */
-const userModel = require('../models/note.model')
-const utilities = require('../utilities/encryption')
+const userModel = require('../models/user.model')
+const utilities = require('../utilities/helperclass')
 const bcrypt = require('bcrypt');
 const { logger } = require("../../logger/logger");
 const nodemailer = require('../utilities/nodeemailer.js');
