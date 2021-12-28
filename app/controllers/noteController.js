@@ -48,7 +48,7 @@ class NoteController {
             const id = { id: req.user.dataForToken.id };
             const getNoteValidation = validation.noteIDValidation.validate(id);
             if (getNoteValidation.error) {
-              console.log(getNoteValidation.error);
+                logger.error(getNoteValidation.error);
               return res.status(400).send({
                 success: false,
                 message: "Wrong Input Validations",
@@ -57,19 +57,21 @@ class NoteController {
             }
             noteService.getNote(id, (error, data) => {
                 if (error) {
+                    logger.error(error);
                   return res.status(400).json({
                     message: "failed to get all notes",
                     success: false
                   });
                 } else {
                   return res.status(201).json({
-                    message: "Get All Notes successfully",
+                    message: " Successfully !!! retrieve all notes.....",
                     success: true,
                     data: data
                   });
                 }
           });
         } catch (error) {
+            logger.error(error);
           return res.status(500).json({
             message: "Internal Server Error",
             success: false
