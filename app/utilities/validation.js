@@ -56,9 +56,9 @@ class Validation {
 
     });
     notesCreationValidation = Joi.object({
-        userId: Joi.string().required(),
-        title: Joi.string().min(2).required(),
-        description: Joi.string().min(2)
+        userId: Joi.string(),
+        title: Joi.string().min(3).required(),
+        description: Joi.string().min(8).required()
       });
     
                 
