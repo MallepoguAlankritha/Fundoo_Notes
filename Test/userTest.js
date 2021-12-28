@@ -240,7 +240,7 @@ it("should validate the input , return appropriate response", (done) => {
       return done();
     });
 });
-it.only("should validate the wrong input of password, return appropriate response", (done) => {
+it("should validate the wrong input of password, return appropriate response", (done) => {
   chai
     .request(server)
     .put("/resetPassword")
@@ -254,7 +254,7 @@ it.only("should validate the wrong input of password, return appropriate respons
       return done();
     });
 });
-it.only("should validate the wrong input of email, return appropriate response", (done) => {
+it("should validate the wrong input of email, return appropriate response", (done) => {
   chai
     .request(server)
     .put("/resetPassword")
@@ -296,7 +296,7 @@ it("when reset password api is called it should return appropriate response from
       return done();
     });
 });
-it.only("when reset password api is called then update with new password, should return appropriate response", (done) => {
+it("when reset password api is called then update with new password, should return appropriate response", (done) => {
   chai
     .request(server)
     .put("/resetPassword")
@@ -310,7 +310,7 @@ it.only("when reset password api is called then update with new password, should
       return done();
     });
 });
-it.only("when update with new password from wrong OTP, should return appropriate response", (done) => {
+it("when update with new password from wrong OTP, should return appropriate response", (done) => {
   chai
     .request(server)
     .put("/resetPassword")

@@ -1,0 +1,8 @@
+{
+    "notes": {
+        "validToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhRm9yVG9rZW4iOnsiaWQiOiI2MWJjMmY1MDBkZWRiYTU4NjhmYjM5N2YiLCJmaXJzdE5hbWUiOiJNYWxsZXBvZ3UiLCJsYXN0TmFtZSI6IkFsYW5rcml0aGEiLCJlbWFpbCI6Im1hbGxlcG9ndWFsYW5rcml0aGFAZ21haWwuY29tIn0sImlhdCI6MTY0MDY3MTI4MCwiZXhwIjoxNjQwNzU3NjgwfQ.q0mJW3X3Va12m5pb8fX1dfrGg9rrHmTvkPN-G_4DGGU",
+        "invalidToken": "Bearer eyJhbGciOR5cCI6IkpXVCJ9.eyJkYXRhRm9yVG9rZW4iOnsiZW1haWwiOiJ2aXZlay5paXRkOTNAZ21haWwuY29tIn0sImlhdCI6MTYzMzU1NTAyOH0.wJqpcpyzvlQPT684BKIeup28MMdy8M37gRuWuU-RhTY",
+        "description": "a",
+        "title": "b"
+    }
+}

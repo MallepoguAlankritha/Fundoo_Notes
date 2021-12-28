@@ -7,3 +7,6 @@
 {"level":"info","message":"Email id found","timestamp":"2021-12-28T06:01:20.025Z"}
 {"level":"info","message":{"__v":0,"_id":"61bc2f500dedba5868fb397f","createdAt":"2021-12-17T06:33:53.064Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$MzcteemqGUuHTRMfqxOwl.lI216BK7l92Xre/G91Dwp8B4G7Qx1um","updatedAt":"2021-12-28T03:58:49.208Z"},"timestamp":"2021-12-28T06:01:20.305Z"}
 {"level":"info","message":"User logged in successfully","timestamp":"2021-12-28T06:01:20.323Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-28T06:26:33.401Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-28T06:26:33.419Z"}
+{"level":"info","message":"Successfully updated.....","timestamp":"2021-12-28T06:26:33.560Z"}
