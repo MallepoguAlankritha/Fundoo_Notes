@@ -228,7 +228,22 @@ describe("Get all Notes", () => {
             return done();
           });
       });
-      it.only("when call getNote api , should return appropriate response from model", (done) => {
+      it("when call getNote api , should return appropriate response from model", (done) => {
+        const token = noteData.notes.validToken;
+        chai
+          .request(server)
+          .get("/getNote")
+          .set({ authorization: token })
+          .end((err, res) => {
+            if (err) {
+              console.log("plz check your credential");
+              return done();
+            }
+            res.should.have.status(201);
+            return done();
+          });
+      });
+      it("when call getNote api then get all note , should return appropriate response", (done) => {
         const token = noteData.notes.validToken;
         chai
           .request(server)
