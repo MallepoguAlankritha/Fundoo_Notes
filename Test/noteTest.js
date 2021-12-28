@@ -258,4 +258,19 @@ describe("Get all Notes", () => {
             return done();
           });
       });
+      it.only("when call getNote api then didnot get all note with invalid token , should return appropriate response", (done) => {
+        const token = noteData.notes.invalidToken;
+        chai
+          .request(server)
+          .get("/getNote")
+          .set({ authorization: token })
+          .end((err, res) => {
+            if (err) {
+              console.log("plz check your credential");
+              return done();
+            }
+            res.should.have.status(400);
+            return done();
+          });
+      });
   });
