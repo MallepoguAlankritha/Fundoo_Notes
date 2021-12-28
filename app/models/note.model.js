@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { logger } = require("../../logger/logger");
 const noteSchema = mongoose.Schema({
   userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   title: {
@@ -24,8 +25,10 @@ class NoteModel {
           });
           notes.save((error, data) => {
             if (error) {
+                logger.error(error);
               return callback(error, null);
             } else {
+                logger.info(data);
               return callback(null, data);
             }
           });
