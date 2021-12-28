@@ -86,7 +86,23 @@ describe("Create Note", () => {
         return done();
       });
   });
-  it.only("when call createNoteAPI, should return appropriate response from service", (done) => {
+  it("when call createNoteAPI, should return appropriate response from service", (done) => {
+    const token = noteData.notes.validToken;
+    chai
+      .request(server)
+      .post("/createNote")
+      .set({ authorization: token })
+      .send({ title: "google", description: "google is good search engine" })
+      .end((err, res) => {
+        if (err) {
+          console.log("plz check your credential");
+          return done();
+        }
+        res.should.have.status(201);
+        return done();
+      });
+  });
+  it.only("when call createNoteAPI, should return appropriate response from model", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
