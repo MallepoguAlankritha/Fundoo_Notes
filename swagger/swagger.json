@@ -101,7 +101,7 @@
     },
 
 
-                "/reset-Password": {
+                "/resetPassword": {
                     "put": {
                         "tags": [
                             "reset password"
