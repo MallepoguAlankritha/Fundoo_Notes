@@ -1,4 +1,4 @@
-const noteModel = require("../models/note.model");
+const noteModel = require("../models/note.model").UserModel;
 const { logger } = require("../../logger/logger");
 class NoteService {
     createNote = (note, callback) => {
@@ -35,11 +35,13 @@ class NoteService {
         });
       };
       updateNoteById = (updateNote, callback) => {
+  
         noteModel.updateNoteById(updateNote, (error, data) => {
           if (error) {
             logger.error(error);
             return callback(error, null);
           } else {
+            console.log(data);
             logger.info("successfully updated....");
             return callback(null, data);
           }

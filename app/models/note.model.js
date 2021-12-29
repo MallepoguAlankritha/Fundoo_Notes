@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+const UserModel = require("../models/user.model").UserDB;
 const { logger } = require("../../logger/logger");
 const noteSchema = mongoose.Schema({
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  userId: [{ type: mongoose.Schema.Types.ObjectId, ref: "UserInformation" }],
   title: {
     type: String,
     required: true,
@@ -16,56 +17,75 @@ const noteSchema = mongoose.Schema({
   timestamps: true
 });
 const NoteRegister = mongoose.model("NoteBook", noteSchema);
+
 class NoteModel {
-    createNote = (note, callback) => {
+  createNote = (note, callback) => {
+    UserModel.findById({ _id: note.userId }, (error, data) => {
+      if (error) {
+        console.log("1", error);
+        return callback(error, null);
+      } else if (!data) {
+        console.log("2", error);
+        return callback("Id not found", null);
+      } else {
         const notes = new NoteRegister({
-            userId: note.userId,
-            title: note.title,
-            description: note.description
-          });
-          notes.save((error, data) => {
-            if (error) {
-                logger.error(error);
-              return callback(error, null);
-            } else {
-                logger.info(data);
-              return callback(null, data);
-            }
-          });
-    }
-    getNote = (id, callback) => {
-        NoteRegister.find({ userId: id.id }, (error, data) => {
-            if (data) {
-                logger.info("Successfully retrieve all notes.");
-              console.log(data);
-              callback(null, data);
-            } else {
-                logger.error(error);
-              callback(error, null);
-            }
-          });
-        }
-        getNoteById = (id, callback) => {
-          NoteRegister.find({ userId: id.UserId, _id: id.noteId }, (error, data) => {
-            if (data) {
-              logger.info(data);
-              callback(null, data);
-            } else {
-              logger.error(error);
-              callback(error, null);
-            }
-          });
-        }
-        updateNoteById = (updatedNote, callback) => {
-          NoteRegister.findByIdAndUpdate(updatedNote.id, { title: updatedNote.title, description: updatedNote.description }, { new: true }, (err, data) => {
-            if (err) {
-              logger.error(err);
-              return callback(err, null);
-            } else {
-              logger.info("updated successfully");
-              return callback(null, data);
-            }
-          });
-        }
+          userId: note.userId,
+          title: note.title,
+          description: note.description
+        });
+        return notes.save((error, data) => {
+          if (error) {
+            logger.error(error);
+            return callback(error, null);
+          } else {
+            logger.info(data);
+            return callback(null, data);
+          }
+        });
+      }
+    });
+  }
+
+  getNote = (id, callback) => {
+    NoteRegister.find({ userId: id.id }, (error, data) => {
+      if (data) {
+        logger.info("Successfully retrieve all notes.");
+        console.log(data);
+        callback(null, data);
+      } else {
+        logger.error(error);
+        callback(error, null);
+      }
+    });
+  }
+
+  getNoteById = (id, callback) => {
+    NoteRegister.find({ userId: id.UserId, _id: id.noteId }, (error, data) => {
+      if (data) {
+        console.log(data);
+        logger.info(data);
+        callback(null, data);
+      } else {
+        logger.error(error);
+        callback(error, null);
+      }
+    });
+  }
+
+  updateNoteById = (updatedNote, callback) => {
+    NoteRegister.findByIdAndUpdate(updatedNote.id, { title: updatedNote.title, description: updatedNote.description }, { new: true }, (err, data) => {
+      if (err) {
+        logger.error(err);
+        return callback(err, null);
+      } else {
+        logger.info("updated successfully");
+        console.log(data);
+        return callback(null, data);
+      }
+    });
+  }
 }
-module.exports = new NoteModel();
+module.exports = {
+  UserModel: new NoteModel(),
+  User: NoteRegister
+};

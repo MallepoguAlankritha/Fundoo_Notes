@@ -43,7 +43,7 @@ Registeruser.pre('save', async function (next) { // this line
   next();
 });
 const User = mongoose.model('Registeruser',Registeruser)
-class userModel {
+class UserModel {
  
   /**
     * @description register User in the database
@@ -146,4 +146,4 @@ forgotPassword = (data, callback) => {
 
       
 }
-module.exports = new userModel();
+module.exports = { UserModel: new UserModel(), UserDB: User };

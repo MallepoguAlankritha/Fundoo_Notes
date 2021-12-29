@@ -359,3 +359,79 @@
 {"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"{id}\"","timestamp":"2021-12-29T07:20:39.803Z","value":"{id}","valueType":"string"}
 {"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"{id}\"","timestamp":"2021-12-29T07:20:39.804Z","value":"{id}","valueType":"string"}
 {"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61bc2f500dedba5868f7f\"","timestamp":"2021-12-29T08:29:48.585Z","value":"61bc2f500dedba5868f7f","valueType":"string"}
+{"level":"info","message":[],"timestamp":"2021-12-29T12:12:03.094Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T12:12:03.095Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T12:12:03.096Z"}
+{"level":"info","message":"Email id found","timestamp":"2021-12-29T12:12:16.899Z"}
+{"level":"info","message":{"__v":0,"_id":"61cbca9a0262aaa54e17b8cf","createdAt":"2021-12-29T02:40:26.162Z","email":"Humerasingh123@gmail.com","firstName":"Humeraaa","lastName":"Singh","password":"$2b$08$k79MsGXlhQ.BoYtW7yNEj.FGeto0FnQMaut54Av/jFX.QfIqtqNk6","updatedAt":"2021-12-29T02:40:26.162Z"},"timestamp":"2021-12-29T12:12:17.113Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2021-12-29T12:12:17.162Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2021-12-29T12:12:35.555Z"}
+{"level":"info","message":[{"__v":0,"_id":"61cbcac90262aaa54e17b8d2","createdAt":"2021-12-29T02:41:13.884Z","description":"custom fellowship batch","title":"bridgelabz","updatedAt":"2021-12-29T02:41:13.884Z","userId":"61cbca9a0262aaa54e17b8cf"}],"timestamp":"2021-12-29T12:12:35.561Z"}
+{"level":"info","message":{"__v":0,"_id":"61cc5126116fabeb8335fe3a","createdAt":"2021-12-29T12:14:30.940Z","description":"hello world hellow world","title":"helloooooooo","updatedAt":"2021-12-29T12:14:30.940Z","userId":"61cbca9a0262aaa54e17b8cf"},"timestamp":"2021-12-29T12:14:30.982Z"}
+{"level":"info","message":{"__v":0,"_id":"61cc5126116fabeb8335fe3a","createdAt":"2021-12-29T12:14:30.940Z","description":"hello world hellow world","title":"helloooooooo","updatedAt":"2021-12-29T12:14:30.940Z","userId":"61cbca9a0262aaa54e17b8cf"},"timestamp":"2021-12-29T12:14:30.991Z"}
+{"level":"info","message":"Successfully inserted note","timestamp":"2021-12-29T12:14:30.993Z"}
+{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"Humerasingh123@gmail.com"},"level":"error","timestamp":"2021-12-29T12:23:33.994Z"}
+{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"Humerasingh123@gmail.com"},"level":"error","timestamp":"2021-12-29T12:23:33.997Z"}
+{"level":"error","message":"User already registered.","timestamp":"2021-12-29T12:23:33.999Z"}
+{"level":"info","message":{"__v":0,"_id":"61bc2f500dedba5868fb397f","createdAt":"2021-12-17T06:33:53.064Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$GJw6BFhDGSxpbwiAId36/.EWZ8Na4S6Ks1GCit6xiq8vY9JwmyW22","updatedAt":"2021-12-29T06:28:30.605Z"},"timestamp":"2021-12-29T12:23:38.747Z"}
+{"level":"info","message":{"__v":0,"_id":"61bc2f500dedba5868fb397f","createdAt":"2021-12-17T06:33:53.064Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$GJw6BFhDGSxpbwiAId36/.EWZ8Na4S6Ks1GCit6xiq8vY9JwmyW22","updatedAt":"2021-12-29T06:28:30.605Z"},"timestamp":"2021-12-29T12:23:38.748Z"}
+{"level":"info","message":"Email sent successfully","timestamp":"2021-12-29T12:23:38.780Z"}
+{"level":"info","message":"Successfully updated.....","timestamp":"2021-12-29T12:23:43.462Z"}
+{"level":"info","message":"updated successfully","timestamp":"2021-12-29T12:33:36.818Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2021-12-29T12:33:36.824Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T12:33:36.825Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T12:41:18.341Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T12:41:18.342Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T12:41:18.342Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T12:41:22.438Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T12:41:22.438Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T12:41:22.439Z"}
+{"level":"info","message":"updated successfully","timestamp":"2021-12-29T12:42:48.559Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2021-12-29T12:42:48.560Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T12:42:48.561Z"}
+{"level":"info","message":"updated successfully","timestamp":"2021-12-29T12:47:35.783Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2021-12-29T12:47:35.784Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T12:47:35.785Z"}
+{"level":"error","timestamp":"2021-12-29T12:54:02.897Z"}
+{"level":"error","timestamp":"2021-12-29T12:56:18.440Z"}
+{"level":"error","timestamp":"2021-12-29T12:57:13.534Z"}
+{"level":"error","timestamp":"2021-12-29T12:57:55.095Z"}
+{"level":"error","timestamp":"2021-12-29T12:57:57.037Z"}
+{"level":"info","message":"updated successfully","timestamp":"2021-12-29T13:01:01.718Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2021-12-29T13:01:01.719Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T13:01:01.721Z"}
+{"level":"info","message":"updated successfully","timestamp":"2021-12-29T13:03:55.482Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2021-12-29T13:03:55.540Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T13:03:55.565Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T13:08:03.415Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T13:08:03.415Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T13:08:03.416Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2021-12-29T13:08:39.955Z"}
+{"level":"info","message":[{"__v":0,"_id":"61cbcac90262aaa54e17b8d2","createdAt":"2021-12-29T02:41:13.884Z","description":"custom fellowship batch","title":"bridgelabz","updatedAt":"2021-12-29T02:41:13.884Z","userId":"61cbca9a0262aaa54e17b8cf"},{"__v":0,"_id":"61cc5126116fabeb8335fe3a","createdAt":"2021-12-29T12:14:30.940Z","description":"hello world hellow world","title":"helloooooooo","updatedAt":"2021-12-29T12:14:30.940Z","userId":"61cbca9a0262aaa54e17b8cf"}],"timestamp":"2021-12-29T13:08:39.986Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2021-12-29T13:15:58.123Z"}
+{"level":"info","message":[{"__v":0,"_id":"61cbcac90262aaa54e17b8d2","createdAt":"2021-12-29T02:41:13.884Z","description":"custom fellowship batch","title":"bridgelabz","updatedAt":"2021-12-29T02:41:13.884Z","userId":"61cbca9a0262aaa54e17b8cf"},{"__v":0,"_id":"61cc5126116fabeb8335fe3a","createdAt":"2021-12-29T12:14:30.940Z","description":"hello world hellow world","title":"helloooooooo","updatedAt":"2021-12-29T12:14:30.940Z","userId":"61cbca9a0262aaa54e17b8cf"}],"timestamp":"2021-12-29T13:15:58.139Z"}
+{"level":"info","message":"updated successfully","timestamp":"2021-12-29T13:26:54.611Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2021-12-29T13:26:54.623Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T13:26:54.625Z"}
+{"level":"info","message":"updated successfully","timestamp":"2021-12-29T13:27:33.542Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2021-12-29T13:27:33.543Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T13:27:33.544Z"}
+{"level":"info","message":"updated successfully","timestamp":"2021-12-29T13:28:25.721Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2021-12-29T13:28:25.723Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T13:28:25.723Z"}
+{"level":"info","message":"success fully registered","timestamp":"2021-12-29T14:08:13.843Z"}
+{"level":"info","message":{"__v":0,"_id":"61cc6bcdd7aa402354a90112","createdAt":"2021-12-29T14:08:13.549Z","email":"Humerasingh123@gmail.com","firstName":"Humeraaa","lastName":"Singh","password":"$2b$08$U3LP45iQ0aFaqAdxX4d23.JLfyyJEHIQp/56DuYFdnYhn7J5aPl4G","updatedAt":"2021-12-29T14:08:13.549Z"},"timestamp":"2021-12-29T14:08:13.849Z"}
+{"level":"info","message":"User registered","timestamp":"2021-12-29T14:08:13.850Z"}
+{"level":"info","message":"Email id found","timestamp":"2021-12-29T14:08:24.634Z"}
+{"level":"info","message":{"__v":0,"_id":"61cc6bcdd7aa402354a90112","createdAt":"2021-12-29T14:08:13.549Z","email":"Humerasingh123@gmail.com","firstName":"Humeraaa","lastName":"Singh","password":"$2b$08$U3LP45iQ0aFaqAdxX4d23.JLfyyJEHIQp/56DuYFdnYhn7J5aPl4G","updatedAt":"2021-12-29T14:08:13.549Z"},"timestamp":"2021-12-29T14:08:24.663Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2021-12-29T14:08:24.669Z"}
+{"level":"info","message":{"__v":0,"_id":"61cc6c01d7aa402354a90116","createdAt":"2021-12-29T14:09:05.299Z","description":"hello world hellow world","title":"helloooooooo","updatedAt":"2021-12-29T14:09:05.299Z","userId":["61cc6bcdd7aa402354a90112"]},"timestamp":"2021-12-29T14:09:05.515Z"}
+{"level":"info","message":{"__v":0,"_id":"61cc6c01d7aa402354a90116","createdAt":"2021-12-29T14:09:05.299Z","description":"hello world hellow world","title":"helloooooooo","updatedAt":"2021-12-29T14:09:05.299Z","userId":["61cc6bcdd7aa402354a90112"]},"timestamp":"2021-12-29T14:09:05.516Z"}
+{"level":"info","message":"Successfully inserted note","timestamp":"2021-12-29T14:09:05.517Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2021-12-29T14:09:25.787Z"}
+{"level":"info","message":[{"__v":0,"_id":"61cc6c01d7aa402354a90116","createdAt":"2021-12-29T14:09:05.299Z","description":"hello world hellow world","title":"helloooooooo","updatedAt":"2021-12-29T14:09:05.299Z","userId":["61cc6bcdd7aa402354a90112"]}],"timestamp":"2021-12-29T14:09:25.797Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2021-12-29T14:10:17.310Z"}
+{"level":"info","message":[{"__v":0,"_id":"61cc6c01d7aa402354a90116","createdAt":"2021-12-29T14:09:05.299Z","description":"hello world hellow world","title":"helloooooooo","updatedAt":"2021-12-29T14:09:05.299Z","userId":["61cc6bcdd7aa402354a90112"]}],"timestamp":"2021-12-29T14:10:17.314Z"}
+{"level":"info","message":"updated successfully","timestamp":"2021-12-29T14:11:28.617Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2021-12-29T14:11:28.633Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T14:11:28.636Z"}
