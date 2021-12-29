@@ -273,6 +273,7 @@ describe("Get all Notes", () => {
             return done();
           });
       });
+    });
       // api for getNoteById
 
 describe("GetNoteById", () => {
@@ -380,4 +381,22 @@ describe("GetNoteById", () => {
       });
   });
 });
+// api for update note by id
+
+describe("Update Note By Id", () => {
+  it.only("when call updateNoteById with validToken , should return appropriate response from controller", (done) => {
+    const token = noteData.notes.validToken;
+    chai
+      .request(server)
+      .put("/updateNote/:id")
+      .set({ authorization: token })
+      .end((err, res) => {
+        if (err) {
+          console.log("plz check your credential");
+          return done();
+        }
+        res.should.have.status(201);
+        return done();
+      });
+  });
 });
