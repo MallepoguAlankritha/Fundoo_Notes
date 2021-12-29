@@ -445,13 +445,29 @@ describe("Update Note By Id", () => {
         return done();
       });
   });
-  it.only("when call updateNoteById with false title , should return appropriate response from controller", (done) => {
+  it("when call updateNoteById with false title , should return appropriate response from controller", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
       .put("/updateNote/61c8913bdcf696ac219ce3ea")
       .set({ authorization: token })
       .send({ title: "S", description: "yahoo is very good search engine" })
+      .end((err, res) => {
+        if (err) {
+          console.log("plz check your credential");
+          return done();
+        }
+        res.should.have.status(400);
+        return done();
+      });
+  });
+  it.only("when call updateNoteById with false description , should return appropriate response from controller", (done) => {
+    const token = noteData.notes.validToken;
+    chai
+      .request(server)
+      .put("/updateNote/61c8913bdcf696ac219ce3ea")
+      .set({ authorization: token })
+      .send({ title: "yahoo", description: "g" })
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
