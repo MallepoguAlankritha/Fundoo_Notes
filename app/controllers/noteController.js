@@ -163,7 +163,7 @@ class NoteController {
           const id = { userId: req.user.dataForToken.id, noteId: req.params.id };
           const deleteNoteValidation = validation.validateDeleteNote.validate(id);
           if (deleteNoteValidation.error) {
-            console.log(deleteNoteValidation.error);
+            logger.error(deleteNoteValidation.error);
             return res.status(400).send({
               success: false,
               message: "Wrong Input Validations",
@@ -172,11 +172,13 @@ class NoteController {
           }
           noteService.deleteNoteById(id, (error, data) => {
             if (error) {
+              logger.error(error);
               return res.status(400).json({
                 message: "Note not found",
                 success: false
               });
             }
+            logger.info("successfully deleted..");
             return res.status(201).send({
               message: "Successfully Deleted note",
               success: true,
@@ -184,6 +186,7 @@ class NoteController {
             });
           });
         } catch {
+          logger.error(error);
           return res.status(500).json({
             message: "Internal server error",
             success: false
