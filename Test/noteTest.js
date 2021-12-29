@@ -289,7 +289,7 @@ describe("GetNoteById", () => {
         return done();
       });
   });
-  it("when call getNoteById with validToken , should return appropriate response", (done) => {
+  it.only("when call getNoteById with validToken , should return appropriate response", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
