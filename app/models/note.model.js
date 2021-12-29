@@ -84,6 +84,9 @@ class NoteModel {
       }
     });
   }
+  deleteNoteById = (id, callback) => {
+    return callback(null, id);
+  };
 }
 module.exports = {
   UserModel: new NoteModel(),
