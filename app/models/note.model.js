@@ -85,8 +85,13 @@ class NoteModel {
     });
   }
   deleteNoteById = (id, callback) => {
-    return callback(null, id);
-  };
+    NoteRegister.findOneAndDelete({ $and: [{ _id: id.noteId }, { userId: id.userId }] }, (error, data) => {
+      if (data) {
+        return callback(null, data);
+      }
+      return callback(error, null);
+    });
+  }
 }
 module.exports = {
   UserModel: new NoteModel(),
