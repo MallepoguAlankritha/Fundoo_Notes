@@ -106,3 +106,40 @@
 {"level":"error","timestamp":"2021-12-29T12:57:13.537Z"}
 {"level":"error","timestamp":"2021-12-29T12:57:55.103Z"}
 {"level":"error","timestamp":"2021-12-29T12:57:57.037Z"}
+{"_original":{"userId":"61cbca9a0262aaa54e17b8cf"},"details":[{"context":{"key":"title","label":"title"},"message":"\"title\" is required","path":["title"],"type":"any.required"}],"level":"error","timestamp":"2021-12-29T14:33:11.929Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.099Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.099Z"}
+{"_original":{"description":"yahoo is good search engine","title":"c","userId":"61cbca9a0262aaa54e17b8cf"},"details":[{"context":{"key":"title","label":"title","limit":3,"value":"c"},"message":"\"title\" length must be at least 3 characters long","path":["title"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T14:33:12.121Z"}
+{"_original":{"description":"googl","title":"google","userId":"61cbca9a0262aaa54e17b8cf"},"details":[{"context":{"key":"description","label":"description","limit":8,"value":"googl"},"message":"\"description\" length must be at least 8 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T14:33:12.150Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.183Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.184Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.220Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.220Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.254Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.254Z"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-29T14:33:12.551Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-29T14:33:12.551Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-29T14:33:12.552Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-29T14:33:12.712Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-29T14:33:12.712Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-29T14:33:12.713Z","value":":id","valueType":"string"}
+{"_original":{"description":"yahoo is very good search engine","id":"61c8913bdcf696ac219ce3ea","title":"S","userId":"61cbca9a0262aaa54e17b8cf"},"details":[{"context":{"key":"title","label":"title","limit":3,"value":"S"},"message":"\"title\" length must be at least 3 characters long","path":["title"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T14:33:12.777Z"}
+{"_original":{"description":"g","id":"61c8913bdcf696ac219ce3ea","title":"yahoo","userId":"61cbca9a0262aaa54e17b8cf"},"details":[{"context":{"key":"description","label":"description","limit":3,"value":"g"},"message":"\"description\" length must be at least 3 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T14:33:12.792Z"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61bc2f500dedba5868f7f\"","timestamp":"2021-12-29T14:33:12.868Z","value":"61bc2f500dedba5868f7f","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61bc2f500dedba5868f7f\"","timestamp":"2021-12-29T14:33:12.868Z","value":"61bc2f500dedba5868f7f","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61bc2f500dedba5868f7f\"","timestamp":"2021-12-29T14:33:12.868Z","value":"61bc2f500dedba5868f7f","valueType":"string"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-29T14:33:13.090Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-29T14:33:13.100Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-29T14:33:13.109Z"}
+{"level":"error","message":"Invalid User","timestamp":"2021-12-29T14:33:13.125Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:13.126Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-29T14:33:13.126Z"}
+{"level":"error","message":"Invalid User","timestamp":"2021-12-29T14:33:13.147Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:13.148Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-29T14:33:13.148Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:13.164Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:15.216Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:17.232Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:19.230Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:21.232Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:23.280Z"}

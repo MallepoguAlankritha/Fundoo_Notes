@@ -435,3 +435,77 @@
 {"level":"info","message":"updated successfully","timestamp":"2021-12-29T14:11:28.617Z"}
 {"level":"info","message":"successfully updated....","timestamp":"2021-12-29T14:11:28.633Z"}
 {"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T14:11:28.636Z"}
+{"_original":{"userId":"61cbca9a0262aaa54e17b8cf"},"details":[{"context":{"key":"title","label":"title"},"message":"\"title\" is required","path":["title"],"type":"any.required"}],"level":"error","timestamp":"2021-12-29T14:33:11.925Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.098Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.099Z"}
+{"_original":{"description":"yahoo is good search engine","title":"c","userId":"61cbca9a0262aaa54e17b8cf"},"details":[{"context":{"key":"title","label":"title","limit":3,"value":"c"},"message":"\"title\" length must be at least 3 characters long","path":["title"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T14:33:12.121Z"}
+{"_original":{"description":"googl","title":"google","userId":"61cbca9a0262aaa54e17b8cf"},"details":[{"context":{"key":"description","label":"description","limit":8,"value":"googl"},"message":"\"description\" length must be at least 8 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T14:33:12.149Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.182Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.184Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.219Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.220Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.253Z"}
+{"level":"error","message":"Id not found","timestamp":"2021-12-29T14:33:12.254Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2021-12-29T14:33:12.336Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.337Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2021-12-29T14:33:12.368Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.369Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2021-12-29T14:33:12.389Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.390Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2021-12-29T14:33:12.412Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.412Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2021-12-29T14:33:12.431Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.433Z"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-29T14:33:12.551Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-29T14:33:12.551Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-29T14:33:12.552Z","value":":id","valueType":"string"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.625Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.625Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.625Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.653Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.653Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.653Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.671Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.671Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.671Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.690Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.690Z"}
+{"level":"info","message":[],"timestamp":"2021-12-29T14:33:12.690Z"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-29T14:33:12.711Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-29T14:33:12.712Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-29T14:33:12.713Z","value":":id","valueType":"string"}
+{"level":"info","message":"updated successfully","timestamp":"2021-12-29T14:33:12.763Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2021-12-29T14:33:12.764Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T14:33:12.765Z"}
+{"_original":{"description":"yahoo is very good search engine","id":"61c8913bdcf696ac219ce3ea","title":"S","userId":"61cbca9a0262aaa54e17b8cf"},"details":[{"context":{"key":"title","label":"title","limit":3,"value":"S"},"message":"\"title\" length must be at least 3 characters long","path":["title"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T14:33:12.777Z"}
+{"_original":{"description":"g","id":"61c8913bdcf696ac219ce3ea","title":"yahoo","userId":"61cbca9a0262aaa54e17b8cf"},"details":[{"context":{"key":"description","label":"description","limit":3,"value":"g"},"message":"\"description\" length must be at least 3 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T14:33:12.791Z"}
+{"level":"info","message":"updated successfully","timestamp":"2021-12-29T14:33:12.810Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2021-12-29T14:33:12.811Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T14:33:12.812Z"}
+{"level":"info","message":"updated successfully","timestamp":"2021-12-29T14:33:12.834Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2021-12-29T14:33:12.835Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T14:33:12.836Z"}
+{"level":"info","message":"updated successfully","timestamp":"2021-12-29T14:33:12.851Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2021-12-29T14:33:12.852Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2021-12-29T14:33:12.853Z"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61bc2f500dedba5868f7f\"","timestamp":"2021-12-29T14:33:12.868Z","value":"61bc2f500dedba5868f7f","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61bc2f500dedba5868f7f\"","timestamp":"2021-12-29T14:33:12.868Z","value":"61bc2f500dedba5868f7f","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61bc2f500dedba5868f7f\"","timestamp":"2021-12-29T14:33:12.868Z","value":"61bc2f500dedba5868f7f","valueType":"string"}
+{"level":"info","message":"success fully registered","timestamp":"2021-12-29T14:33:13.075Z"}
+{"level":"info","message":{"__v":0,"_id":"61cc71a85f4b786880481f62","createdAt":"2021-12-29T14:33:12.981Z","email":"Nicolas_Weber56@yahoo.com","firstName":"Florence","lastName":"Feil","password":"$2b$08$.fZHobNMItapNQN0VAHzA.oMR6Menvl6lXr4FEcQd1tLWOWXiERrW","updatedAt":"2021-12-29T14:33:12.981Z"},"timestamp":"2021-12-29T14:33:13.078Z"}
+{"level":"info","message":"User registered","timestamp":"2021-12-29T14:33:13.079Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-29T14:33:13.090Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-29T14:33:13.100Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-29T14:33:13.109Z"}
+{"level":"error","message":"Invalid User","timestamp":"2021-12-29T14:33:13.125Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:13.125Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-29T14:33:13.126Z"}
+{"level":"error","message":"Invalid User","timestamp":"2021-12-29T14:33:13.147Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:13.148Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-29T14:33:13.148Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:13.163Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:15.216Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:17.232Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:19.229Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:21.232Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:23.279Z"}
