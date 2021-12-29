@@ -124,6 +124,7 @@ class NoteController {
           };
           const updateNoteValidation = validation.noteUpdateValidation.validate(updateNote);
           if (updateNoteValidation.error) {
+            logger.error(updateNoteValidation.error);
             return res.status(400).send({
               success: false,
               message: "Wrong Input Validations",
@@ -132,19 +133,23 @@ class NoteController {
           }
           noteService.updateNoteById(updateNote, (error, data) => {
             if (error) {
+              logger.error(error);
               return res.status(400).json({
                 message: "Failed to update note",
                 success: false
               });
             } else {
+              logger.info("Succefully updated..");
               return res.status(201).send({
                 message: "Successfully updated....",
                 success: true,
                 data: data
               });
             }
+
           });
         } catch (error) {
+          logger.error(error);
           return res.status(500).json({
             message: "Internal server error",
             success: false

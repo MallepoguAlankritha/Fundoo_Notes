@@ -40,10 +40,10 @@ class NoteService {
             logger.error(error);
             return callback(error, null);
           } else {
+            logger.info("successfully updated....");
             return callback(null, data);
           }
-        }
-        );
+        });
       };
       
 }
