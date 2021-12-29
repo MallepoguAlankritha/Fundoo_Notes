@@ -210,7 +210,7 @@ it('should give status 200 when otp with email has been sent and is been saved i
 })
 })
 // Test cases for RESET Password API
-
+/*
 describe("Reset Password API", () => {  
   it("when call reset password api, should return appropriate response", (done) => {
     chai
@@ -325,3 +325,4 @@ it("when update with new password from wrong OTP, should return appropriate resp
     });
   });
 });
+*/

@@ -1,6 +1,6 @@
 /**
  * @module       routes
- * @file         note.router.js
+ * @file         user.router.js
  * @description  API Routing
  * @author       Alankritha
  */
@@ -20,4 +20,6 @@ module.exports = (app) => {
 app.post("/createNote", helperclass.validateToken, noteController.createNote);
  // api for getnote
  app.get("/getNote", helperclass.validateToken, noteController.getNote);
+ // api for getNoteById
+ app.get("/getNote/:id", helperclass.validateToken, noteController.getNote);
 }

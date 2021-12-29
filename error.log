@@ -1,3 +1,32 @@
 {"level":"error","message":"Internal server error","timestamp":"2021-12-28T06:26:33.402Z"}
 {"level":"error","message":"Internal server error","timestamp":"2021-12-28T06:26:33.420Z"}
 {"_original":{"userId":"61bc2f500dedba5868fb397f"},"details":[{"context":{"key":"title","label":"title"},"message":"\"title\" is required","path":["title"],"type":"any.required"}],"level":"error","timestamp":"2021-12-28T10:20:12.564Z"}
+{"level":"error","message":"Error occured......","timestamp":"2021-12-29T02:38:44.224Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-29T02:38:44.226Z"}
+{"_original":{"userId":"61bc2f500dedba5868fb397f"},"details":[{"context":{"key":"title","label":"title"},"message":"\"title\" is required","path":["title"],"type":"any.required"}],"level":"error","timestamp":"2021-12-29T02:48:39.048Z"}
+{"_original":{"description":"google is good search engine","title":"c","userId":"61bc2f500dedba5868fb397f"},"details":[{"context":{"key":"title","label":"title","limit":3,"value":"c"},"message":"\"title\" length must be at least 3 characters long","path":["title"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T02:48:39.303Z"}
+{"_original":{"description":"googl","title":"google","userId":"61bc2f500dedba5868fb397f"},"details":[{"context":{"key":"description","label":"description","limit":8,"value":"googl"},"message":"\"description\" length must be at least 8 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T02:48:39.337Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-29T02:48:39.900Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-29T02:48:39.954Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-29T02:48:40.021Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-29T02:48:40.040Z"}
+{"level":"error","message":"Invalid User","timestamp":"2021-12-29T02:48:40.191Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T02:48:40.191Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-29T02:48:40.191Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-29T02:48:44.446Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-29T02:48:44.562Z"}
+{"_original":{"userId":"61bc2f500dedba5868fb397f"},"details":[{"context":{"key":"title","label":"title"},"message":"\"title\" is required","path":["title"],"type":"any.required"}],"level":"error","timestamp":"2021-12-29T02:53:24.114Z"}
+{"_original":{"description":"google is good search engine","title":"c","userId":"61bc2f500dedba5868fb397f"},"details":[{"context":{"key":"title","label":"title","limit":3,"value":"c"},"message":"\"title\" length must be at least 3 characters long","path":["title"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T02:53:24.349Z"}
+{"_original":{"description":"googl","title":"google","userId":"61bc2f500dedba5868fb397f"},"details":[{"context":{"key":"description","label":"description","limit":8,"value":"googl"},"message":"\"description\" length must be at least 8 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T02:53:24.365Z"}
+{"_original":{"description":"google is good search engine","title":"c","userId":"61bc2f500dedba5868fb397f"},"details":[{"context":{"key":"title","label":"title","limit":3,"value":"c"},"message":"\"title\" length must be at least 3 characters long","path":["title"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T02:54:43.940Z"}
+{"_original":{"description":"googl","title":"google","userId":"61bc2f500dedba5868fb397f"},"details":[{"context":{"key":"description","label":"description","limit":8,"value":"googl"},"message":"\"description\" length must be at least 8 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T02:54:43.964Z"}
+{"_original":{"userId":"61bc2f500dedba5868fb397f"},"details":[{"context":{"key":"title","label":"title"},"message":"\"title\" is required","path":["title"],"type":"any.required"}],"level":"error","timestamp":"2021-12-29T03:36:04.903Z"}
+{"_original":{"description":"google is good search engine","title":"c","userId":"61bc2f500dedba5868fb397f"},"details":[{"context":{"key":"title","label":"title","limit":3,"value":"c"},"message":"\"title\" length must be at least 3 characters long","path":["title"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T03:36:05.152Z"}
+{"_original":{"description":"googl","title":"google","userId":"61bc2f500dedba5868fb397f"},"details":[{"context":{"key":"description","label":"description","limit":8,"value":"googl"},"message":"\"description\" length must be at least 8 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-12-29T03:36:05.203Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-29T03:36:06.063Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-29T03:36:06.076Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-29T03:36:06.087Z"}
+{"level":"error","message":"Invalid User","timestamp":"2021-12-29T03:36:06.239Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T03:36:06.239Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-29T03:36:06.239Z"}
+{"_original":{"userId":"61bc2f500dedba5868fb397f"},"details":[{"context":{"key":"title","label":"title"},"message":"\"title\" is required","path":["title"],"type":"any.required"}],"level":"error","timestamp":"2021-12-29T04:28:28.684Z"}

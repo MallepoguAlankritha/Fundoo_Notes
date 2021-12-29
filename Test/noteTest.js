@@ -44,7 +44,7 @@ describe("Create Note", () => {
       .request(server)
       .post("/createNote")
       .set({ authorization: token })
-      .send({ title: "google", description: "google is good search engine" })
+      .send({ title: "yahooooo", description: "yahoo is very good search engine" })
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
@@ -60,7 +60,7 @@ describe("Create Note", () => {
       .request(server)
       .post("/createNote")
       .set({ authorization: token })
-      .send({ title: "c", description: "google is good search engine" })
+      .send({ title: "c", description: "yahoo is good search engine" })
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
@@ -92,7 +92,7 @@ describe("Create Note", () => {
       .request(server)
       .post("/createNote")
       .set({ authorization: token })
-      .send({ title: "google", description: "google is good search engine" })
+      .send({ title: "yahoooo", description: "yahoo is very good search engine" })
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
@@ -108,7 +108,7 @@ describe("Create Note", () => {
       .request(server)
       .post("/createNote")
       .set({ authorization: token })
-      .send({ title: "google", description: "google is good search engine" })
+      .send({ title: "yahoooo", description: "yahoo is very good search engine" })
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
@@ -124,7 +124,7 @@ describe("Create Note", () => {
       .request(server)
       .post("/createNote")
       .set({ authorization: token })
-      .send({ title: "google", description: "google is good search engine" })
+      .send({ title: "yahooooo", description: "yahooooo is  very good search engine" })
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
@@ -140,7 +140,7 @@ describe("Create Note", () => {
       .request(server)
       .post("/createNote")
       .set({ authorization: token })
-      .send({ title: "google", description: "google is good search engine" })
+      .send({ title: "yahoooo", description: "yahooo is very good search engine" })
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
@@ -258,7 +258,7 @@ describe("Get all Notes", () => {
             return done();
           });
       });
-      it.only("when call getNote api then didnot get all note with invalid token , should return appropriate response", (done) => {
+      it("when call getNote api then didnot get all note with invalid token , should return appropriate response", (done) => {
         const token = noteData.notes.invalidToken;
         chai
           .request(server)
@@ -273,4 +273,21 @@ describe("Get all Notes", () => {
             return done();
           });
       });
+      // api for getNoteById
+
+describe("GetNoteById", () => {
+  it.only("when call getNoteById with InvalidToken , should return appropriate response", (done) => {
+    chai
+      .request(server)
+      .get("/getNote/:id")
+      .end((err, res) => {
+        if (err) {
+          console.log("plz check your credential");
+          return done();
+        }
+        res.should.have.status(500);
+        return done();
+      });
   });
+});
+})
