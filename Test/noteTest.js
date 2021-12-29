@@ -509,19 +509,35 @@ describe("Update Note By Id", () => {
         return done();
       });
   });
-  it.only("given id is matched then update, should return proper response", (done) => {
+  it("given id is matched then update, should return proper response", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
       .put("/updateNote/61bc2f500dedba5868fb397f")
       .set({ authorization: token })
-      .send({ title: "School", description: "golden period of life" })
+      .send({ title: "Yahooo", description: "yahoo is very good search engine" })
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
           return done();
         }
         res.should.have.status(201);
+        return done();
+      });
+  });
+  it.only("given id is not matched then don't update, should return proper response", (done) => {
+    const token = noteData.notes.validToken;
+    chai
+      .request(server)
+      .put("/updateNote/61bc2f500dedba5868f7f")
+      .set({ authorization: token })
+      .send({ title: "Yahoooo", description: "yahoo is very good search engine" })
+      .end((err, res) => {
+        if (err) {
+          console.log("plz check your credential");
+          return done();
+        }
+        res.should.have.status(400);
         return done();
       });
   });
