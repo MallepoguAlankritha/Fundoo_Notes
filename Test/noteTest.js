@@ -477,7 +477,7 @@ describe("Update Note By Id", () => {
         return done();
       });
   });
-  it.only("when call updateNoteById with valid input , should return appropriate response from service", (done) => {
+  it("when call updateNoteById with valid input , should return appropriate response from service", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -493,13 +493,29 @@ describe("Update Note By Id", () => {
         return done();
       });
   });
-  it.only("when call updateNoteById , should return appropriate response from model", (done) => {
+  it("when call updateNoteById , should return appropriate response from model", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
       .put("/updateNote/61bc2f500dedba5868fb397f")
       .set({ authorization: token })
       .send({ title: "Yahooooo", description: "yahoo is very good search engine" })
+      .end((err, res) => {
+        if (err) {
+          console.log("plz check your credential");
+          return done();
+        }
+        res.should.have.status(201);
+        return done();
+      });
+  });
+  it.only("given id is matched then update, should return proper response", (done) => {
+    const token = noteData.notes.validToken;
+    chai
+      .request(server)
+      .put("/updateNote/61bc2f500dedba5868fb397f")
+      .set({ authorization: token })
+      .send({ title: "School", description: "golden period of life" })
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
