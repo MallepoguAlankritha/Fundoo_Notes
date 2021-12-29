@@ -297,7 +297,7 @@ describe("GetNoteById", () => {
       .set({ authorization: token })
       .end((err, res) => {
         if (err) {
-          console.log("plz check your credential");
+          console.log("please check your credential");
           return done();
         }
         res.should.have.status(201);
