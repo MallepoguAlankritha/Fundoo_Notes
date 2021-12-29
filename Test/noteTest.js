@@ -276,7 +276,7 @@ describe("Get all Notes", () => {
       // api for getNoteById
 
 describe("GetNoteById", () => {
-  it.only("when call getNoteById with InvalidToken , should return appropriate response", (done) => {
+  it("when call getNoteById with InvalidToken , should return appropriate response", (done) => {
     chai
       .request(server)
       .get("/getNote/:id")
@@ -286,6 +286,21 @@ describe("GetNoteById", () => {
           return done();
         }
         res.should.have.status(500);
+        return done();
+      });
+  });
+  it("when call getNoteById with validToken , should return appropriate response", (done) => {
+    const token = noteData.notes.validToken;
+    chai
+      .request(server)
+      .get("/getNote/:id")
+      .set({ authorization: token })
+      .end((err, res) => {
+        if (err) {
+          console.log("plz check your credential");
+          return done();
+        }
+        res.should.have.status(201);
         return done();
       });
   });
