@@ -46,7 +46,7 @@ class NoteModel {
           });
         }
         getNoteById = (id, callback) => {
-          NoteRegister.find({ userId: id.UserId }, (error, data) => {
+          NoteRegister.find({ userId: id.UserId, _id: id.noteId }, (error, data) => {
             if (data) {
               callback(null, data);
             } else {

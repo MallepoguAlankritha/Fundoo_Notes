@@ -21,5 +21,5 @@ app.post("/createNote", helperclass.validateToken, noteController.createNote);
  // api for getnote
  app.get("/getNote", helperclass.validateToken, noteController.getNote);
  // api for getNoteById
- app.get("/getNote/:id", helperclass.validateToken, noteController.getNote);
+ app.get("/getNote/:id", helperclass.validateToken, noteController.getNoteById);
 }
