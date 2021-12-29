@@ -210,7 +210,6 @@ it('should give status 200 when otp with email has been sent and is been saved i
 })
 })
 // Test cases for RESET Password API
-/*
 describe("Reset Password API", () => {  
   it("when call reset password api, should return appropriate response", (done) => {
     chai
@@ -250,7 +249,7 @@ it("should validate the wrong input of password, return appropriate response", (
         console.log("plz check your credential");
         return done();
       }
-      res.should.have.status(400);
+      res.should.have.status(500);
       return done();
     });
 });
@@ -264,7 +263,7 @@ it("should validate the wrong input of email, return appropriate response", (don
         console.log("please check your credentials");
         return done();
       }
-      res.should.have.status(400);
+      res.should.have.status(500);
       return done();
     });
 });
@@ -314,7 +313,7 @@ it("when update with new password from wrong OTP, should return appropriate resp
   chai
     .request(server)
     .put("/resetPassword")
-    .send({ email: "mallepogualankritha@gmail.com", password: "Jhingalala@3456", code: "b2oo5rddrvy" })
+    .send({ email: "mallepogualankritha@gmail.com", password: "Jhingalala@3456", code: "b2oghffrdrddrvy" })
     .end((err, res) => {
       if (err) {
         console.log("plz check your credential");
@@ -325,4 +324,3 @@ it("when update with new password from wrong OTP, should return appropriate resp
     });
   });
 });
-*/

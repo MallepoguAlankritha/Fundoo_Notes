@@ -364,7 +364,7 @@ describe("GetNoteById", () => {
         return done();
       });
   });
-  it.only("when call getNoteById with validToken using find method , should return appropriate response from model", (done) => {
+  it("when call getNoteById with validToken using find method , should return appropriate response from model", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
