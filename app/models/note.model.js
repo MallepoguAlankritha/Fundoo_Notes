@@ -56,5 +56,8 @@ class NoteModel {
             }
           });
         }
+        updateNoteById = (id, callback) => {
+          return callback(null, id);
+        }
 }
 module.exports = new NoteModel();
