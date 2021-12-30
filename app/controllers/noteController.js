@@ -140,7 +140,6 @@ class NoteController {
                 success: false
               });
             } else {
-              console.log(data);
               logger.info("Succefully updated..");
               return res.status(201).send({
                 message: "Successfully updated....",

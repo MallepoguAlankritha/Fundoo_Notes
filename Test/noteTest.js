@@ -6,7 +6,7 @@ chai.should();
 const noteData = require("./note.Token.json");
 
 describe("Create Note", () => {
-  it("when call create note api, should return appropriate response from controller", (done) => {
+  it.only("when call create note api, should return appropriate response from controller", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -22,7 +22,7 @@ describe("Create Note", () => {
         return done();
       });
   });
-  it("when call create note api, should return appropriate response from controller with invalid token", (done) => {
+  it.only("when call create note api, should return appropriate response from controller with invalid token", (done) => {
     const token = noteData.notes.invalidToken;
     chai
       .request(server)
@@ -38,7 +38,7 @@ describe("Create Note", () => {
         return done();
       });
   });
-  it("give valid input, should return appropriate response from controller", (done) => {
+  it.only("give valid input, should return appropriate response from controller", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -54,7 +54,7 @@ describe("Create Note", () => {
         return done();
       });
   });
-  it("give invalid title , should return appropriate response from controller", (done) => {
+  it.only("give invalid title , should return appropriate response from controller", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -70,7 +70,7 @@ describe("Create Note", () => {
         return done();
       });
   });
-  it("give invalid description, should return appropriate response from controller", (done) => {
+  it.only("give invalid description, should return appropriate response from controller", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -86,7 +86,7 @@ describe("Create Note", () => {
         return done();
       });
   });
-  it("when call createNoteAPI, should return appropriate response from service", (done) => {
+  it.only("when call createNoteAPI, should return appropriate response from service", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -102,7 +102,7 @@ describe("Create Note", () => {
         return done();
       });
   });
-  it("when call createNoteAPI, should return appropriate response from model", (done) => {
+  it.only("when call createNoteAPI, should return appropriate response from model", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -118,7 +118,7 @@ describe("Create Note", () => {
         return done();
       });
   });
-  it("when call createNoteAPI with validToken, should return appropriate response from model", (done) => {
+  it.only("when call createNoteAPI with validToken, should return appropriate response from model", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -134,7 +134,7 @@ describe("Create Note", () => {
         return done();
       });
   });
-  it("when call createNoteAPI with inValid token, should return appropriate response from model", (done) => {
+  it.only("when call createNoteAPI with inValid token, should return appropriate response from model", (done) => {
     const token = noteData.notes.invalidToken;
     chai
       .request(server)
@@ -154,7 +154,7 @@ describe("Create Note", () => {
 // api for get all notes
 
 describe("Get all Notes", () => {
-    it("when call getNote api without token, should return appropriate response from controller", (done) => {
+    it.only("when call getNote api without token, should return appropriate response from controller", (done) => {
       chai
         .request(server)
         .get("/getNote")
@@ -168,7 +168,7 @@ describe("Get all Notes", () => {
         });
     });
   
-    it("when call getNote api with token, should return appropriate response from controller", (done) => {
+    it.only("when call getNote api with token, should return appropriate response from controller", (done) => {
       const token = noteData.notes.validToken;
       chai
         .request(server)
@@ -183,7 +183,7 @@ describe("Get all Notes", () => {
           return done();
         });
     });
-    it("when call getNote api with token, should return appropriate response from controller", (done) => {
+    it.only("when call getNote api with token, should return appropriate response from controller", (done) => {
         const token = noteData.notes.invalidToken;
         chai
           .request(server)
@@ -198,7 +198,7 @@ describe("Get all Notes", () => {
             return done();
           });
       });
-      it("when call getNote api with token is Authentic Request, should return appropriate response from controller", (done) => {
+      it.only("when call getNote api with token is Authentic Request, should return appropriate response from controller", (done) => {
         const token = noteData.notes.validToken;
         chai
           .request(server)
@@ -213,7 +213,7 @@ describe("Get all Notes", () => {
             return done();
           });
       });
-      it("when call getNote api , should return appropriate response from service", (done) => {
+      it.only("when call getNote api , should return appropriate response from service", (done) => {
         const token = noteData.notes.validToken;
         chai
           .request(server)
@@ -228,7 +228,7 @@ describe("Get all Notes", () => {
             return done();
           });
       });
-      it("when call getNote api , should return appropriate response from model", (done) => {
+      it.only("when call getNote api , should return appropriate response from model", (done) => {
         const token = noteData.notes.validToken;
         chai
           .request(server)
@@ -243,7 +243,7 @@ describe("Get all Notes", () => {
             return done();
           });
       });
-      it("when call getNote api then get all note , should return appropriate response", (done) => {
+      it.only("when call getNote api then get all note , should return appropriate response", (done) => {
         const token = noteData.notes.validToken;
         chai
           .request(server)
@@ -258,7 +258,7 @@ describe("Get all Notes", () => {
             return done();
           });
       });
-      it("when call getNote api then didnot get all note with invalid token , should return appropriate response", (done) => {
+      it.only("when call getNote api then didnot get all note with invalid token , should return appropriate response", (done) => {
         const token = noteData.notes.invalidToken;
         chai
           .request(server)
@@ -277,7 +277,7 @@ describe("Get all Notes", () => {
       // api for getNoteById
 
 describe("GetNoteById", () => {
-  it("when call getNoteById with InvalidToken , should return appropriate response", (done) => {
+  it.only("when call getNoteById with InvalidToken , should return appropriate response", (done) => {
     chai
       .request(server)
       .get("/getNote/:id")
@@ -290,7 +290,7 @@ describe("GetNoteById", () => {
         return done();
       });
   });
-  it("when call getNoteById with validToken , should return appropriate response", (done) => {
+  it.only("when call getNoteById with validToken , should return appropriate response", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -305,7 +305,7 @@ describe("GetNoteById", () => {
         return done();
       });
   });
-  it("given token is verified then given id should be validated", (done) => {
+  it.only("given token is verified then given id should be validated", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -320,7 +320,7 @@ describe("GetNoteById", () => {
         return done();
       });
   });
-  it("given token is not verified then given id should not be validated", (done) => {
+  it.only("given token is not verified then given id should not be validated", (done) => {
     const token = noteData.notes.invalidToken;
     chai
       .request(server)
@@ -335,7 +335,7 @@ describe("GetNoteById", () => {
         return done();
       });
   });
-  it("when call getNoteById with validToken , should return appropriate response from service", (done) => {
+  it.only("when call getNoteById with validToken , should return appropriate response from service", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -350,7 +350,7 @@ describe("GetNoteById", () => {
         return done();
       });
   });
-  it("when call getNoteById with validToken , should return appropriate response from model", (done) => {
+  it.only("when call getNoteById with validToken , should return appropriate response from model", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -365,7 +365,7 @@ describe("GetNoteById", () => {
         return done();
       });
   });
-  it("when call getNoteById with validToken using find method , should return appropriate response from model", (done) => {
+  it.only("when call getNoteById with validToken using find method , should return appropriate response from model", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -384,7 +384,7 @@ describe("GetNoteById", () => {
 // api for update note by id
 
 describe("Update Note By Id", () => {
-  it("when call updateNoteById with validToken , should return appropriate response from controller", (done) => {
+  it.only("when call updateNoteById with validToken , should return appropriate response from controller", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -399,7 +399,7 @@ describe("Update Note By Id", () => {
         return done();
       });
   });
-  it("when call updateNoteById with inValidToken , should return appropriate response from controller", (done) => {
+  it.only("when call updateNoteById with inValidToken , should return appropriate response from controller", (done) => {
     const token = noteData.notes.invalidToken;
     chai
       .request(server)
@@ -414,7 +414,7 @@ describe("Update Note By Id", () => {
         return done();
       });
   });
-  it("when call updateNoteById with inValidToken , should return appropriate response from controller", (done) => {
+  it.only("when call updateNoteById with inValidToken , should return appropriate response from controller", (done) => {
     const token = noteData.notes.invalidToken;
     chai
       .request(server)
@@ -429,7 +429,7 @@ describe("Update Note By Id", () => {
         return done();
       });
   });
-  it("when call updateNoteById with valid input , should return appropriate response from controller", (done) => {
+  it.only("when call updateNoteById with valid input , should return appropriate response from controller", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -445,7 +445,7 @@ describe("Update Note By Id", () => {
         return done();
       });
   });
-  it("when call updateNoteById with false title , should return appropriate response from controller", (done) => {
+  it.only("when call updateNoteById with false title , should return appropriate response from controller", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -461,7 +461,7 @@ describe("Update Note By Id", () => {
         return done();
       });
   });
-  it("when call updateNoteById with false description , should return appropriate response from controller", (done) => {
+  it.only("when call updateNoteById with false description , should return appropriate response from controller", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -477,7 +477,7 @@ describe("Update Note By Id", () => {
         return done();
       });
   });
-  it("when call updateNoteById with valid input , should return appropriate response from service", (done) => {
+  it.only("when call updateNoteById with valid input , should return appropriate response from service", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -493,7 +493,7 @@ describe("Update Note By Id", () => {
         return done();
       });
   });
-  it("when call updateNoteById , should return appropriate response from model", (done) => {
+  it.only("when call updateNoteById , should return appropriate response from model", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -509,7 +509,7 @@ describe("Update Note By Id", () => {
         return done();
       });
   });
-  it("given id is matched then update, should return proper response", (done) => {
+  it.only("given id is matched then update, should return proper response", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -525,7 +525,7 @@ describe("Update Note By Id", () => {
         return done();
       });
   });
-  it("given id is not matched then don't update, should return proper response", (done) => {
+  it.only("given id is not matched then don't update, should return proper response", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -545,7 +545,7 @@ describe("Update Note By Id", () => {
 // api of Delete Note by Id
 
 describe("DeleteNoteById", () => {
-  it("when call DeleteNote Api with valid token, should return proper response from controller", (done) => {
+  it.only("when call DeleteNote Api with valid token, should return proper response from controller", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -560,7 +560,7 @@ describe("DeleteNoteById", () => {
         return done();
       });
   });
-  it("when call DeleteNote Api with inValid token, should return proper response from controller", (done) => {
+  it.only("when call DeleteNote Api with inValid token, should return proper response from controller", (done) => {
     const token = noteData.notes.invalidToken;
     chai
       .request(server)
@@ -575,7 +575,7 @@ describe("DeleteNoteById", () => {
         return done();
       });
   });
-  it("when it is validate with the given id, should return proper response from controller", (done) => {
+  it.only("when it is validate with the given id, should return proper response from controller", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -590,7 +590,7 @@ describe("DeleteNoteById", () => {
         return done();
       });
   });
-  it("when it is validate with the given false id, should return proper response from controller", (done) => {
+  it.only("when it is validate with the given false id, should return proper response from controller", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -605,7 +605,7 @@ describe("DeleteNoteById", () => {
         return done();
       });
   });
-  it("when call DeleteNote api, should return proper response from service", (done) => {
+  it.only("when call DeleteNote api, should return proper response from service", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -620,7 +620,7 @@ describe("DeleteNoteById", () => {
         return done();
       });
   });
-  it("when call DeleteNote api, should return proper response from model", (done) => {
+  it.only("when call DeleteNote api, should return proper response from model", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
@@ -635,7 +635,7 @@ describe("DeleteNoteById", () => {
         return done();
       });
   });
-  it("given id present in DB then delete, should return proper response from model", (done) => {
+  it.only("given id present in DB then delete, should return proper response from model", (done) => {
     const token = noteData.notes.validToken;
     chai
       .request(server)

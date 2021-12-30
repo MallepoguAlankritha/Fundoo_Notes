@@ -22,10 +22,10 @@ class NoteModel {
   createNote = (note, callback) => {
     UserModel.findById({ _id: note.userId }, (error, data) => {
       if (error) {
-        console.log("1", error);
+        
         return callback(error, null);
       } else if (!data) {
-        console.log("2", error);
+       
         return callback("Id not found", null);
       } else {
         const notes = new NoteRegister({
@@ -50,7 +50,7 @@ class NoteModel {
     NoteRegister.find({ userId: id.id }, (error, data) => {
       if (data) {
         logger.info("Successfully retrieve all notes.");
-        console.log(data);
+      
         callback(null, data);
       } else {
         logger.error(error);
@@ -62,7 +62,7 @@ class NoteModel {
   getNoteById = (id, callback) => {
     NoteRegister.find({ userId: id.UserId, _id: id.noteId }, (error, data) => {
       if (data) {
-        console.log(data);
+        
         logger.info(data);
         callback(null, data);
       } else {
@@ -79,7 +79,7 @@ class NoteModel {
         return callback(err, null);
       } else {
         logger.info("updated successfully");
-        console.log(data);
+       
         return callback(null, data);
       }
     });

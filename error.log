@@ -143,3 +143,101 @@
 {"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:19.230Z"}
 {"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:21.232Z"}
 {"level":"error","message":"Invalid Credential","timestamp":"2021-12-29T14:33:23.280Z"}
+{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"Humerasingh123@gmail.com"},"level":"error","timestamp":"2021-12-30T02:19:46.270Z"}
+{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"Humerasingh123@gmail.com"},"level":"error","timestamp":"2021-12-30T02:19:46.273Z"}
+{"level":"error","message":"User already registered.","timestamp":"2021-12-30T02:19:46.274Z"}
+{"level":"error","message":"Error occured......","timestamp":"2021-12-30T13:34:28.338Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-30T13:34:28.339Z"}
+{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"niharika123@gmail.com"},"level":"error","timestamp":"2021-12-30T13:37:34.578Z"}
+{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"niharika123@gmail.com"},"level":"error","timestamp":"2021-12-30T13:37:34.583Z"}
+{"level":"error","message":"User already registered.","timestamp":"2021-12-30T13:37:34.584Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-30T13:41:26.550Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-30T13:41:35.688Z"}
+{"level":"error","message":null,"timestamp":"2021-12-30T13:48:29.271Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-30T13:55:02.001Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-30T13:55:02.045Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-30T13:55:02.082Z"}
+{"level":"error","message":"Invalid User","timestamp":"2021-12-30T13:55:02.207Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-30T13:55:02.209Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-30T13:55:02.210Z"}
+{"level":"error","message":"Invalid User","timestamp":"2021-12-30T13:55:02.281Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-30T13:55:02.282Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-30T13:55:02.283Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-30T13:55:06.868Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-30T13:55:06.915Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-30T13:58:09.653Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-30T13:58:09.698Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-30T13:58:09.727Z"}
+{"level":"error","message":"Invalid User","timestamp":"2021-12-30T13:58:09.799Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-30T13:58:09.800Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-30T13:58:09.803Z"}
+{"level":"error","message":"Invalid User","timestamp":"2021-12-30T13:58:09.864Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-30T13:58:09.864Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-30T13:58:09.865Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-30T13:58:14.313Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-30T13:58:14.361Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-30T13:59:54.141Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-30T13:59:54.177Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-30T13:59:54.220Z"}
+{"level":"error","message":"Invalid User","timestamp":"2021-12-30T13:59:54.306Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-30T13:59:54.308Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-30T13:59:54.309Z"}
+{"level":"error","message":"Invalid User","timestamp":"2021-12-30T13:59:54.355Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-30T13:59:54.355Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-30T13:59:54.356Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-30T13:59:58.789Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-30T13:59:58.821Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-30T14:02:19.157Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-30T14:02:19.187Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2021-12-30T14:02:19.212Z"}
+{"level":"error","message":"Invalid User","timestamp":"2021-12-30T14:02:19.441Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2021-12-30T14:02:19.441Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2021-12-30T14:02:19.442Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-30T14:02:23.795Z"}
+{"level":"error","message":"Internal server error","timestamp":"2021-12-30T14:02:23.832Z"}
+{"_original":{"userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"title","label":"title"},"message":"\"title\" is required","path":["title"],"type":"any.required"}],"level":"error","timestamp":"2021-12-30T14:11:32.321Z"}
+{"_original":{"description":"yahoo is good search engine","title":"c","userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"title","label":"title","limit":3,"value":"c"},"message":"\"title\" length must be at least 3 characters long","path":["title"],"type":"string.min"}],"level":"error","timestamp":"2021-12-30T14:11:32.568Z"}
+{"_original":{"description":"googl","title":"google","userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"description","label":"description","limit":8,"value":"googl"},"message":"\"description\" length must be at least 8 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-12-30T14:11:32.592Z"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-30T14:11:33.164Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-30T14:11:33.165Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-30T14:11:33.165Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-30T14:11:33.311Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-30T14:11:33.312Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-30T14:11:33.312Z","value":":id","valueType":"string"}
+{"_original":{"description":"yahoo is very good search engine","id":"61c8913bdcf696ac219ce3ea","title":"S","userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"title","label":"title","limit":3,"value":"S"},"message":"\"title\" length must be at least 3 characters long","path":["title"],"type":"string.min"}],"level":"error","timestamp":"2021-12-30T14:11:33.391Z"}
+{"_original":{"description":"g","id":"61c8913bdcf696ac219ce3ea","title":"yahoo","userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"description","label":"description","limit":3,"value":"g"},"message":"\"description\" length must be at least 3 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-12-30T14:11:33.405Z"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61bc2f500dedba5868f7f\"","timestamp":"2021-12-30T14:11:33.481Z","value":"61bc2f500dedba5868f7f","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61bc2f500dedba5868f7f\"","timestamp":"2021-12-30T14:11:33.482Z","value":"61bc2f500dedba5868f7f","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61bc2f500dedba5868f7f\"","timestamp":"2021-12-30T14:11:33.482Z","value":"61bc2f500dedba5868f7f","valueType":"string"}
+{"_original":{"noteId":":id","userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"noteId","label":"noteId","limit":20,"value":":id"},"message":"\"noteId\" length must be at least 20 characters long","path":["noteId"],"type":"string.min"}],"level":"error","timestamp":"2021-12-30T14:11:33.508Z"}
+{"level":"error","message":null,"timestamp":"2021-12-30T14:11:33.559Z"}
+{"_original":{"noteId":"61c8913bdcf696aca","userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"noteId","label":"noteId","limit":20,"value":"61c8913bdcf696aca"},"message":"\"noteId\" length must be at least 20 characters long","path":["noteId"],"type":"string.min"}],"level":"error","timestamp":"2021-12-30T14:11:33.574Z"}
+{"level":"error","message":null,"timestamp":"2021-12-30T14:11:33.591Z"}
+{"level":"error","message":null,"timestamp":"2021-12-30T14:11:33.608Z"}
+{"level":"error","message":null,"timestamp":"2021-12-30T14:11:33.631Z"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61c8913bdcf696ac219c\"","timestamp":"2021-12-30T14:11:33.647Z","value":"61c8913bdcf696ac219c","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61c8913bdcf696ac219c\"","timestamp":"2021-12-30T14:11:33.648Z","value":"61c8913bdcf696ac219c","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61c8913bdcf696ac219c\"","timestamp":"2021-12-30T14:11:33.648Z","value":"61c8913bdcf696ac219c","valueType":"string"}
+{"_original":{"userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"title","label":"title"},"message":"\"title\" is required","path":["title"],"type":"any.required"}],"level":"error","timestamp":"2021-12-30T14:15:32.229Z"}
+{"_original":{"description":"yahoo is good search engine","title":"c","userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"title","label":"title","limit":3,"value":"c"},"message":"\"title\" length must be at least 3 characters long","path":["title"],"type":"string.min"}],"level":"error","timestamp":"2021-12-30T14:15:32.511Z"}
+{"_original":{"description":"googl","title":"google","userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"description","label":"description","limit":8,"value":"googl"},"message":"\"description\" length must be at least 8 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-12-30T14:15:32.539Z"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-30T14:15:33.014Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-30T14:15:33.015Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-30T14:15:33.016Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-30T14:15:33.224Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-30T14:15:33.224Z","value":":id","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\":id\"","timestamp":"2021-12-30T14:15:33.225Z","value":":id","valueType":"string"}
+{"_original":{"description":"yahoo is very good search engine","id":"61c8913bdcf696ac219ce3ea","title":"S","userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"title","label":"title","limit":3,"value":"S"},"message":"\"title\" length must be at least 3 characters long","path":["title"],"type":"string.min"}],"level":"error","timestamp":"2021-12-30T14:15:33.323Z"}
+{"_original":{"description":"g","id":"61c8913bdcf696ac219ce3ea","title":"yahoo","userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"description","label":"description","limit":3,"value":"g"},"message":"\"description\" length must be at least 3 characters long","path":["description"],"type":"string.min"}],"level":"error","timestamp":"2021-12-30T14:15:33.340Z"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61bc2f500dedba5868f7f\"","timestamp":"2021-12-30T14:15:33.424Z","value":"61bc2f500dedba5868f7f","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61bc2f500dedba5868f7f\"","timestamp":"2021-12-30T14:15:33.425Z","value":"61bc2f500dedba5868f7f","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61bc2f500dedba5868f7f\"","timestamp":"2021-12-30T14:15:33.425Z","value":"61bc2f500dedba5868f7f","valueType":"string"}
+{"_original":{"noteId":":id","userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"noteId","label":"noteId","limit":20,"value":":id"},"message":"\"noteId\" length must be at least 20 characters long","path":["noteId"],"type":"string.min"}],"level":"error","timestamp":"2021-12-30T14:15:33.442Z"}
+{"level":"error","message":null,"timestamp":"2021-12-30T14:15:33.488Z"}
+{"_original":{"noteId":"61c8913bdcf696aca","userId":"61cdb501eb1d22354bff0ad8"},"details":[{"context":{"key":"noteId","label":"noteId","limit":20,"value":"61c8913bdcf696aca"},"message":"\"noteId\" length must be at least 20 characters long","path":["noteId"],"type":"string.min"}],"level":"error","timestamp":"2021-12-30T14:15:33.505Z"}
+{"level":"error","message":null,"timestamp":"2021-12-30T14:15:33.526Z"}
+{"level":"error","message":null,"timestamp":"2021-12-30T14:15:33.544Z"}
+{"level":"error","message":null,"timestamp":"2021-12-30T14:15:33.560Z"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61c8913bdcf696ac219c\"","timestamp":"2021-12-30T14:15:33.579Z","value":"61c8913bdcf696ac219c","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61c8913bdcf696ac219c\"","timestamp":"2021-12-30T14:15:33.579Z","value":"61c8913bdcf696ac219c","valueType":"string"}
+{"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61c8913bdcf696ac219c\"","timestamp":"2021-12-30T14:15:33.580Z","value":"61c8913bdcf696ac219c","valueType":"string"}
