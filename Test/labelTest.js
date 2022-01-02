@@ -1,6 +1,8 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const server = require('../server');
+const faker = require('faker');
+const labelDB = require('./label.json');
 chai.use(chaiHttp);
 const { expect } = require('chai');
 chai.should();
@@ -12,6 +14,17 @@ describe('Add label by id api ', () => {
             .post('/addlabel/:id')
             .end((err, res) => {
                 res.should.have.status(500);
+                done();
+            });
+    });
+    it.only('Gives true when token is verify', (done) => {
+        const token = labelDB.label.validToken
+        chai
+            .request(server)
+            .post('/addlabel/:id')
+            .set({ authorization: token })
+            .end((err, res) => {
+                res.should.have.status(201);
                 done();
             });
     });

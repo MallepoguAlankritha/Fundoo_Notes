@@ -858,3 +858,6 @@
 {"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61c8913bdcf696ac219c\"","timestamp":"2021-12-30T14:15:33.579Z","value":"61c8913bdcf696ac219c","valueType":"string"}
 {"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61c8913bdcf696ac219c\"","timestamp":"2021-12-30T14:15:33.579Z","value":"61c8913bdcf696ac219c","valueType":"string"}
 {"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61c8913bdcf696ac219c\"","timestamp":"2021-12-30T14:15:33.580Z","value":"61c8913bdcf696ac219c","valueType":"string"}
+{"level":"info","message":"Email id found","timestamp":"2022-01-02T14:16:25.283Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-02T14:16:25.506Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2022-01-02T14:16:25.517Z"}
