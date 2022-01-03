@@ -1,5 +1,5 @@
 const validation = require('../utilities/validation')
-const service = require('../service/label.service')
+const LabelService = require('../service/label.service')
 class Label {
     /**
      * @description function written to Added Label into the database
@@ -7,7 +7,7 @@ class Label {
      * @param {*} res
      * @returns response
      */
-     addLabelById = (req, res) => {
+     addLabel = (req, res) => {
         try {
             if (req.user) {
                 const labelName = req.body.labelName
@@ -19,32 +19,31 @@ class Label {
                 const labelInfo = {
                     labelName: req.body.labelName,
                     userId: req.user.dataForToken.id,
-                    noteId : req.params.id
+                    noteId : req.params.id,
+                    email: req.user.dataForToken.email
                 }
-                service.addLabel(labelInfo, (error, data) => {
+                LabelService.addLabel(labelInfo, (error, data) => {
                     if (error) {
-                        const response = {sucess : true , message : error.message}
-                       return res.status(401).send(response)
+                        const response = { sucess: false, message: 'Some error occured' }
+                        return res.status(404).send(response)
                     }
-                    else if (!data){
-                        const response = {sucess : true , message : data.message }
-                       return res.status(400).send(response)
+                    else if (!data) {
+                        const response = { sucess: true, message: "Successfully added label !", data: data }
+                        return res.status(400).json(response)
                     }
-                    const response = {sucess : true ,message :"Valid Entry of Token"}
+                    
+                    const response = { success: true, message: "Successfully added label !", data: data }
                     return res.status(200).json(response)
-            })
-        }
-                
+                })
+            }
             else {
-                const response = {sucess : false ,message :"Invalid Entry of Token"}
+                const response = { sucess: false, message: "Invalid Entry of Token" }
                 return res.status(400).json(response)
             }
-            
         } catch (err) {
-            return res.status(500).json({
-              message: 'Internal server Error'
-            });
-        }
+            const response = { sucess: false, message: "Internal  Server error" }
+            return res.status(500).json(response);
         }
     }
+}
     module.exports = new Label(); 

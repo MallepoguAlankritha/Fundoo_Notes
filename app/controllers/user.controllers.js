@@ -2,9 +2,10 @@
  * @description   : Taking the request from the client and gives the response 
  * @author        : Alankritha 
 */
-const userService = require('../service/user.service')
-const validation = require('../utilities/validation')
+const userService = require('../service/user.service');
+const validation = require('../utilities/validation');
 const { logger } = require("../../logger/logger");
+const { database } = require('faker/locale/en_BORK');
 class Controller {
    /**
      * @description Create and save user and sending response to service

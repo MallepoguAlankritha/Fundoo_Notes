@@ -6,9 +6,8 @@ const labelDB = require('./label.json');
 chai.use(chaiHttp);
 const { expect } = require('chai');
 chai.should();
-
 describe('Add label by id api ', () => {
-    it.only('AddLabelByIdby_Checkingserver', (done) => {
+    it('AddLabelById_by_checking_server', (done) => {
         chai
             .request(server)
             .post('/addlabel/:id')
@@ -17,18 +16,18 @@ describe('Add label by id api ', () => {
                 done();
             });
     });
-    it.only('Gives true when token is verify', (done) => {
+    it.only('Given Token should give true when token is valid', (done) => {
         const token = labelDB.label.validToken
         chai
             .request(server)
             .post('/addlabel/:id')
             .set({ authorization: token })
             .end((err, res) => {
-                res.should.have.status(201);
+                res.should.have.status(200);
                 done();
             });
     });
-    it.only('Should Give false when token is not verify', (done) => {
+    it('Given Token Should give false when token is invalidtoken', (done) => {
         const token = labelDB.label.invalidToken
         chai
             .request(server)
@@ -39,7 +38,7 @@ describe('Add label by id api ', () => {
                 done();
             });
     });
-    it.only('If payload of data is validated then it should give true', (done) => {
+    it.only('Given Token Should give true when payload is validate', (done) => {
         const token = labelDB.label.validToken;
         const labelName = {
             labelname: faker.lorem.word()
@@ -54,14 +53,14 @@ describe('Add label by id api ', () => {
                 done();
             })
     })
-    it.only('Should give true when service layer give response', (done) => {
+    it.only('Should give true when service layer is giving response', (done) => {
         const token = labelDB.label.validToken;
         const labelName = {
             labelname: faker.lorem.word()
         }
         chai
             .request(server)
-            .post('/addlabel/61d28dcc06b3b1ccde87b8b6')
+            .post('/addlabel/61d28e1906b3b1ccde87b8ba')
             .set({ authorization: token })
             .send(labelName)
             .end((err, res) => {
@@ -69,34 +68,25 @@ describe('Add label by id api ', () => {
                 done();
             })
     })
-    it.only('Should give false when service layer , is not returning appropriate response', (done) => {
+    it.only('Should give true when model layer is giving response', (done) => {
         const token = labelDB.label.validToken;
         const labelName = {
             labelname: faker.lorem.word()
         }
         chai
             .request(server)
-            .post('/addlabel/61d28dcc06b3b1ccde87b8b6')
+            .post('/addlabel/61d28e1906b3b1ccde87b8ba')
             .set({ authorization: token })
             .send(labelName)
             .end((err, res) => {
-                res.should.have.status(400);
+                res.should.have.status(200);
                 done();
             })
     })
-    it.only('Should give false when service layer , is returning null or undefine', (done) => {
-        const token = labelDB.label.validToken;
-        const labelName = {
-            labelname: faker.lorem.word()
-        }
-        chai
-            .request(server)
-            .post('/addlabel/61d28dcc06b3b1ccde87b8b6')
-            .set({ authorization: token })
-            .send(labelName)
-            .end((err, res) => {
-                res.should.have.status(401);
-                done();
-            })
-    })
-}); 
+
+
+}) 
+
+
+
+
