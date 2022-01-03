@@ -1,19 +1,18 @@
-const NoteRegister = require('../models/note.model').Note;
+const NoteRegister = require('./note.model').User;
 const mongoose = require('mongoose');
+const { logger } = require('../../logger/logger')
 
 const labelSchema = mongoose.Schema({
-    userId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'user',
-    },
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'Registeruser' },
 
     noteId: [{
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'note'
-        }],
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'NoteBook'
+    }],
 
     labelName: {
         type: String,
+        unique: true,
         required: true
     },
 
@@ -22,44 +21,54 @@ const labelSchema = mongoose.Schema({
 })
 
 const label = mongoose.model('label', labelSchema);
+
 class LabelModel {
 
     /**
-	 * @description Create a new label
-	 * @method  finds note with specific Id
-	 */
+     * @description Create a new label
+     * @method  finds note with specific Id
+     */
 
     addLabel = (labelInfo, callback) => {
-        const findNotes = NoteRegister.find({ email: labelInfo.email,_id: labelInfo.noteId });
+        const findNotes = NoteRegister.find({ email: labelInfo.email, _id: labelInfo.noteId })
         if (findNotes.length === 0) {
-            return callback('This note is not exist or this belongs to another user',null);
+            return callback('This note is not exist or this belongs to another user', null);
         }
-        const findlabel = label.find({ userId: labelInfo.id, labelName: labelInfo.labelName });
-                if (findlabel.length !== 0) {
-                    label.findOneAndUpdate({ labelName:labelInfo.labelName },{ $addToSet: { noteId: labelInfo.noteId } },(error,data)=>{
-                        if(error){
-                            callback("error occured",null)
-                        }
-                        else if(!data){
-                            callback("label is not found",null)
-                        }
-                        else{
-                            return callback(null,data)
-                        }
-                        const labelmodel = new label({
-                            userId: labelInfo.id,
-                            noteId: labelInfo.noteId,
-                            labelName: labelInfo.labelname,
-                        });
-                        labelmodel.save((error,data))
-                        .then((data)=>{
-                            return callback(null,data)
-                        }).catch((error)=>{
-                            return callback(error,null)
-                        })
+        label.find({ userId: labelInfo.userId, labelName: labelInfo.labelName }, (error, data) => {
+            if (!data || data.length === 0) {
+                
+                const labelmodel = new label({
+                    userId: labelInfo.userId,
+                    noteId: [labelInfo.noteId],
+                    labelName: labelInfo.labelName,
+                });
+                labelmodel.save((error, data))
+                    .then((data) => {
+                      
+                        return callback(null, data)
+                    }).catch((error) => {
+                      
+                        
+                        callback(error, null)
                     })
-                }
+            } else if (data) {
+                label.findOneAndUpdate({ userId: labelInfo.userId, labelName: labelInfo.labelName }, { $addToSet: { noteId: [labelInfo.noteId] } }, (error, data) => {
+                    if (error) {
+                        
+                        callback(error, null)
+                    }
+                    else if (!data) {
+                        
+                        
+                        return callback('label is  not found', data)
+                    }
+                    else {
+                       
+                        return callback(error, data)
+                    }
+                })
+            }
+        })
     }
 }
-
-module.exports = new LabelModel();
+    module.exports = new LabelModel();

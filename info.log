@@ -877,3 +877,13 @@
 {"level":"info","message":"updated successfully","timestamp":"2022-01-03T05:51:10.689Z"}
 {"level":"info","message":"successfully updated....","timestamp":"2022-01-03T05:51:10.690Z"}
 {"level":"info","message":"Succefully updated..","timestamp":"2022-01-03T05:51:10.691Z"}
+{"level":"info","message":{"__v":0,"_id":"61d2f9f4a48aa4a21b0e1902","createdAt":"2022-01-03T13:28:20.936Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-03T13:28:20.936Z","userId":["61d28dcc06b3b1ccde87b8b6"]},"timestamp":"2022-01-03T13:28:20.966Z"}
+{"level":"info","message":{"__v":0,"_id":"61d2f9f4a48aa4a21b0e1902","createdAt":"2022-01-03T13:28:20.936Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-03T13:28:20.936Z","userId":["61d28dcc06b3b1ccde87b8b6"]},"timestamp":"2022-01-03T13:28:20.976Z"}
+{"level":"info","message":"Successfully inserted note","timestamp":"2022-01-03T13:28:20.979Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-03T13:28:26.661Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d28e1906b3b1ccde87b8ba","createdAt":"2022-01-03T05:48:09.169Z","description":"e=mc2","title":"Formulaee","updatedAt":"2022-01-03T05:51:10.643Z","userId":["61d28dcc06b3b1ccde87b8b6"]},{"__v":0,"_id":"61d2f9f4a48aa4a21b0e1902","createdAt":"2022-01-03T13:28:20.936Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-03T13:28:20.936Z","userId":["61d28dcc06b3b1ccde87b8b6"]}],"timestamp":"2022-01-03T13:28:26.667Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-03T13:28:31.969Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d28e1906b3b1ccde87b8ba","createdAt":"2022-01-03T05:48:09.169Z","description":"e=mc2","title":"Formulaee","updatedAt":"2022-01-03T05:51:10.643Z","userId":["61d28dcc06b3b1ccde87b8b6"]},{"__v":0,"_id":"61d2f9f4a48aa4a21b0e1902","createdAt":"2022-01-03T13:28:20.936Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-03T13:28:20.936Z","userId":["61d28dcc06b3b1ccde87b8b6"]}],"timestamp":"2022-01-03T13:28:31.976Z"}
+{"level":"info","message":"updated successfully","timestamp":"2022-01-03T13:28:36.865Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2022-01-03T13:28:36.866Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2022-01-03T13:28:36.866Z"}

@@ -78,11 +78,17 @@ class Validation {
         noteId: Joi.string().required().min(20),
         userId: Joi.string()
       });
-      labelValidation = Joi.object({
-        labelName: Joi.string()
-          .required()
+      validateLabel = Joi.object({
+        labelName: Joi.string().required()
       });
-                
+      validateUserid = Joi.object({
+        id: Joi.string()
+      });
+      labelvalidator = Joi.object({
+        userId:Joi.string(),
+        labelId
+        :Joi.string()
+      });      
   }
    
 
