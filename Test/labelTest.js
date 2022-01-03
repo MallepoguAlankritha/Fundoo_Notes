@@ -112,25 +112,23 @@ describe('Add label by id api ', () => {
                 res.should.have.status(200);
                 done();
             })
-    })   
-    it.only('When note added into existing label, it should give true', (done) => {
-        const token = labelDB.label.validToken;
-        const labelName = {
-            labelname: faker.lorem.word()
-        }
-        chai
-            .request(server)
-            .post('/addlabel/61d28e1906b3b1ccde87b8ba')
-            .set({ authorization: token })
-            .send(labelName)
-            .end((err, res) => {
-                res.should.have.status(201);
-                done();
-            })
-    })
-
-
+    })  
+it.only('Should give true when new label is created', (done) => {
+    const token = labelDB.label.validToken;
+    const labelName = {
+        labelname: faker.lorem.word()
+    }
+    chai
+        .request(server)
+        .post('/addlabel/61cc41d4db10efa515b4e1e8')
+        .set({ authorization: token })
+        .send(labelName)
+        .end((err, res) => {
+            res.should.have.status(200);
+            done();
+        })
 }) 
+})      
 
 
 

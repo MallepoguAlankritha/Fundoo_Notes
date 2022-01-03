@@ -46,6 +46,17 @@ class LabelModel {
                         else{
                             return callback(null,data)
                         }
+                        const labelmodel = new label({
+                            userId: labelInfo.id,
+                            noteId: labelInfo.noteId,
+                            labelName: labelInfo.labelname,
+                        });
+                        labelmodel.save((error,data))
+                        .then((data)=>{
+                            return callback(null,data)
+                        }).catch((error)=>{
+                            return callback(error,null)
+                        })
                     })
                 }
     }
