@@ -24,8 +24,8 @@ class Label {
                 }
                 LabelService.addLabel(labelInfo, (error, data) => {
                     if (error) {
-                        const response = { sucess: false, message: 'Some error occured' }
-                        return res.status(404).send(response)
+                        const response = {sucess : false , message : error.message}
+                        return res.status(200).send(response)
                     }
                     else if (!data) {
                         const response = { sucess: true, message: "Successfully added label !", data: data }
