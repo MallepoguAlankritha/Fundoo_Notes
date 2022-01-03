@@ -10,7 +10,7 @@ class Label {
      addLabel = (req, res) => {
         try {
             if (req.user) {
-                const labelName = req.body.labelName
+                const labelName ={labelName : req.body.labelName}
                 const validateResult = validation.labelValidation.validate(labelName);
                 if (validateResult.error) {
                     const response = { sucess: false, message: "Wrong Input Vaidation" }
