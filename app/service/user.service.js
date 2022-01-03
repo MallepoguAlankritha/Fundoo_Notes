@@ -50,7 +50,7 @@ class userService {
           });
         } else {
           logger.error(error);
-          return callback(error);
+          return callback(error,null);
         }
       });
     } 

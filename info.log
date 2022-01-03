@@ -861,3 +861,19 @@
 {"level":"info","message":"Email id found","timestamp":"2022-01-02T14:16:25.283Z"}
 {"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-02T14:16:25.506Z"}
 {"level":"info","message":"User logged in successfully","timestamp":"2022-01-02T14:16:25.517Z"}
+{"level":"info","message":"success fully registered","timestamp":"2022-01-03T05:46:52.786Z"}
+{"level":"info","message":{"__v":0,"_id":"61d28dcc06b3b1ccde87b8b6","createdAt":"2022-01-03T05:46:52.597Z","email":"anishasree@gmail.com","firstName":"Anisha","lastName":"Sree","password":"$2b$08$vSp5wye7nW5PxQ7V8RoyIelRCVAWFqWRW58/cK5/bAOiPuiGM4tuO","updatedAt":"2022-01-03T05:46:52.597Z"},"timestamp":"2022-01-03T05:46:52.799Z"}
+{"level":"info","message":"User registered","timestamp":"2022-01-03T05:46:52.802Z"}
+{"level":"info","message":"Email id found","timestamp":"2022-01-03T05:47:18.364Z"}
+{"level":"info","message":{"__v":0,"_id":"61d28dcc06b3b1ccde87b8b6","createdAt":"2022-01-03T05:46:52.597Z","email":"anishasree@gmail.com","firstName":"Anisha","lastName":"Sree","password":"$2b$08$vSp5wye7nW5PxQ7V8RoyIelRCVAWFqWRW58/cK5/bAOiPuiGM4tuO","updatedAt":"2022-01-03T05:46:52.597Z"},"timestamp":"2022-01-03T05:47:18.473Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2022-01-03T05:47:18.517Z"}
+{"level":"info","message":{"__v":0,"_id":"61d28e1906b3b1ccde87b8ba","createdAt":"2022-01-03T05:48:09.169Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-03T05:48:09.169Z","userId":["61d28dcc06b3b1ccde87b8b6"]},"timestamp":"2022-01-03T05:48:09.272Z"}
+{"level":"info","message":{"__v":0,"_id":"61d28e1906b3b1ccde87b8ba","createdAt":"2022-01-03T05:48:09.169Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-03T05:48:09.169Z","userId":["61d28dcc06b3b1ccde87b8b6"]},"timestamp":"2022-01-03T05:48:09.279Z"}
+{"level":"info","message":"Successfully inserted note","timestamp":"2022-01-03T05:48:09.281Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-03T05:48:52.471Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d28e1906b3b1ccde87b8ba","createdAt":"2022-01-03T05:48:09.169Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-03T05:48:09.169Z","userId":["61d28dcc06b3b1ccde87b8b6"]}],"timestamp":"2022-01-03T05:48:52.473Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-03T05:49:59.281Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d28e1906b3b1ccde87b8ba","createdAt":"2022-01-03T05:48:09.169Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-03T05:48:09.169Z","userId":["61d28dcc06b3b1ccde87b8b6"]}],"timestamp":"2022-01-03T05:49:59.283Z"}
+{"level":"info","message":"updated successfully","timestamp":"2022-01-03T05:51:10.689Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2022-01-03T05:51:10.690Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2022-01-03T05:51:10.691Z"}

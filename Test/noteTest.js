@@ -28,7 +28,6 @@ describe("Create Note", () => {
       .request(server)
       .post("/createNote")
       .set({ authorization: token })
-      .send(token)
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");

@@ -68,7 +68,7 @@ class Controller {
           };
           const loginValidation = validation.authLogin.validate(userLoginInfo);
             if (loginValidation.error) {
-              logger.error(loginValidation.error);
+              logger.error('wrong input validation');
                 res.status(400).send({
                     success: false,
                     message: loginValidation.error.message
@@ -80,7 +80,6 @@ class Controller {
                   return res.status(400).json({
                       success: false,
                       message: 'Unable to login .please enter correct info',
-                      error
                   });
               }
               logger.info("User logged in successfully");
