@@ -120,7 +120,7 @@ it.only('Should give true when new label is created', (done) => {
     }
     chai
         .request(server)
-        .post('/addlabel/61cc41d4db10efa515b4e1e8')
+        .post('/addlabel/61d28e1906b3b1ccde87b8ba')
         .set({ authorization: token })
         .send(labelName)
         .end((err, res) => {
