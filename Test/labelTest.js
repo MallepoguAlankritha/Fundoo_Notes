@@ -98,6 +98,21 @@ describe('Add label by id api ', () => {
                 done();
             })
     })
+    it.only('Should give true when fetched user is belong to labelInfo', (done) => {
+        const token = labelDB.label.validToken;
+        const labelName = {
+            labelname: faker.lorem.word()
+        }
+        chai
+            .request(server)
+            .post('/addlabel/61d28e1906b3b1ccde87b8ba')
+            .set({ authorization: token })
+            .send(labelName)
+            .end((err, res) => {
+                res.should.have.status(200);
+                done();
+            })
+    })   
 
 
 }) 
