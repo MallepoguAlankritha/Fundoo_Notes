@@ -50,7 +50,52 @@ describe('Add label by id api ', () => {
             .set({ authorization: token })
             .send(labelName)
             .end((err, res) => {
-                res.should.have.status(201);
+                res.should.have.status(200);
+                done();
+            })
+    })
+    it.only('Should give true when service layer give response', (done) => {
+        const token = labelDB.label.validToken;
+        const labelName = {
+            labelname: faker.lorem.word()
+        }
+        chai
+            .request(server)
+            .post('/addlabel/61d28dcc06b3b1ccde87b8b6')
+            .set({ authorization: token })
+            .send(labelName)
+            .end((err, res) => {
+                res.should.have.status(200);
+                done();
+            })
+    })
+    it.only('Should give false when service layer , is not returning appropriate response', (done) => {
+        const token = labelDB.label.validToken;
+        const labelName = {
+            labelname: faker.lorem.word()
+        }
+        chai
+            .request(server)
+            .post('/addlabel/61d28dcc06b3b1ccde87b8b6')
+            .set({ authorization: token })
+            .send(labelName)
+            .end((err, res) => {
+                res.should.have.status(400);
+                done();
+            })
+    })
+    it.only('Should give false when service layer , is returning null or undefine', (done) => {
+        const token = labelDB.label.validToken;
+        const labelName = {
+            labelname: faker.lorem.word()
+        }
+        chai
+            .request(server)
+            .post('/addlabel/61d28dcc06b3b1ccde87b8b6')
+            .set({ authorization: token })
+            .send(labelName)
+            .end((err, res) => {
+                res.should.have.status(401);
                 done();
             })
     })
