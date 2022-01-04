@@ -132,7 +132,7 @@ class LabelController {
             return res.status(500).json(response)
         }
     }
-    deletelabelById = (req, res) => {
+    deletelabelById = async (req, res) => {
         try {
             const credentials = {
                 id: req.params.id,
@@ -143,18 +143,18 @@ class LabelController {
                 const response = { sucess: false, message: "Validaton faliled", error: validatiionResult.error }
                 return res.status(400).json(response)
             }
-            LabelService.deleteLabel(credentials, resolve, reject)
-            function resolve(data){
-                const response = { sucess: true, message: "label is deleted Succesfully", data:data }
-                return res.status(200).json(response)
-            }
-            function reject(error){
-                const response = { sucess: false, message: "failed to remove labels", error: error }
+            let deletelabel = await LabelService.deleteLabel(credentials)
+                if(!deletelabel){
+                    const response = { sucess: false, message: "failed to remove labels",}
                 return res.status(400).json(response)
             }
 
-        }catch(error){
-            const response = { sucess: false, message: "Internal  Server error" }
+            else{
+                const response = { sucess: true, message: "label is deleted Succesfully", data:deletelabel }
+                return res.status(200).json(response)
+            }
+    } catch(error){
+        const response = { sucess: false, message: "Internal  Server error" ,error}
             return res.status(500).json(response)
         }
     }
