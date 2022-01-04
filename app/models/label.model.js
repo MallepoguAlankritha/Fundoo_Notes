@@ -35,11 +35,11 @@ class LabelModel {
             return callback('This note is not exist or this belongs to another user', null);
         }
         label.find({ userId: labelInfo.userId, labelName: labelInfo.labelName }, (error, data) => {
-            if (!data) {
+            if (!data || data.length === 0) {
                 
                 const labelmodel = new label({
                     userId: labelInfo.userId,
-                    noteId: [labelInfo.noteId],
+                    noteId: [labelInfo.userId],
                     labelName: labelInfo.labelName,
                 });
                 labelmodel.save((error, data))
