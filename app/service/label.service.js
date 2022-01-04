@@ -26,12 +26,14 @@ class LabelService {
     }
     // Retrieve all labels by Id
     getlabelById = (credential) => {
-        return new Promise((resolve,reject)=>{
-            if(credential){
-                resolve(credential)
-            }
-                reject("data is not found")
-            })
+        return new Promise((resolve, reject) => {
+            labelmodel.getlabelById(credential)
+                .then(data => {
+                    resolve(data)
+                }).catch(error => {
+                    reject(error)
+                })
+        })
     }
 }
 
