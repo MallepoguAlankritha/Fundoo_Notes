@@ -92,6 +92,10 @@ class Validation {
       updatelabelbyid =Joi.object({
         userId:Joi.string(),
         id:Joi.string()
+      });
+      deletelabel = Joi.object({
+        userId:Joi.string(),
+        id:Joi.string()
       });     
   }
    

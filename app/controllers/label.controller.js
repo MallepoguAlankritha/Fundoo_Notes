@@ -133,8 +133,17 @@ class LabelController {
         }
     }
     deletelabelById = (req, res) => {
-        try{
-            const response = { sucess: false, message: "Add Controller Layer" }
+        try {
+            const credentials = {
+                id: req.params.id,
+                userId: req.user.dataForToken.id
+            }
+            const validatiionResult = validation.deletelabel.validate(credentials)
+            if (validatiionResult.error) {
+                const response = { sucess: false, message: "Validaton faliled", error: validatiionResult.error }
+                return res.status(400).json(response)
+            }
+            const response = { sucess: true, message: "Add Controller Layer" }
             return res.status(200).json(response)
 
         }catch(error){
