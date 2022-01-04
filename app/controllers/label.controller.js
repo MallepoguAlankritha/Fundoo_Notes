@@ -145,7 +145,7 @@ class LabelController {
             }
             LabelService.deleteLabel(credentials, resolve, reject)
             function resolve(data){
-                const response = { sucess: true, message: "label is deleted Succesfully", error: validatiionResult.error }
+                const response = { sucess: true, message: "label is deleted Succesfully", data:data }
                 return res.status(200).json(response)
             }
             function reject(error){

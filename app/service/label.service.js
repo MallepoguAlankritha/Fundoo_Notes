@@ -45,9 +45,10 @@ class LabelService {
             })
         })
     }
-    deleteLabel  = (id, resolve, reject)=>{
-        if(id){
-           return resolve(id)
+    deleteLabel = async (credential, resolve, reject) => {
+        let deletelabel = await labelmodel.deleteLabel(credential)
+        if(deletelabel){
+            return resolve(deletelabel)
         }
         return reject(null)
     }
