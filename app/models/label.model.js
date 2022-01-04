@@ -92,5 +92,13 @@ class LabelModel {
             })
         })
     }
+    updatelabelById = (updatelabel) => {
+        return new Promise((resolve, reject) => {
+            if (updatelabel) {
+                resolve(updatelabel)
+            }
+            reject("Some error occured")
+        })
+    }
 }
     module.exports = new LabelModel();

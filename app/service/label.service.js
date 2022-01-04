@@ -37,10 +37,12 @@ class LabelService {
     }
     updatelabelById = (updatelabel) => {
         return new Promise((resolve, reject) => {
-            if (updatelabel) {
-                resolve(updatelabel)
-            }
-            reject("Some error occured")
+            labelmodel.updatelabelById(updatelabel)
+            .then(data=>{
+                resolve(data)
+            }).catch(error=>{
+                reject(error)
+            })
         })
     }
 }
