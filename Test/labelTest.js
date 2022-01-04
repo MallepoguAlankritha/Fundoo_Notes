@@ -185,6 +185,17 @@ describe('get label  api ', () => {
                 done();
             });
     })
+    it.only('Should return true from GetLabel API model Layer ,return appropriate response" ', (done) => {
+        const token = labelDB.label.validToken;
+        chai
+            .request(server)
+            .get('/getlabel')
+            .set({ authorization: token })
+            .end((err, res) => {
+                res.should.have.status(200);
+                done();
+            });
+    })
 })     
 
 
