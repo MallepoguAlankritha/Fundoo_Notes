@@ -283,7 +283,18 @@ describe('get label_by id api ', () => {
                     done();
                 });
     });
-})     
+}) 
+describe('update label_by id api ', () => {
+    it.only('Added Controller layer and Checking Response of Updatelabelby_id', (done) => {
+        chai
+            .request(server)
+            .put('/updatelabel/:id')
+            .end((err, res) => {
+                res.should.have.status(500);
+                done();
+            });
+    });
+})    
 
 
 

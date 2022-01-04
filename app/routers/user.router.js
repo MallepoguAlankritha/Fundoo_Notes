@@ -33,4 +33,6 @@ app.delete("/deleteNote/:id", helperclass.validateToken, noteController.deleteNo
  app.get('/getlabel',helperclass.validateToken,label.getlabel);
  // api for get Label  
  app.get('/getlabel/:id', helperclass.validateToken,label.getlabelById);
+ // api for update Label  
+ app.put('/updatelabel/:id', helperclass.validateToken,label.updatelabelById);
 }

@@ -99,7 +99,17 @@ class LabelController {
             })
         }
         catch(error) {
-            console.log("error",error)
+            
+            const response = { sucess: false, message: "Internal  Server error" }
+            return res.status(500).json(response)
+        }
+    }
+
+    updatelabelById = (req, res) => {
+        try{
+            console.log("Added Controller Layer")
+        }catch(error){
+            
             const response = { sucess: false, message: "Internal  Server error" }
             return res.status(500).json(response)
         }
