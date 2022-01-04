@@ -890,3 +890,6 @@
 {"level":"info","message":"Email id found","timestamp":"2022-01-04T03:27:03.040Z"}
 {"level":"info","message":{"__v":0,"_id":"61d28dcc06b3b1ccde87b8b6","createdAt":"2022-01-03T05:46:52.597Z","email":"anishasree@gmail.com","firstName":"Anisha","lastName":"Sree","password":"$2b$08$vSp5wye7nW5PxQ7V8RoyIelRCVAWFqWRW58/cK5/bAOiPuiGM4tuO","updatedAt":"2022-01-03T05:46:52.597Z"},"timestamp":"2022-01-04T03:27:03.257Z"}
 {"level":"info","message":"User logged in successfully","timestamp":"2022-01-04T03:27:03.277Z"}
+{"level":"info","message":"Email id found","timestamp":"2022-01-04T06:11:42.167Z"}
+{"level":"info","message":{"__v":0,"_id":"61d28dcc06b3b1ccde87b8b6","createdAt":"2022-01-03T05:46:52.597Z","email":"anishasree@gmail.com","firstName":"Anisha","lastName":"Sree","password":"$2b$08$vSp5wye7nW5PxQ7V8RoyIelRCVAWFqWRW58/cK5/bAOiPuiGM4tuO","updatedAt":"2022-01-03T05:46:52.597Z"},"timestamp":"2022-01-04T06:11:42.244Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2022-01-04T06:11:42.255Z"}

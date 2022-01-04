@@ -430,6 +430,17 @@ describe('Delete label_by id api ', () => {
                     done();
                 });
         });
+        it.only('Should return true when label is deleted ,return appropriate response', (done) => {
+            const token = labelDB.label.validToken
+            chai
+                .request(server)
+                .delete('/deletelabel/61d28e1906b3b1ccde87b8ba')
+                .set({authorization:token})
+                .end((err, res) => {
+                    res.should.have.status(200);
+                    done();
+                });
+        });
     })
 
 
