@@ -294,6 +294,17 @@ describe('update label_by id api ', () => {
                 done();
             });
     });
+    it.only('it should give true when,token is valid ', (done) => {
+        const token = labelDB.label.validToken
+        chai
+            .request(server)
+            .put('/updatelabel/:id')
+            .set({authorization : token})
+            .end((err, res) => {
+                res.should.have.status(200);
+                done();
+            });
+    });
 })    
 
 

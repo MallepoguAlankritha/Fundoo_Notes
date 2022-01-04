@@ -107,7 +107,8 @@ class LabelController {
 
     updatelabelById = (req, res) => {
         try{
-            console.log("Added Controller Layer")
+            const response = { sucess: true, message: "token is decoded and giving true response" }
+            return res.status(200).json(response)
         }catch(error){
             
             const response = { sucess: false, message: "Internal  Server error" }
