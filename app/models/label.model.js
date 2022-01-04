@@ -34,7 +34,7 @@ class LabelModel {
         if (findNotes.length === 0) {
             return callback('This note is not exist or this belongs to another user', null);
         }
-        label.findOne({ userId: labelInfo.userId, labelName: labelInfo.labelName }, (error, data) => {
+        label.find({ userId: labelInfo.userId, labelName: labelInfo.labelName }, (error, data) => {
             if (!data) {
                 
                 const labelmodel = new label({
@@ -69,6 +69,13 @@ class LabelModel {
                 })
             }
         })
+    }
+    getLabel = (labelInfo, callback) => {
+        if (labelInfo) {
+            return callback("Service is not giving response", null)
+        }else{
+            return callback(null, labelInfo)
+        }
     }
 }
     module.exports = new LabelModel();

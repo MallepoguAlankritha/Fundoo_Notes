@@ -53,16 +53,33 @@ class LabelController {
     getlabel = (req,res)=>{
         try{
             if(req.user){
-                    const response = {sucess : true , message : 'Some error occured'}
-                   return res.status(200).send(response)
+                const userId = { id: req.user.dataForToken.id }
+                const validateResult = validation.validateUserid.validate(userId);
+                if (validateResult.error) {
+                    console.log(validateResult.error)
+                    const response = { sucess: false, message: 'Wrong Input Validation', data: validateResult }
+                    return res.status(400).send(response)
+                }
+                labelService.getLabel(userId, (error, data) => {
+                    if (error) {
+                        const response = { sucess: false, message: 'Some error occured' }
+                        return res.status(400).send(response)
+                    }
+                    else if(!data){
+                        const response = { sucess: false, message: 'data is undefine or null' }
+                        return res.status(400).send(response)
+                    }
+                    const response = { sucess: true, message: 'label is fetched' }
+                    return res.status(200).send(response)
+                })
             }
-            else{
-                const response = {sucess : true , message : 'Some error occured'}
-                   return res.status(400).send(response)
+            else {
+                const response = { sucess: false, message: 'Invalid Token' }
+                return res.status(400).send(response)
             }
         }
-        catch(error){
-            const response = {sucess : false ,message :"Internal  Server error"}
+        catch (error) {
+            const response = { sucess: false, message: "Internal  Server error" }
             return res.status(500).json(response)
         }
     }

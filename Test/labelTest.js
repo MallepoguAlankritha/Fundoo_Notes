@@ -168,9 +168,20 @@ describe('get label  api ', () => {
             .request(server)
             .get('/getlabel')
             .set({authorization : token})
-            .send({id : "32145345666"})
+            .send({id : "32161cc41d4db10efa515b4e1e85345666"})
             .end((err, res) => {
-                res.should.have.status(400);
+                res.should.have.status(200);
+                done();
+            });
+    })
+    it.only('Should return true from GetLabel API Service Layer ,return appropriate response" ', (done) => {
+        const token = labelDB.label.validToken;
+        chai
+            .request(server)
+            .get('/getlabel')
+            .set({ authorization: token })
+            .end((err, res) => {
+                res.should.have.status(200);
                 done();
             });
     })
