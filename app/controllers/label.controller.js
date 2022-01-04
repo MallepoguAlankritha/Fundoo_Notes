@@ -1,5 +1,6 @@
 const validation = require('../utilities/validation')
 const LabelService = require('../service/label.service')
+const {logger} = require('../../logger/logger')
 class LabelController {
     /**
      * @description function written to Added Label into the database
@@ -25,15 +26,16 @@ class LabelController {
                 }
                 LabelService.addLabel(labelInfo, (error, data) => {
                     if (error) {
-                        
+                        logger.error('Some error occurred !')
                         const response = { sucess: false, message: 'Some error occured' }
                         return res.status(404).send(response)
                     }
                     else if (!data) {
+                        logger.info('Some error occurred while adding label')
                         const response = { sucess: false, message: "Successfully added label !", data: data }
                         return res.status(400).json(response)
                     }
-                   
+                    logger.info('Successfully added label !');
                     const response = { sucess: true, message: "Successfully added label !", data: data }
                     return res.status(200).json(response)
                 })

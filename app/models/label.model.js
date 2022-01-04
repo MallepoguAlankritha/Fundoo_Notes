@@ -44,10 +44,10 @@ class LabelModel {
                 });
                 labelmodel.save((error, data))
                     .then((data) => {
-                      
+                        logger.info('Successfully added label !');
                         return callback(null, data)
                     }).catch((error) => {
-                      
+                        logger.info('Some error occurred while adding label');
                         
                         callback(error, null)
                     })
@@ -59,11 +59,11 @@ class LabelModel {
                     }
                     else if (!data) {
                         
-                        
+                        logger.info('label is not found !');
                         return callback('label is  not found', data)
                     }
                     else {
-                       
+                        logger.info('Successfully added label !');
                         return callback(error, data)
                     }
                 })
