@@ -56,6 +56,10 @@ class LabelController {
                     const response = {sucess : true , message : 'Some error occured'}
                    return res.status(200).send(response)
             }
+            else{
+                const response = {sucess : true , message : 'Some error occured'}
+                   return res.status(400).send(response)
+            }
         }
         catch(error){
             const response = {sucess : false ,message :"Internal  Server error"}

@@ -150,6 +150,17 @@ describe('get label  api ', () => {
                 done();
             });
     });
+    it.only('it should give false when token is invalid', (done) => {
+        const token = labelDB.label.invalidToken;
+        chai
+            .request(server)
+            .get('/getlabel')
+            .set({authorization : token})
+            .end((err, res) => {
+                res.should.have.status(400);
+                done();
+            });
+    });
 })     
 
 
