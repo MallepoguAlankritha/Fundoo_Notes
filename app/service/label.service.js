@@ -12,17 +12,16 @@ class LabelService {
             return callback(null, data)
         })
     }
-    getLabel = (labelId, callback) => {
-        if (labelId) {
-            labelmodel.getLabel(labelId, (error, data) => {
-                if (error) {
-                    return callback(error, null)
-                }
-                else {
-                    return callback("Service layer is not giving response", data)
-                }
+     // Retrieve all labels
+     getLabel = (userId) => {
+        return new Promise((resolve, reject) => {
+            let result = labelmodel.getLabel(userId)
+            result.then((data) => {
+                resolve(data)
+            }).catch((error) => {
+                reject(error)
             })
-}
+        })
     }
 }
 

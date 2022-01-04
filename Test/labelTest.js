@@ -196,6 +196,29 @@ describe('get label  api ', () => {
                 done();
             });
     })
+    it.only('Should return true when Label is added and manage user condition', (done) => {
+        const token = labelDB.label.validToken;
+        chai
+            .request(server)
+            .get('/getlabel')
+            .set({ authorization: token })
+            .end((err, res) => {
+                res.should.have.status(200);
+                done();
+            });
+    })
+})
+
+describe('get label_by id api ', () => {
+    it.only('getlabelbyid_checkingserver', (done) => {
+        chai
+            .request(server)
+            .get('/getlabel/:id')
+            .end((err, res) => {
+                res.should.have.status(500);
+                done();
+            });
+    });
 })     
 
 

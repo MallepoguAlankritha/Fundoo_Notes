@@ -50,28 +50,23 @@ class LabelController {
             return res.status(500).json(response);
         }
     }
-    getlabel = (req,res)=>{
-        try{
-            if(req.user){
+    getlabel = (req, res) => {
+        try {
+            if (req.user) {
                 const userId = { id: req.user.dataForToken.id }
                 const validateResult = validation.validateUserid.validate(userId);
                 if (validateResult.error) {
-                    console.log(validateResult.error)
                     const response = { sucess: false, message: 'Wrong Input Validation', data: validateResult }
                     return res.status(400).send(response)
                 }
-                labelService.getLabel(userId, (error, data) => {
-                    if (error) {
+                LabelService.getLabel(userId)
+                    .then((data) => {
+                        const response = { sucess: true, message: 'label is fetched', data: data }
+                        return res.status(200).send(response)
+                    }).catch((error) => {
                         const response = { sucess: false, message: 'Some error occured' }
-                        return res.status(400).send(response)
-                    }
-                    else if(!data){
-                        const response = { sucess: false, message: 'data is undefine or null' }
-                        return res.status(400).send(response)
-                    }
-                    const response = { sucess: true, message: 'label is fetched' }
-                    return res.status(200).send(response)
-                })
+                        return res.status(200).send(response)
+                    })
             }
             else {
                 const response = { sucess: false, message: 'Invalid Token' }
@@ -83,5 +78,15 @@ class LabelController {
             return res.status(500).json(response)
         }
     }
+    getlabelById = (req,res)=>{
+        try{
+            console.log("try block");
+        }
+        catch{
+            const response = { sucess: false, message: "Internal  Server error" }
+            return res.status(500).json(response)
+        }
+    }
+
 }
     module.exports = new LabelController(); 

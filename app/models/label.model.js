@@ -70,12 +70,17 @@ class LabelModel {
             }
         })
     }
-    getLabel = (userId, callback) => {
-        if (!userId) {
-            return callback("Service is not giving response", null);
-        }else{
-            return callback(null, userId);
-        }
+    // Retrieve all labels
+    getLabel = (userId) => {
+        return new Promise((resolve, reject) => {
+            label.find({ userId: userId.id })
+                .then((data) => {
+                    resolve(data)
+                }).catch((error) => {
+
+                    reject(error)
+                })
+        })
     }
 }
     module.exports = new LabelModel();
