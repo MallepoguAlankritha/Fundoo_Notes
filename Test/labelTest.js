@@ -219,6 +219,15 @@ describe('get label_by id api ', () => {
                 done();
             });
     });
+    it.only('it should give true when ,add controller layer and checking the response of token in getlabel_by_id', (done) => {
+        chai
+            .request(server)
+            .get('/getlabel/:id')
+            .end((err, res) => {
+                res.should.have.status(500);
+                done();
+            });
+    });
 })     
 
 

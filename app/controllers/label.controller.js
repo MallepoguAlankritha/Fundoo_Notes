@@ -80,7 +80,8 @@ class LabelController {
     }
     getlabelById = (req,res)=>{
         try{
-            console.log("try block");
+            const response = { sucess: false, message: "Internal  Server error" }
+            return res.status(200).json(response)
         }
         catch{
             const response = { sucess: false, message: "Internal  Server error" }
