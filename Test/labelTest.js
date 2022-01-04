@@ -320,10 +320,22 @@ describe('update label_by id api ', () => {
         const token = labelDB.label.invalidToken
         chai
             .request(server)
-            .put('/updatelabel/61cfd6c0209469fbeb')
+            .put('/updatelabel/61d28e1906b3b1ccde87b8ba')
             .set({authorization : token})
             .end((err, res) => {
                 res.should.have.status(400);
+                done();
+            });
+    });
+    it.only('it should give true when Service Layer is Added ', (done) => {
+        const token = labelDB.label.validToken
+        chai
+            .request(server)
+            .put('/updatelabel/61d28e1906b3b1ccde87b8ba')
+            .set({authorization : token})
+            .send({labelName : 'Alankritha'})
+            .end((err, res) => {
+                res.should.have.status(200);
                 done();
             });
     });
