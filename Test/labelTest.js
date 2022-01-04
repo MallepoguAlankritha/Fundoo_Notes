@@ -350,7 +350,19 @@ describe('update label_by id api ', () => {
                 res.should.have.status(200);
                 done();
             });
-    }); 
+    });
+    it.only('it should give true when label is Updated is Succesfully ', (done) => {
+        const token = labelDB.label.validToken
+        chai
+            .request(server)
+            .put('/updatelabel/61d28e1906b3b1ccde87b8ba')
+            .set({authorization : token})
+            .send({labelName : 'Alankritha'})
+            .end((err, res) => {
+                res.should.have.status(200);
+                done();
+            });
+    });  
 })    
 
 
