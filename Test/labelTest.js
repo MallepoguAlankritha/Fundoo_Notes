@@ -83,7 +83,7 @@ describe('Add label by id api ', () => {
                 done();
             })
     })
-    it.only('Should return true when note is belong to same user', (done) => {
+    it('Should return true when note is belong to same user', (done) => {
         const token = labelDB.label.validToken;
         const labelName = {
             labelname: faker.lorem.word()
@@ -98,7 +98,7 @@ describe('Add label by id api ', () => {
                 done();
             })
     })
-    it.only('Should give true when fetched user is belong to labelInfo', (done) => {
+    it('Should give true when fetched user is belong to labelInfo', (done) => {
         const token = labelDB.label.validToken;
         const labelName = {
             labelname: faker.lorem.word()
@@ -113,7 +113,7 @@ describe('Add label by id api ', () => {
                 done();
             })
     })  
-it.only('Should give true when new label is created', (done) => {
+it('Should give true when new label is created', (done) => {
     const token = labelDB.label.validToken;
     const labelName = {
         labelname: faker.lorem.word()
@@ -128,7 +128,18 @@ it.only('Should give true when new label is created', (done) => {
             done();
         })
 }) 
-})      
+}) 
+describe('get label  api ', () => {
+    it.only('getlabel_by_checking_server', (done) => {
+        chai
+            .request(server)
+            .get('/getlabel')
+            .end((err, res) => {
+                res.should.have.status(500);
+                done();
+            });
+    });
+})     
 
 
 

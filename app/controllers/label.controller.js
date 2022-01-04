@@ -46,9 +46,20 @@ class LabelController {
             }
             
         } catch (err) {
-            console.log("in controller",err);
             const response = { sucess: false, message: "Internal  Server error" }
             return res.status(500).json(response);
+        }
+    }
+    getlabel = (req,res)=>{
+        try{
+            if(req.user){
+                    const response = {sucess : true , message : 'Some error occured'}
+                   return res.status(200).send(response)
+            }
+        }
+        catch(error){
+            const response = {sucess : false ,message :"Internal  Server error"}
+            return res.status(500).json(response)
         }
     }
 }

@@ -29,4 +29,6 @@ app.put("/updateNote/:id", helperclass.validateToken, noteController.updateNoteB
 app.delete("/deleteNote/:id", helperclass.validateToken, noteController.deleteNoteById);
  // api for addLabel By Id 
  app.post('/addlabel/:id', helperclass.validateToken, label.addLabel);
+ // api for get label 
+ app.get('/getlabel',helperclass.validateToken,label.getlabel)
 }
