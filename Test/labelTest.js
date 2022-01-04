@@ -139,6 +139,17 @@ describe('get label  api ', () => {
                 done();
             });
     });
+    it.only('it should give true when token is decoded', (done) => {
+        const token = labelDB.label.validToken;
+        chai
+            .request(server)
+            .get('/getlabel')
+            .set({authorization : token})
+            .end((err, res) => {
+                res.should.have.status(200);
+                done();
+            });
+    });
 })     
 
 
