@@ -272,6 +272,17 @@ describe('get label_by id api ', () => {
                     done();
                 });
     });
+    it.only('it should give true when , check response with valid Param and findng the label with label id ', (done) => { 
+        const token = labelDB.label.validToken
+        chai
+            .request(server)
+            .get('/getlabel/61d28e1906b3b1ccde87b8ba')
+            .set({ authorization: token })
+            .end((err, res) => {
+                res.should.have.status(201);
+                    done();
+                });
+    });
 })     
 
 
