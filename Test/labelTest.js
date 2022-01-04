@@ -363,8 +363,19 @@ describe('update label_by id api ', () => {
                 done();
             });
     });  
-})    
-
+})  
+describe('Delete label_by id api ', () => {
+    it.only('it should give true when,token is valid ', (done) => {
+            const token = labelDB.label.validToken
+            chai
+                .request(server)
+                .delete('/deletelabel/:id')
+                .end((err, res) => {
+                    res.should.have.status(500);
+                    done();
+                });
+        });  
+    })
 
 
 
