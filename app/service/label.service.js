@@ -1,3 +1,4 @@
+const { resolve } = require('bluebird')
 const labelmodel = require('../models/label.model')
 class LabelService {
     /**
@@ -22,6 +23,15 @@ class LabelService {
                 reject(error)
             })
         })
+    }
+    // Retrieve all labels by Id
+    getlabelById = (credential) => {
+        return new Promise((resolve,reject)=>{
+            if(credential){
+                resolve(credential)
+            }
+                reject("data is not found")
+            })
     }
 }
 
