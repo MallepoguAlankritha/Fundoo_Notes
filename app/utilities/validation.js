@@ -88,7 +88,11 @@ class Validation {
         userId:Joi.string(),
         labelId
         :Joi.string()
-      });      
+      }); 
+      updatelabelbyid =Joi.object({
+        userId:Joi.string(),
+        id:Joi.string()
+      });     
   }
    
 

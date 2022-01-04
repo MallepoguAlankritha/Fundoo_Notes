@@ -106,16 +106,21 @@ class LabelController {
     }
 
     updatelabelById = (req, res) => {
-        try{
-            if(req.user){
-                const response = { sucess: true, message: "token is decoded and giving true response" }
-                 return res.status(200).json(response)
-            }else{
-                const response = { sucess: true, message: "token is decoded and giving true response" }
-                 return res.status(400).json(response)
+        try {
+            const updtlabel = {
+                userId: req.user.dataForToken.id,
+                id: req.params.id
+            };
+            const validatiionResult = validation.updatelabelbyid.validate(updtlabel)
+            if(validatiionResult.error){
+            const response = { sucess: false, message: "Validation Failed", error : validatiionResult.error }
+             return res.status(422).json(response)
             }
+                const response = { sucess: true, message: "token is decoded and giving true response" }
+                return res.status(200).json(response)
 
-        }catch(error){
+            } catch (error) {
+               
             
             const response = { sucess: false, message: "Internal  Server error" }
             return res.status(500).json(response)

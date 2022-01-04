@@ -316,6 +316,17 @@ describe('update label_by id api ', () => {
                 done();
             });
     });
+    it.only('it should give false when Something is Wrong with credential ,Validation Failed ', (done) => {
+        const token = labelDB.label.invalidToken
+        chai
+            .request(server)
+            .put('/updatelabel/61cfd6c0209469fbeb')
+            .set({authorization : token})
+            .end((err, res) => {
+                res.should.have.status(400);
+                done();
+            });
+    });
 })    
 
 
