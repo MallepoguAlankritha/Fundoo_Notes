@@ -386,6 +386,17 @@ describe('Delete label_by id api ', () => {
                     done();
                 });
         }); 
+        it.only('it should give false when,token is invalid ', (done) => {
+            const token = labelDB.label.invalidToken
+            chai
+                .request(server)
+                .delete('/deletelabel/:id')
+                .set({authorization:token})
+                .end((err, res) => {
+                    res.should.have.status(400);
+                    done();
+                });
+        });
     })
 
 
