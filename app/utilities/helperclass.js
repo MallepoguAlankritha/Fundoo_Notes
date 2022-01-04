@@ -49,7 +49,10 @@ class Helper {
       return res.status(500).send({ success: false, message: 'Something went wrong!' });
     }
   }
+  comparePassword = (password, result) => {
+    return bcrypt.compare(password, result);
 }
+};
 
 
 module.exports = new Helper();

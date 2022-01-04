@@ -239,6 +239,17 @@ describe('get label_by id api ', () => {
                     done();
                 });
     });
+    it.only('it should give true when ,Credential is Validated in getlabel_by_id_', (done) => { 
+        const token = labelDB.label.validToken
+        chai
+            .request(server)
+            .get('/getlabel/61cfd6c0209440838069fbeb')
+            .set({ authorization: token })
+            .end((err, res) => {
+                res.should.have.status(201);
+                    done();
+                });
+    });
 })     
 
 

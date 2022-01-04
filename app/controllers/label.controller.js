@@ -78,12 +78,21 @@ class LabelController {
             return res.status(500).json(response)
         }
     }
-    getlabelById = (req,res)=>{
-        try{
-            const response = { sucess: false, message: "Internal  Server error" }
-            return res.status(200).json(response)
-        }
-        catch{
+    getlabelById = (req, res) => {
+        try {
+            const credentials = {
+                userId: req.user.dataForToken.id,
+                labelId: req.params.id
+            };
+            const validationResult = validation.labelvalidator.validate(credentials)
+            if (validationResult.error) {
+                const response = { sucess: false, message: "Wrong Credential  Validation" }
+                res.status(422).json(response)
+            }
+            const response = { sucess: true, message: "Succesfuly label is fetch",data:credentials}
+            return res.status(201).json(response)   
+    }
+        catch {
             const response = { sucess: false, message: "Internal  Server error" }
             return res.status(500).json(response)
         }
