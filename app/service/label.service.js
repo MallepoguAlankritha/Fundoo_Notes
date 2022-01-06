@@ -1,5 +1,6 @@
 const { resolve } = require('bluebird')
 const labelmodel = require('../models/label.model')
+const nodeRedis = require('../middleware/redis')
 class LabelService {
     /**
      * @description Create a new label 
@@ -25,9 +26,10 @@ class LabelService {
         })
     }
     // Retrieve all labels by Id
-    getlabelById = (credential) => {
+    getlabelById = (userId) => {
         return new Promise((resolve, reject) => {
-            labelmodel.getlabelById(credential)
+            labelmodel.getlabelById(userId)
+            nodeRedis.setData('fetchRedisById',6000,JSON.stringify(data))
                 .then(data => {
                     resolve(data)
                 }).catch(error => {
@@ -40,7 +42,7 @@ class LabelService {
             labelmodel.updatelabelById(updatelabel)
             .then(data=>{
                 resolve(data)
-            }).catch(error=>{
+            }).catch(error=> {
                 reject(error)
             })
         })

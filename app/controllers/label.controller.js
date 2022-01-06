@@ -61,6 +61,7 @@ class LabelController {
                 }
                 LabelService.getLabel(userId)
                 .then((data) => {
+            
                     const response = { sucess: true, message: 'label is fetched', data: data }
                         return res.status(200).send(response)
                     }).catch((error) => {

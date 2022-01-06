@@ -241,3 +241,11 @@
 {"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61c8913bdcf696ac219c\"","timestamp":"2021-12-30T14:15:33.579Z","value":"61c8913bdcf696ac219c","valueType":"string"}
 {"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61c8913bdcf696ac219c\"","timestamp":"2021-12-30T14:15:33.579Z","value":"61c8913bdcf696ac219c","valueType":"string"}
 {"kind":"ObjectId","level":"error","path":"_id","reason":{},"stringValue":"\"61c8913bdcf696ac219c\"","timestamp":"2021-12-30T14:15:33.580Z","value":"61c8913bdcf696ac219c","valueType":"string"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2022-01-06T02:24:19.842Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2022-01-06T02:24:19.869Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2022-01-06T02:24:19.883Z"}
+{"level":"error","message":"Invalid User","timestamp":"2022-01-06T02:24:20.059Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2022-01-06T02:24:20.060Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2022-01-06T02:24:20.060Z"}
+{"level":"error","message":"Internal server error","timestamp":"2022-01-06T02:24:24.375Z"}
+{"level":"error","message":"Internal server error","timestamp":"2022-01-06T02:24:24.388Z"}

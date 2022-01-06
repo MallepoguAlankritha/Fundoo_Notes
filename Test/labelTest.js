@@ -130,7 +130,7 @@ it('Should give true when new label is created', (done) => {
 }) 
 }) 
 describe('get label  api ', () => {
-    it.only('getlabel_by_checking_server', (done) => {
+    it('getlabel_by_checking_server', (done) => {
         chai
             .request(server)
             .get('/getlabel')
@@ -139,7 +139,7 @@ describe('get label  api ', () => {
                 done();
             });
     });
-    it.only('it should give true when token is decoded', (done) => {
+    it('it should give true when token is decoded', (done) => {
         const token = labelDB.label.validToken;
         chai
             .request(server)
@@ -150,7 +150,7 @@ describe('get label  api ', () => {
                 done();
             });
     });
-    it.only('it should give false when token is invalid', (done) => {
+    it('it should give false when token is invalid', (done) => {
         const token = labelDB.label.invalidToken;
         chai
             .request(server)
@@ -161,7 +161,7 @@ describe('get label  api ', () => {
                 done();
             });
     });
-    it.only('it should give false when userid is not validate', (done) => {
+    it('it should give false when userid is not validate', (done) => {
         const token = labelDB.label.validToken;
         const id = labelDB.label.id
         chai
@@ -174,7 +174,7 @@ describe('get label  api ', () => {
                 done();
             });
     })
-    it.only('Should return true from GetLabel API Service Layer ,return appropriate response" ', (done) => {
+    it('Should return true from GetLabel API Service Layer ,return appropriate response" ', (done) => {
         const token = labelDB.label.validToken;
         chai
             .request(server)
@@ -185,7 +185,7 @@ describe('get label  api ', () => {
                 done();
             });
     })
-    it.only('Should return true from GetLabel API model Layer ,return appropriate response" ', (done) => {
+    it('Should return true from GetLabel API model Layer ,return appropriate response" ', (done) => {
         const token = labelDB.label.validToken;
         chai
             .request(server)
@@ -196,7 +196,7 @@ describe('get label  api ', () => {
                 done();
             });
     })
-    it.only('Should return true when Label is added and manage user condition', (done) => {
+    it('Should return true when Label is added and manage user condition', (done) => {
         const token = labelDB.label.validToken;
         chai
             .request(server)
@@ -210,7 +210,7 @@ describe('get label  api ', () => {
 })
 
 describe('get label_by id api ', () => {
-    it.only('getlabelbyid_checkingserver', (done) => {
+    it('getlabelbyid_checkingserver', (done) => {
         chai
             .request(server)
             .get('/getlabel/:id')
@@ -219,7 +219,7 @@ describe('get label_by id api ', () => {
                 done();
             });
     });
-    it.only('it should give true when ,add controller layer and checking the response of token in getlabel_by_id', (done) => {
+    it('it should give true when ,add controller layer and checking the response of token in getlabel_by_id', (done) => {
         chai
             .request(server)
             .get('/getlabel/:id')
@@ -228,7 +228,7 @@ describe('get label_by id api ', () => {
                 done();
             });
     });
-    it.only('it should give true when ,add controller layer and checking response by of invalid token in getlabel_by_id_', (done) => {
+    it('it should give true when ,add controller layer and checking response by of invalid token in getlabel_by_id_', (done) => {
         const token = labelDB.label.invalidToken
         chai
             .request(server)
@@ -239,7 +239,7 @@ describe('get label_by id api ', () => {
                     done();
                 });
     });
-    it.only('it should give true when ,Credential is Validated in getlabel_by_id_', (done) => { 
+    it('it should give true when ,Credential is Validated in getlabel_by_id_', (done) => { 
         const token = labelDB.label.validToken
         chai
             .request(server)
@@ -250,7 +250,7 @@ describe('get label_by id api ', () => {
                     done();
                 });
     });
-    it.only('it should give true when , Added Servce layer in getlabel_by_id_', (done) => { 
+    it('it should give true when , Added Servce layer in getlabel_by_id_', (done) => { 
         const token = labelDB.label.validToken
         chai
             .request(server)
@@ -261,7 +261,7 @@ describe('get label_by id api ', () => {
                     done();
                 });
     });
-    it.only('it should give true when , Added Model layer in getlabel_by_id_', (done) => { 
+    it('it should give true when , Added Model layer in getlabel_by_id_', (done) => { 
         const token = labelDB.label.validToken
         chai
             .request(server)
@@ -272,7 +272,7 @@ describe('get label_by id api ', () => {
                     done();
                 });
     });
-    it.only('it should give true when , check response with valid Param and findng the label with label id ', (done) => { 
+    it('it should give true when , check response with valid Param and findng the label with label id ', (done) => { 
         const token = labelDB.label.validToken
         chai
             .request(server)
@@ -285,7 +285,7 @@ describe('get label_by id api ', () => {
     });
 }) 
 describe('update label_by id api ', () => {
-    it.only('Added Controller layer and Checking Response of Updatelabelby_id', (done) => {
+    it('Added Controller layer and Checking Response of Updatelabelby_id', (done) => {
         chai
             .request(server)
             .put('/updatelabel/:id')
@@ -294,7 +294,7 @@ describe('update label_by id api ', () => {
                 done();
             });
     });
-    it.only('it should give true when,token is valid ', (done) => {
+    it('it should give true when,token is valid ', (done) => {
         const token = labelDB.label.validToken
         chai
             .request(server)
@@ -305,7 +305,7 @@ describe('update label_by id api ', () => {
                 done();
             });
     });
-    it.only('it should give true when,token is not decoded ', (done) => {
+    it('it should give true when,token is not decoded ', (done) => {
         const token = labelDB.label.invalidToken
         chai
             .request(server)
@@ -316,7 +316,7 @@ describe('update label_by id api ', () => {
                 done();
             });
     });
-    it.only('it should give false when Something is Wrong with credential ,Validation Failed ', (done) => {
+    it('it should give false when Something is Wrong with credential ,Validation Failed ', (done) => {
         const token = labelDB.label.invalidToken
         chai
             .request(server)
@@ -327,7 +327,7 @@ describe('update label_by id api ', () => {
                 done();
             });
     });
-    it.only('it should give true when Service Layer is Added ', (done) => {
+    it('it should give true when Service Layer is Added ', (done) => {
         const token = labelDB.label.validToken
         chai
             .request(server)
@@ -339,7 +339,7 @@ describe('update label_by id api ', () => {
                 done();
             });
     });
-    it.only('it should give true when Model Layer is Added ', (done) => {
+    it('it should give true when Model Layer is Added ', (done) => {
         const token = labelDB.label.validToken
         chai
             .request(server)
@@ -351,7 +351,7 @@ describe('update label_by id api ', () => {
                 done();
             });
     });
-    it.only('it should give true when label is Updated is Succesfully ', (done) => {
+    it('it should give true when label is Updated is Succesfully ', (done) => {
         const token = labelDB.label.validToken
         chai
             .request(server)
@@ -365,7 +365,7 @@ describe('update label_by id api ', () => {
     });  
 })  
 describe('Delete label_by id api ', () => {
-    it.only('it should give true when,token is valid ', (done) => {
+    it('it should give true when,token is valid ', (done) => {
             const token = labelDB.label.validToken
             chai
                 .request(server)
@@ -375,7 +375,7 @@ describe('Delete label_by id api ', () => {
                     done();
                 });
         }); 
-        it.only('it should give true when,token is valid ', (done) => {
+        it('it should give true when,token is valid ', (done) => {
             const token = labelDB.label.validToken
             chai
                 .request(server)
@@ -386,7 +386,7 @@ describe('Delete label_by id api ', () => {
                     done();
                 });
         }); 
-        it.only('it should give false when,token is invalid ', (done) => {
+        it('it should give false when,token is invalid ', (done) => {
             const token = labelDB.label.invalidToken
             chai
                 .request(server)
@@ -397,7 +397,7 @@ describe('Delete label_by id api ', () => {
                     done();
                 });
         });
-        it.only('it should give true when,true param is validated ', (done) => {
+        it('it should give true when,true param is validated ', (done) => {
             const token = labelDB.label.validToken
             chai
                 .request(server)
@@ -408,7 +408,7 @@ describe('Delete label_by id api ', () => {
                     done();
                 });
         });
-        it.only('Should return true from DeletrLabelApi Service Layer ,return appropriate response', (done) => {
+        it('Should return true from DeletrLabelApi Service Layer ,return appropriate response', (done) => {
             const token = labelDB.label.validToken
             chai
                 .request(server)
@@ -419,7 +419,7 @@ describe('Delete label_by id api ', () => {
                     done();
                 });
         });
-        it.only('Should return true from DeleteLabelApi model Layer ,return appropriate response', (done) => {
+        it('Should return true from DeleteLabelApi model Layer ,return appropriate response', (done) => {
             const token = labelDB.label.validToken
             chai
                 .request(server)
@@ -430,7 +430,7 @@ describe('Delete label_by id api ', () => {
                     done();
                 });
         });
-        it.only('Should return true when label is deleted ,return appropriate response', (done) => {
+        it('Should return true when label is deleted ,return appropriate response', (done) => {
             const token = labelDB.label.validToken
             chai
                 .request(server)

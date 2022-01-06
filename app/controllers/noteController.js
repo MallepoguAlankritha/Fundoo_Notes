@@ -63,6 +63,7 @@ class NoteController {
                     success: false
                   });
                 } else {
+    
                   return res.status(201).json({
                     message: " Successfully !!! retrieve all notes.....",
                     success: true,
@@ -80,6 +81,7 @@ class NoteController {
       }
       getNoteById = (req, res) => {
         try {
+          const noteId = req.params.id;
           const id = { userId: req.user.dataForToken.id, noteId: req.params.id };
       const getNoteValidation = validation.getNoteByIDValidation.validate(id);
       if (getNoteValidation.error) {
@@ -98,6 +100,7 @@ class NoteController {
             success: false
           });
         } else {
+          
           logger.info(data);
           return res.status(201).json({
             message: " Successfully !! retreive given note",

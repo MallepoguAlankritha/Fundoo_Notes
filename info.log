@@ -893,3 +893,108 @@
 {"level":"info","message":"Email id found","timestamp":"2022-01-04T06:11:42.167Z"}
 {"level":"info","message":{"__v":0,"_id":"61d28dcc06b3b1ccde87b8b6","createdAt":"2022-01-03T05:46:52.597Z","email":"anishasree@gmail.com","firstName":"Anisha","lastName":"Sree","password":"$2b$08$vSp5wye7nW5PxQ7V8RoyIelRCVAWFqWRW58/cK5/bAOiPuiGM4tuO","updatedAt":"2022-01-03T05:46:52.597Z"},"timestamp":"2022-01-04T06:11:42.244Z"}
 {"level":"info","message":"User logged in successfully","timestamp":"2022-01-04T06:11:42.255Z"}
+{"level":"info","message":"Email id found","timestamp":"2022-01-04T10:54:59.992Z"}
+{"level":"info","message":{"__v":0,"_id":"61d28dcc06b3b1ccde87b8b6","createdAt":"2022-01-03T05:46:52.597Z","email":"anishasree@gmail.com","firstName":"Anisha","lastName":"Sree","password":"$2b$08$vSp5wye7nW5PxQ7V8RoyIelRCVAWFqWRW58/cK5/bAOiPuiGM4tuO","updatedAt":"2022-01-03T05:46:52.597Z"},"timestamp":"2022-01-04T10:55:00.139Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2022-01-04T10:55:00.163Z"}
+{"level":"info","message":{"__v":0,"_id":"61d42798dff12937f0362ceb","createdAt":"2022-01-04T10:55:20.214Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-04T10:55:20.214Z","userId":["61d28dcc06b3b1ccde87b8b6"]},"timestamp":"2022-01-04T10:55:20.265Z"}
+{"level":"info","message":{"__v":0,"_id":"61d42798dff12937f0362ceb","createdAt":"2022-01-04T10:55:20.214Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-04T10:55:20.214Z","userId":["61d28dcc06b3b1ccde87b8b6"]},"timestamp":"2022-01-04T10:55:20.269Z"}
+{"level":"info","message":"Successfully inserted note","timestamp":"2022-01-04T10:55:20.272Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-04T10:55:36.143Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d28e1906b3b1ccde87b8ba","createdAt":"2022-01-03T05:48:09.169Z","description":"e=mc2","title":"Formulaee","updatedAt":"2022-01-03T13:28:36.850Z","userId":["61d28dcc06b3b1ccde87b8b6"]},{"__v":0,"_id":"61d2f9f4a48aa4a21b0e1902","createdAt":"2022-01-03T13:28:20.936Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-03T13:28:20.936Z","userId":["61d28dcc06b3b1ccde87b8b6"]},{"__v":0,"_id":"61d42798dff12937f0362ceb","createdAt":"2022-01-04T10:55:20.214Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-04T10:55:20.214Z","userId":["61d28dcc06b3b1ccde87b8b6"]}],"timestamp":"2022-01-04T10:55:36.146Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-04T10:55:53.131Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d28e1906b3b1ccde87b8ba","createdAt":"2022-01-03T05:48:09.169Z","description":"e=mc2","title":"Formulaee","updatedAt":"2022-01-03T13:28:36.850Z","userId":["61d28dcc06b3b1ccde87b8b6"]},{"__v":0,"_id":"61d2f9f4a48aa4a21b0e1902","createdAt":"2022-01-03T13:28:20.936Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-03T13:28:20.936Z","userId":["61d28dcc06b3b1ccde87b8b6"]},{"__v":0,"_id":"61d42798dff12937f0362ceb","createdAt":"2022-01-04T10:55:20.214Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-04T10:55:20.214Z","userId":["61d28dcc06b3b1ccde87b8b6"]}],"timestamp":"2022-01-04T10:55:53.136Z"}
+{"level":"info","message":"updated successfully","timestamp":"2022-01-04T10:56:12.870Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2022-01-04T10:56:12.872Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2022-01-04T10:56:12.874Z"}
+{"level":"info","message":"Successfully added label !","timestamp":"2022-01-04T10:56:36.525Z"}
+{"level":"info","message":"Successfully added label !","timestamp":"2022-01-04T10:56:36.528Z"}
+{"level":"info","message":"success fully registered","timestamp":"2022-01-05T02:25:06.957Z"}
+{"level":"info","message":{"__v":0,"_id":"61d5018290c595e6cfa6e634","createdAt":"2022-01-05T02:25:06.877Z","email":"sangeethasharma@gmail.com","firstName":"Sangeetha","lastName":"Sharma","password":"$2b$08$CooXLfsNwJ9ZJYvxK2wRUO48d7Ll.sS9fSwwU8JBOBGN38OhCT5A6","updatedAt":"2022-01-05T02:25:06.877Z"},"timestamp":"2022-01-05T02:25:07.007Z"}
+{"level":"info","message":"User registered","timestamp":"2022-01-05T02:25:07.008Z"}
+{"level":"info","message":"Email id found","timestamp":"2022-01-05T02:25:32.792Z"}
+{"level":"info","message":{"__v":0,"_id":"61d5018290c595e6cfa6e634","createdAt":"2022-01-05T02:25:06.877Z","email":"sangeethasharma@gmail.com","firstName":"Sangeetha","lastName":"Sharma","password":"$2b$08$CooXLfsNwJ9ZJYvxK2wRUO48d7Ll.sS9fSwwU8JBOBGN38OhCT5A6","updatedAt":"2022-01-05T02:25:06.877Z"},"timestamp":"2022-01-05T02:25:32.824Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2022-01-05T02:25:32.828Z"}
+{"level":"info","message":{"__v":0,"_id":"61d501ee90c595e6cfa6e638","createdAt":"2022-01-05T02:26:54.510Z","description":"custom batch fellowship","title":"bridgelabz","updatedAt":"2022-01-05T02:26:54.510Z","userId":["61d5018290c595e6cfa6e634"]},"timestamp":"2022-01-05T02:26:54.527Z"}
+{"level":"info","message":{"__v":0,"_id":"61d501ee90c595e6cfa6e638","createdAt":"2022-01-05T02:26:54.510Z","description":"custom batch fellowship","title":"bridgelabz","updatedAt":"2022-01-05T02:26:54.510Z","userId":["61d5018290c595e6cfa6e634"]},"timestamp":"2022-01-05T02:26:54.528Z"}
+{"level":"info","message":"Successfully inserted note","timestamp":"2022-01-05T02:26:54.529Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-05T02:27:51.376Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d501ee90c595e6cfa6e638","createdAt":"2022-01-05T02:26:54.510Z","description":"custom batch fellowship","title":"bridgelabz","updatedAt":"2022-01-05T02:26:54.510Z","userId":["61d5018290c595e6cfa6e634"]}],"timestamp":"2022-01-05T02:27:51.377Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-05T02:28:38.694Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d28e1906b3b1ccde87b8ba","createdAt":"2022-01-03T05:48:09.169Z","description":"e=mc2","title":"Formulaee","updatedAt":"2022-01-04T10:56:12.813Z","userId":["61d28dcc06b3b1ccde87b8b6"]},{"__v":0,"_id":"61d2f9f4a48aa4a21b0e1902","createdAt":"2022-01-03T13:28:20.936Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-03T13:28:20.936Z","userId":["61d28dcc06b3b1ccde87b8b6"]},{"__v":0,"_id":"61d42798dff12937f0362ceb","createdAt":"2022-01-04T10:55:20.214Z","description":"h2s04 sulphuric acid","title":"Formula","updatedAt":"2022-01-04T10:55:20.214Z","userId":["61d28dcc06b3b1ccde87b8b6"]}],"timestamp":"2022-01-05T02:28:38.695Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-05T02:32:07.662Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d501ee90c595e6cfa6e638","createdAt":"2022-01-05T02:26:54.510Z","description":"custom batch fellowship","title":"bridgelabz","updatedAt":"2022-01-05T02:26:54.510Z","userId":["61d5018290c595e6cfa6e634"]}],"timestamp":"2022-01-05T02:32:07.663Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-05T02:32:52.209Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d501ee90c595e6cfa6e638","createdAt":"2022-01-05T02:26:54.510Z","description":"custom batch fellowship","title":"bridgelabz","updatedAt":"2022-01-05T02:26:54.510Z","userId":["61d5018290c595e6cfa6e634"]}],"timestamp":"2022-01-05T02:32:52.210Z"}
+{"level":"info","message":"updated successfully","timestamp":"2022-01-05T02:34:38.697Z"}
+{"level":"info","message":"successfully updated....","timestamp":"2022-01-05T02:34:38.697Z"}
+{"level":"info","message":"Succefully updated..","timestamp":"2022-01-05T02:34:38.697Z"}
+{"level":"info","message":"Successfully added label !","timestamp":"2022-01-05T02:35:54.179Z"}
+{"level":"info","message":"Successfully added label !","timestamp":"2022-01-05T02:35:54.180Z"}
+{"level":"info","message":"Successfully added label !","timestamp":"2022-01-05T02:36:36.952Z"}
+{"level":"info","message":"Successfully added label !","timestamp":"2022-01-05T02:36:36.953Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-05T02:36:42.873Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d501ee90c595e6cfa6e638","createdAt":"2022-01-05T02:26:54.510Z","description":"h20","title":"Formul","updatedAt":"2022-01-05T02:34:38.690Z","userId":["61d5018290c595e6cfa6e634"]}],"timestamp":"2022-01-05T02:36:42.874Z"}
+{"level":"info","message":"Successfully added label !","timestamp":"2022-01-05T02:37:00.610Z"}
+{"level":"info","message":"Successfully added label !","timestamp":"2022-01-05T02:37:00.610Z"}
+{"level":"info","message":"Successfully added label !","timestamp":"2022-01-05T02:39:58.507Z"}
+{"level":"info","message":"Successfully added label !","timestamp":"2022-01-05T02:39:58.507Z"}
+{"level":"info","message":"success fully registered","timestamp":"2022-01-06T02:24:19.819Z"}
+{"level":"info","message":{"__v":0,"_id":"61d652d3bccb5e92c5b99037","createdAt":"2022-01-06T02:24:19.644Z","email":"Jamey53@gmail.com","firstName":"Delfina","lastName":"Reynolds","password":"$2b$08$prF8pu3L0thfTO6m1.iW9.73sKp5N/byeNVGgAP04F6RakKcsPeX.","updatedAt":"2022-01-06T02:24:19.644Z"},"timestamp":"2022-01-06T02:24:19.824Z"}
+{"level":"info","message":"User registered","timestamp":"2022-01-06T02:24:19.825Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2022-01-06T02:24:19.841Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2022-01-06T02:24:19.869Z"}
+{"level":"error","message":"Wrong Input Validations","timestamp":"2022-01-06T02:24:19.883Z"}
+{"level":"info","message":"Email id found","timestamp":"2022-01-06T02:24:19.933Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-06T02:24:20.033Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2022-01-06T02:24:20.047Z"}
+{"level":"error","message":"Invalid User","timestamp":"2022-01-06T02:24:20.059Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2022-01-06T02:24:20.060Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2022-01-06T02:24:20.060Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-06T02:24:20.075Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-06T02:24:20.076Z"}
+{"level":"info","message":"Email sent successfully","timestamp":"2022-01-06T02:24:20.105Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-06T02:24:20.189Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-06T02:24:20.189Z"}
+{"level":"info","message":"Email sent successfully","timestamp":"2022-01-06T02:24:20.197Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-06T02:24:20.228Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-06T02:24:20.229Z"}
+{"level":"info","message":"Email sent successfully","timestamp":"2022-01-06T02:24:20.233Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-06T02:24:20.255Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-06T02:24:20.255Z"}
+{"level":"info","message":"Email sent successfully","timestamp":"2022-01-06T02:24:20.258Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-06T02:24:20.277Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-06T02:24:20.279Z"}
+{"level":"info","message":"Email sent successfully","timestamp":"2022-01-06T02:24:20.283Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-06T02:24:20.303Z"}
+{"level":"info","message":{"__v":0,"_id":"61cdb501eb1d22354bff0ad8","createdAt":"2021-12-30T13:32:50.071Z","email":"mallepogualankritha@gmail.com","firstName":"Mallepogu","lastName":"Alankritha","password":"$2b$10$KoF9KHZOpuqBfP.ENHURHu8OrCjBOBBDPoazGP/l13Y7PLJX3oD0K","updatedAt":"2021-12-30T13:35:33.092Z"},"timestamp":"2022-01-06T02:24:20.304Z"}
+{"level":"info","message":"Email sent successfully","timestamp":"2022-01-06T02:24:20.307Z"}
+{"level":"error","message":"Internal server error","timestamp":"2022-01-06T02:24:24.375Z"}
+{"level":"error","message":"Internal server error","timestamp":"2022-01-06T02:24:24.387Z"}
+{"level":"info","message":"Email id found","timestamp":"2022-01-06T12:00:36.527Z"}
+{"level":"info","message":{"__v":0,"_id":"61d5018290c595e6cfa6e634","createdAt":"2022-01-05T02:25:06.877Z","email":"sangeethasharma@gmail.com","firstName":"Sangeetha","lastName":"Sharma","password":"$2b$08$CooXLfsNwJ9ZJYvxK2wRUO48d7Ll.sS9fSwwU8JBOBGN38OhCT5A6","updatedAt":"2022-01-05T02:25:06.877Z"},"timestamp":"2022-01-06T12:00:36.570Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2022-01-06T12:00:36.575Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-06T12:00:50.059Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d501ee90c595e6cfa6e638","createdAt":"2022-01-05T02:26:54.510Z","description":"h20","title":"Formul","updatedAt":"2022-01-05T02:34:38.690Z","userId":["61d5018290c595e6cfa6e634"]}],"timestamp":"2022-01-06T12:00:50.061Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-06T12:00:55.365Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d501ee90c595e6cfa6e638","createdAt":"2022-01-05T02:26:54.510Z","description":"h20","title":"Formul","updatedAt":"2022-01-05T02:34:38.690Z","userId":["61d5018290c595e6cfa6e634"]}],"timestamp":"2022-01-06T12:00:55.369Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-06T12:01:03.187Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d501ee90c595e6cfa6e638","createdAt":"2022-01-05T02:26:54.510Z","description":"h20","title":"Formul","updatedAt":"2022-01-05T02:34:38.690Z","userId":["61d5018290c595e6cfa6e634"]}],"timestamp":"2022-01-06T12:01:03.188Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-06T12:01:12.471Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d501ee90c595e6cfa6e638","createdAt":"2022-01-05T02:26:54.510Z","description":"h20","title":"Formul","updatedAt":"2022-01-05T02:34:38.690Z","userId":["61d5018290c595e6cfa6e634"]}],"timestamp":"2022-01-06T12:01:12.472Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-06T12:02:25.402Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d501ee90c595e6cfa6e638","createdAt":"2022-01-05T02:26:54.510Z","description":"h20","title":"Formul","updatedAt":"2022-01-05T02:34:38.690Z","userId":["61d5018290c595e6cfa6e634"]}],"timestamp":"2022-01-06T12:02:25.406Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-06T12:02:29.836Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d501ee90c595e6cfa6e638","createdAt":"2022-01-05T02:26:54.510Z","description":"h20","title":"Formul","updatedAt":"2022-01-05T02:34:38.690Z","userId":["61d5018290c595e6cfa6e634"]}],"timestamp":"2022-01-06T12:02:29.837Z"}
+{"level":"info","message":"Successfully retrieve all notes.","timestamp":"2022-01-06T12:02:35.621Z"}
+{"level":"info","message":[{"__v":0,"_id":"61d501ee90c595e6cfa6e638","createdAt":"2022-01-05T02:26:54.510Z","description":"h20","title":"Formul","updatedAt":"2022-01-05T02:34:38.690Z","userId":["61d5018290c595e6cfa6e634"]}],"timestamp":"2022-01-06T12:02:35.622Z"}
+{"level":"info","message":[],"timestamp":"2022-01-06T12:48:40.977Z"}
+{"level":"info","message":[],"timestamp":"2022-01-06T12:50:10.743Z"}
+{"level":"info","message":[],"timestamp":"2022-01-06T12:51:30.210Z"}
+{"level":"info","message":[],"timestamp":"2022-01-06T12:52:08.841Z"}
+{"level":"info","message":[],"timestamp":"2022-01-06T12:52:08.843Z"}
+{"level":"info","message":[],"timestamp":"2022-01-06T12:52:08.844Z"}
+{"level":"info","message":"Email id found","timestamp":"2022-01-06T12:52:45.057Z"}
+{"level":"info","message":{"__v":0,"_id":"61d5018290c595e6cfa6e634","createdAt":"2022-01-05T02:25:06.877Z","email":"sangeethasharma@gmail.com","firstName":"Sangeetha","lastName":"Sharma","password":"$2b$08$CooXLfsNwJ9ZJYvxK2wRUO48d7Ll.sS9fSwwU8JBOBGN38OhCT5A6","updatedAt":"2022-01-05T02:25:06.877Z"},"timestamp":"2022-01-06T12:52:45.096Z"}
+{"level":"info","message":"User logged in successfully","timestamp":"2022-01-06T12:52:45.113Z"}
+{"level":"info","message":"Successfully added label !","timestamp":"2022-01-06T12:52:58.367Z"}
+{"level":"info","message":"Successfully added label !","timestamp":"2022-01-06T12:52:58.368Z"}

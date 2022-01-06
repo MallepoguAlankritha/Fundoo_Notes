@@ -32,7 +32,7 @@ class LabelModel {
     addLabel = (labelInfo, callback) => {
         const findNotes = NoteRegister.find({ email: labelInfo.email, _id: labelInfo.noteId })
         if (findNotes.length === 0) {
-            return callback('This note is not exist or this belongs to another user', null);
+            return callback('This note is not exist ', null);
         }
         label.find({ userId: labelInfo.userId, labelName: labelInfo.labelName }, (error, data) => {
             if (!data || data.length === 0) {
