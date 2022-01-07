@@ -3,7 +3,7 @@ const { createNoteValidation } = require("../utilities/validation");
 const noteService = require("../service/note.service");
 const { logger } = require("../../logger/logger");
 class NoteController {
-    createNote = (req, res) => {
+    createNote = async (req, res) => {
       try {
         const note = {
             userId: req.user.dataForToken.id,
@@ -19,30 +19,27 @@ class NoteController {
             data: createNoteValidation
         });
         }
-        noteService.createNote(note, (error, data) => {
-            if (error) {
-                logger.error(error);
-              return res.status(400).json({
-                message: "failed to post note",
-                success: false
-              });
-            } else {
-                logger.info("Successfully inserted note");
-              return res.status(201).send({
-                message: "Successfully inserted note",
-                success: true,
-                data: data
-              });
-            }
-          });
-      } catch (error) {
-        logger.error("Internal server error");
-        return res.status(500).send({
+        const notes = await noteService.createNote(note);
+      if (!notes) {
+        return res.status(400).send({
           success: false,
-          message: "Internal server error"
+          message: "error in  creating note"
+        });
+      } else {
+        return res.status(201).send({
+          success: true,
+          message: "Successfully....  creating note",
+          data: notes
         });
       }
+    } catch (error) {
+      logger.error("Internal server error");
+      return res.status(500).send({
+        success: false,
+        message: "Internal server error"
+      });
     }
+  }
     getNote = (req, res) => {
         try {
             const id = { id: req.user.dataForToken.id };

@@ -23,15 +23,28 @@
         },
         "login": {
             "email": "mallepogualankritha@gmail.com",
-            "password": "Alankritha@12"
+            "password": "Alankritha@1234867"
         },
         "loginWithImproperDetails": {
             "email": "ansh123@gmail.com",
             "password": "Anshas12@$"
+        },
+        "validDetails": {
+            "email": "mallepogualankritha@gmail.com",
+            "code": "y4ythnnd9x",
+            "password": "1234578Hk"
+        },
+        "invalidDetails": {
+            "email": "utkarsh95gmail.com",
+            "password": "Akahu76727"
+        },
+        "userLoginPos": {
+            "email": "mallepogualankritha@gmail.com",
+            "password": "Alankritha@1234867"
         }
-       
     }
 }
+
     
 
 

@@ -6,10 +6,10 @@
  */
  var Promise = require("bluebird");
  const bcrypt = Promise.promisifyAll(require("bcrypt"));
- const otp = require('./otp.js');
+ const Otp = require('./otp.js');
  const { logger } = require("../../logger/logger");
 const mongoose = require('mongoose');
-const encryption = require('../utilities/helperclass');
+const utilities = require('../utilities/helperclass');
 const Registeruser = new mongoose.Schema({
     firstName: {
         type: String,
@@ -117,33 +117,31 @@ forgotPassword = (data, callback) => {
       * @param {*} callback
       * @returns
       */
- resetPassword = (userData) => {
+ resetPassword = (userData, callback) => {
   return new Promise((resolve, reject) => {
-      otp.findOne({ code: userData.code })
-          .then((data) => {
-              if (userData.code == data.code) {
-                  encryption.hashing(userData.password)
-                      .then((hash) => {
-                          userData.password = hash;
-                          User.updateOne({ email: userData.email }, { '$set': { "password": userData.password } })
-                              .then((data) => {
-                                  resolve(data)
+    Otp.findOne({ code: userData.code })
+        .then((data) => {
+            if (userData.code == data.code) {
+                utilities.hashing(userData.password)
+                    .then((hash) => {
+                        userData.password = hash;
+                        User.updateOne({ email: userData.email }, { '$set': { "password": userData.password } })
+                            .then((data) => {
+                                resolve(data)
 
-                              }).catch((error) => {
-                                  reject(error)
-                              })
-                      }).catch((error) => {
-                          reject(error)
-                      })
-              } else {
-                  reject(null)
-              }
-          }).catch((error) => {
-              reject("Otp doesnt match", null)
-          });
-  });
+                            }).catch((error) => {
+                                reject(error)
+                            })
+                    }).catch((error) => {
+                        reject(error)
+                    })
+            } else {
+                reject(null)
+            }
+        }).catch((error) => {
+            reject("Otp doesnt match", null)
+        });
+});
 }
-
-      
 }
 module.exports = { UserModel: new UserModel(), UserDB: User };

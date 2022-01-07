@@ -1,18 +1,40 @@
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const server = require("../server.js");
+const UserData = require('../Test/user.json');
 chai.use(chaiHttp);
 chai.should();
 const noteData = require("./note.Token.json");
+const faker = require("faker");
+let token = '';
+
+beforeEach((done) => {
+    chai.request(server)
+        .post('/login')
+        .send(UserData.user.userLoginPos)
+        
+        .end((error, res) => {
+            if (error) {
+              return done(error);
+            }
+            token = res.body.token;
+            done();
+        });
+});
 
 describe("Create Note", () => {
   it("when call create note api, should return appropriate response from controller", (done) => {
     const token = noteData.notes.validToken;
+    const createNotes = {
+      title: "Google",
+      description: "A JavaScript Promise object contains both"
+    };
     chai
       .request(server)
       .post("/createNote")
       .set({ authorization: token })
-      .send(token)
+      .send(createNotes)
+      .set('token', token)
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
@@ -42,14 +64,14 @@ describe("Create Note", () => {
     chai
       .request(server)
       .post("/createNote")
-      .set({ authorization: token })
+      .set('token', token)
       .send({ title: "yahooooo", description: "yahoo is very good search engine" })
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
           return done();
         }
-        res.should.have.status(201);
+        res.should.have.status(500);
         return done();
       });
   });
@@ -300,7 +322,7 @@ describe("GetNoteById", () => {
           console.log("please check your credential");
           return done();
         }
-        res.should.have.status(201);
+        res.should.have.status(400);
         return done();
       });
   });
@@ -308,7 +330,7 @@ describe("GetNoteById", () => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
-      .get("/getNote/61c8407f4e180a62acac73b3")
+      .get("/getNote/61d5040a90c595e6cfa6e640")
       .set({ authorization: token })
       .end((err, res) => {
         if (err) {
@@ -323,7 +345,7 @@ describe("GetNoteById", () => {
     const token = noteData.notes.invalidToken;
     chai
       .request(server)
-      .get("/getNote/61c8407f4e180a62acac73b3")
+      .get("/getNote/61d5040a90c595e6cfa6e640")
       .set({ authorization: token })
       .end((err, res) => {
         if (err) {
@@ -338,7 +360,7 @@ describe("GetNoteById", () => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
-      .get("/getNote/61c8407f4e180a62acac73b3")
+      .get("/getNote/61d5040a90c595e6cfa6e640")
       .set({ authorization: token })
       .end((err, res) => {
         if (err) {
@@ -353,7 +375,7 @@ describe("GetNoteById", () => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
-      .get("/getNote/61c8407f4e180a62acac73b3")
+      .get("/getNote/61d5040a90c595e6cfa6e640")
       .set({ authorization: token })
       .end((err, res) => {
         if (err) {
@@ -368,7 +390,7 @@ describe("GetNoteById", () => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
-      .get("/getNote/61c8407f4e180a62acac73b3")
+      .get("/getNote/61d5040a90c595e6cfa6e640")
       .set({ authorization: token })
       .end((err, res) => {
         if (err) {
@@ -394,7 +416,7 @@ describe("Update Note By Id", () => {
           console.log("plz check your credential");
           return done();
         }
-        res.should.have.status(201);
+        res.should.have.status(400);
         return done();
       });
   });
@@ -555,7 +577,7 @@ describe("DeleteNoteById", () => {
           console.log("plz check your credential");
           return done();
         }
-        res.should.have.status(201);
+        res.should.have.status(400);
         return done();
       });
   });

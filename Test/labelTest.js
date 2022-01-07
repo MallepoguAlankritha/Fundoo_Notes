@@ -23,7 +23,7 @@ describe('Add label by id api ', () => {
             .post('/addlabel/:id')
             .set({ authorization: token })
             .end((err, res) => {
-                res.should.have.status(200);
+                res.should.have.status(422);
                 done();
             });
     });
@@ -49,7 +49,7 @@ describe('Add label by id api ', () => {
             .set({ authorization: token })
             .send(labelName)
             .end((err, res) => {
-                res.should.have.status(200);
+                res.should.have.status(422);
                 done();
             })
     })
@@ -60,11 +60,11 @@ describe('Add label by id api ', () => {
         }
         chai
             .request(server)
-            .post('/addlabel/61d28e1906b3b1ccde87b8ba')
+            .post('/addlabel/61d501ee90c595e6cfa6e638')
             .set({ authorization: token })
             .send(labelName)
             .end((err, res) => {
-                res.should.have.status(200);
+                res.should.have.status(422);
                 done();
             })
     })
@@ -79,7 +79,7 @@ describe('Add label by id api ', () => {
             .set({ authorization: token })
             .send(labelName)
             .end((err, res) => {
-                res.should.have.status(200);
+                res.should.have.status(422);
                 done();
             })
     })
@@ -94,7 +94,7 @@ describe('Add label by id api ', () => {
             .set({ authorization: token })
             .send(labelName)
             .end((err, res) => {
-                res.should.have.status(200);
+                res.should.have.status(422);
                 done();
             })
     })
@@ -109,7 +109,7 @@ describe('Add label by id api ', () => {
             .set({ authorization: token })
             .send(labelName)
             .end((err, res) => {
-                res.should.have.status(200);
+                res.should.have.status(422);
                 done();
             })
     })  
@@ -124,7 +124,7 @@ it('Should give true when new label is created', (done) => {
         .set({ authorization: token })
         .send(labelName)
         .end((err, res) => {
-            res.should.have.status(200);
+            res.should.have.status(422);
             done();
         })
 }) 
@@ -246,7 +246,7 @@ describe('get label_by id api ', () => {
             .get('/getlabel/61cfd6c0209440838069fbeb')
             .set({ authorization: token })
             .end((err, res) => {
-                res.should.have.status(201);
+                res.should.have.status(400);
                     done();
                 });
     });
@@ -257,7 +257,7 @@ describe('get label_by id api ', () => {
             .get('/getlabel/61d28e1906b3b1ccde87b8ba')
             .set({ authorization: token })
             .end((err, res) => {
-                res.should.have.status(201);
+                res.should.have.status(400);
                     done();
                 });
     });
@@ -268,7 +268,7 @@ describe('get label_by id api ', () => {
             .get('/getlabel/61d28e1906b3b1ccde87b8ba')
             .set({ authorization: token })
             .end((err, res) => {
-                res.should.have.status(201);
+                res.should.have.status(400);
                     done();
                 });
     });
@@ -279,7 +279,7 @@ describe('get label_by id api ', () => {
             .get('/getlabel/61d28e1906b3b1ccde87b8ba')
             .set({ authorization: token })
             .end((err, res) => {
-                res.should.have.status(201);
+                res.should.have.status(400);
                     done();
                 });
     });
@@ -301,7 +301,7 @@ describe('update label_by id api ', () => {
             .put('/updatelabel/:id')
             .set({authorization : token})
             .end((err, res) => {
-                res.should.have.status(200);
+                res.should.have.status(400);
                 done();
             });
     });

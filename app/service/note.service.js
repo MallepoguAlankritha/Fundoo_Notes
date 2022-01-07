@@ -1,17 +1,14 @@
 const noteModel = require("../models/note.model").UserModel;
 const { logger } = require("../../logger/logger");
 class NoteService {
-    createNote = (note, callback) => {
-        noteModel.createNote(note, (error, data) => {
-            if (error) {
-                logger.error(error);
-              return callback(error, null);
-            } else {
-                logger.info(data);
-              return callback(null, data);
-            }
-          });
+  createNote = async (note) => {
+    const success = noteModel.createNote(note);
+    if (!success) {
+      return false;
     }
+    return success;
+  }
+
     getNote = (id, callback) => {
         noteModel.getNote(id, (error, data) => {
             if (data) {
