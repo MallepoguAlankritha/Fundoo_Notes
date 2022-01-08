@@ -46,10 +46,15 @@ describe("Create Note", () => {
   });
   it("when call create note api, should return appropriate response from controller with invalid token", (done) => {
     const token = noteData.notes.invalidToken;
+    const createNotes = {
+      title: faker.name.title(),
+      description: "A JavaScript Promise object contains both"
+    };
     chai
       .request(server)
       .post("/createNote")
       .set({ authorization: token })
+      .send(createNotes)
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
@@ -61,17 +66,22 @@ describe("Create Note", () => {
   });
   it("give valid input, should return appropriate response from controller", (done) => {
     const token = noteData.notes.validToken;
+    const createNotes = {
+      title: "Yahooo",
+      description: "A JavaScript Promise object contains both"
+    };
     chai
       .request(server)
       .post("/createNote")
+      .set({ authorization: token })
       .set('token', token)
-      .send({ title: "yahooooo", description: "yahoo is very good search engine" })
+      .send(createNotes)
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
           return done();
         }
-        res.should.have.status(500);
+        res.should.have.status(201);
         return done();
       });
   });
@@ -109,11 +119,15 @@ describe("Create Note", () => {
   });
   it("when call createNoteAPI, should return appropriate response from service", (done) => {
     const token = noteData.notes.validToken;
+    const createNotes = {
+      title: "Computer",
+      description: "A JavaScript Promise object contains both"
+    };
     chai
       .request(server)
       .post("/createNote")
       .set({ authorization: token })
-      .send({ title: "yahoooo", description: "yahoo is very good search engine" })
+      .send(createNotes)
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
@@ -125,11 +139,15 @@ describe("Create Note", () => {
   });
   it("when call createNoteAPI, should return appropriate response from model", (done) => {
     const token = noteData.notes.validToken;
+    const createNotes = {
+      title: "Kitesdgf",
+      description: "A JavaScript Promise object contains both"
+    };
     chai
       .request(server)
       .post("/createNote")
       .set({ authorization: token })
-      .send({ title: "yahoooo", description: "yahoo is very good search engine" })
+      .send(createNotes)
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
@@ -141,11 +159,15 @@ describe("Create Note", () => {
   });
   it("when call createNoteAPI with validToken, should return appropriate response from model", (done) => {
     const token = noteData.notes.validToken;
+    const createNotes = {
+      title: "Gmail id is",
+      description: "A JavaScript Promise object contains both"
+    };
     chai
       .request(server)
       .post("/createNote")
       .set({ authorization: token })
-      .send({ title: "yahooooo", description: "yahooooo is  very good search engine" })
+      .send(createNotes)
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
@@ -315,14 +337,14 @@ describe("GetNoteById", () => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
-      .get("/getNote/:id")
+      .get("/getNote/61d5040a90c595e6cfa6e640")
       .set({ authorization: token })
       .end((err, res) => {
         if (err) {
           console.log("please check your credential");
           return done();
         }
-        res.should.have.status(400);
+        res.should.have.status(201);
         return done();
       });
   });
@@ -407,10 +429,35 @@ describe("GetNoteById", () => {
 describe("Update Note By Id", () => {
   it("when call updateNoteById with validToken , should return appropriate response from controller", (done) => {
     const token = noteData.notes.validToken;
+    const createNotes = {
+      title: "math",
+      description: "hgsfgadgsdsdskdnsdnsd"
+    };
     chai
       .request(server)
-      .put("/updateNote/:id")
+      .put("/updateNote/61d501ee90c595e6cfa6e638")
       .set({ authorization: token })
+      .send(createNotes)
+      .end((err, res) => {
+        if (err) {
+          console.log("plz check your credential");
+          return done();
+        }
+        res.should.have.status(201);
+        return done();
+      });
+  });
+  it("when call updateNoteById with inValidToken , should return appropriate response from controller", (done) => {
+    const token = noteData.notes.invalidToken;
+    const createNotes = {
+      title: noteData.notes.title,
+      description: faker.lorem.word()
+    };
+    chai
+      .request(server)
+      .put("/updateNote/61d501ee90c595e6cfa6e638")
+      .set({ authorization: token })
+      .send(createNotes)
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
@@ -424,22 +471,7 @@ describe("Update Note By Id", () => {
     const token = noteData.notes.invalidToken;
     chai
       .request(server)
-      .put("/updateNote/:id")
-      .set({ authorization: token })
-      .end((err, res) => {
-        if (err) {
-          console.log("plz check your credential");
-          return done();
-        }
-        res.should.have.status(400);
-        return done();
-      });
-  });
-  it("when call updateNoteById with inValidToken , should return appropriate response from controller", (done) => {
-    const token = noteData.notes.invalidToken;
-    chai
-      .request(server)
-      .put("/updateNote/:id")
+      .put("/updateNote/61d501ee90c595e6cfa6e638")
       .set({ authorization: token })
       .end((err, res) => {
         if (err) {
@@ -452,11 +484,15 @@ describe("Update Note By Id", () => {
   });
   it("when call updateNoteById with valid input , should return appropriate response from controller", (done) => {
     const token = noteData.notes.validToken;
+    const createNotes = {
+      title: "family",
+      description: "gksjf gjsjsfb shfjsha"
+    };
     chai
       .request(server)
       .put("/updateNote/61c8913bdcf696ac219ce3ea")
       .set({ authorization: token })
-      .send({ title: "Yahooooo", description: "Yahoo is very good search engine" })
+      .send(createNotes)
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
@@ -570,14 +606,14 @@ describe("DeleteNoteById", () => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
-      .delete("/deleteNote/:id")
+      .delete("/deleteNote/61d901a8dc6681c132726677")
       .set({ authorization: token })
       .end((err, res) => {
         if (err) {
           console.log("plz check your credential");
           return done();
         }
-        res.should.have.status(400);
+        res.should.have.status(201);
         return done();
       });
   });
@@ -585,7 +621,7 @@ describe("DeleteNoteById", () => {
     const token = noteData.notes.invalidToken;
     chai
       .request(server)
-      .delete("/deleteNote/:id")
+      .delete("/deleteNote/61d901a8dc6681c132726677")
       .set({ authorization: token })
       .end((err, res) => {
         if (err) {
@@ -600,7 +636,7 @@ describe("DeleteNoteById", () => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
-      .delete("/deleteNote/61c8913bdcf696ac219ce3ea")
+      .delete("/deleteNote/61d901a8dc6681c132726677")
       .set({ authorization: token })
       .end((err, res) => {
         if (err) {
@@ -615,7 +651,7 @@ describe("DeleteNoteById", () => {
     const token = noteData.notes.validToken;
     chai
       .request(server)
-      .delete("/deleteNote/61c8913bdcf696aca")
+      .delete("/deleteNote/61d901a8dc663746")
       .set({ authorization: token })
       .end((err, res) => {
         if (err) {

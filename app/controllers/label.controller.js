@@ -40,10 +40,6 @@ class LabelController {
                     return res.status(200).json(response)
                 })
             }
-            else {
-                const response = { sucess: false, message: "Invalid Entry of Token" }
-                return res.status(400).json(response)
-            }
             
         } catch (err) {
             const response = { sucess: false, message: "Internal  Server error" }

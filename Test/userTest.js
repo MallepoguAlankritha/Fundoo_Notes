@@ -88,6 +88,19 @@ describe('registartion', () => {
   });
 });
 describe("Login", () => {
+    it("Should return status code - 200,When given Login details is true. ", (done) => {
+      const loginDetails = loginData.user.login;
+  
+      chai
+      .request(server)
+      .post("/login")
+      .send(loginDetails)
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.should.have.property('success').eql(true);
+        done();
+      });
+  });
 
   it('givenLoginDetails_whenImproper_shouldUnableToLogin', (done) => {
     const loginDetails = loginData.user.loginWithImproperDetails;

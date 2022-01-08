@@ -52,22 +52,13 @@ class LabelModel {
                         callback(error, null)
                     })
             } else if (data) {
-                label.findOneAndUpdate({ userId: labelInfo.userId, labelName: labelInfo.labelName }, { $addToSet: { noteId: [labelInfo.noteId] } }, (error, data) => {
-                    if (error) {
-                        
-                        callback(error, null)
-                    }
-                    else if (!data) {
-                        
-                        logger.info('label is not found !');
-                        return callback('label is  not found', data)
-                    }
-                    else {
-                        logger.info('Successfully added label !');
-                        return callback(error, data)
-                    }
-                })
-            }
+                label.findOneAndUpdate({ userId: labelInfo.userId, labelName: labelInfo.labelName }, { $addToSet: { noteId: [labelInfo.noteId] } })
+                    .then(data=>{
+                        return callback(null, data)
+                    }).catch(error=>{
+                        return callback(error,null)
+                    })
+                }
         })
     }
     // Retrieve all labels

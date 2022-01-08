@@ -6,10 +6,10 @@ class LabelService {
      * @description Create a new label 
      * @method labelModel.create calls model class method
      */
-    addLabel = (labelInfo, callback) => {
+     addLabel = (labelInfo, callback) => {
         labelmodel.addLabel(labelInfo, (error, data) => {
             if (!data) {
-                return callback(null, data)
+                return callback(error, data)
             }
             return callback(null, data)
         })
