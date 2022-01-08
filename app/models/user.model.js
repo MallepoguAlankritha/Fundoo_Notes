@@ -27,10 +27,15 @@ const Registeruser = new mongoose.Schema({
       password: {
         type: String,
         required: true
-      }
+      },
+      googleLogin: { type: Boolean },
+    verified: {
+        type: Boolean,
+        default: false
+    }
     },
     {
-      timestamps: true
+      timestamps: false
 })
 Registeruser.pre('save', async function (next) { // this line
   const User = this;
@@ -56,10 +61,10 @@ class UserModel {
     newUser.lastName = userDetails.lastName;
     newUser.email = userDetails.email;
     newUser.password = userDetails.password;
-    console.log("model",newUser);
+    
 
     newUser.save((error, data) => {
-      console.log("model1",data);
+     
         if (error) {
             logger.error(error);
             callback(error, null);
@@ -74,19 +79,27 @@ class UserModel {
 * @param loginInfo
 * @param callback for service
 */
-
 loginUser = (loginData, callBack) => {
   //To find a user email in the database
   User.findOne({ email: loginData.email }, (error, data) => {
       if (error) {
-        logger.error("Find error while loggin user");
+        console.log("gy",error);
+          logger.error('Find error while login user');
           return callBack(error, null);
       } else if (!data) {
-        logger.error("Invalid User");
+        console.log("hhs",data);
+          logger.error('Invalid User');
           return callBack("Invalid Credential", null);
       } else {
-        logger.info("Email id found");
-          return callBack(null, data);
+        console.log("dey",data);
+          if (data.verified == true) {
+              logger.info("data found in database");
+              console.log("sduhd",data);
+              return callBack(null, data);
+
+          } else {
+              return callBack("mail is not registered yet",null);
+          }
       }
   });
 }
@@ -143,5 +156,19 @@ forgotPassword = (data, callback) => {
         });
 });
 }
+confirmRegister = (data, callback) => {
+  User.findOneAndUpdate({email: data.email},{verified: true},(error, data) => {
+      if (error) {
+        console.log("hd",error);
+        logger.error("data not found in database");
+        return callback(error, null);
+      } else {
+        console.log("dfuh",data);
+        logger.info("data found in database");
+        return callback(null, data);
+      }
+    }
+  );
+};
 }
 module.exports = { UserModel: new UserModel(), UserDB: User };

@@ -6087,3 +6087,20 @@
 {"level":"error","message":"Wrong Information entered...","timestamp":"2022-01-08T15:44:37.814Z"}
 {"level":"error","message":"Error occured......","timestamp":"2022-01-08T15:44:37.937Z"}
 {"level":"error","message":"Wrong Information entered...","timestamp":"2022-01-08T15:44:37.938Z"}
+{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"malankritha43@gmail.com"},"level":"error","timestamp":"2022-01-08T17:47:06.888Z"}
+{"level":"error","message":"User already registered.","timestamp":"2022-01-08T17:47:06.890Z"}
+{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"malankritha43@gmail.com"},"level":"error","timestamp":"2022-01-08T18:12:24.539Z"}
+{"level":"error","message":"User already registered.","timestamp":"2022-01-08T18:12:24.540Z"}
+{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"malankritha43@gmail.com"},"level":"error","timestamp":"2022-01-08T18:15:33.690Z"}
+{"level":"error","message":"User already registered.","timestamp":"2022-01-08T18:15:33.723Z"}
+{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"malankritha43@gmail.com"},"level":"error","timestamp":"2022-01-08T18:16:50.527Z"}
+{"level":"error","message":"User already registered.","timestamp":"2022-01-08T18:16:50.542Z"}
+{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"malankritha43@gmail.com"},"level":"error","timestamp":"2022-01-08T18:22:10.208Z"}
+{"level":"error","message":"User already registered.","timestamp":"2022-01-08T18:22:10.226Z"}
+{"code":11000,"index":0,"keyPattern":{"email":1},"keyValue":{"email":"malankritha43@gmail.com"},"level":"error","timestamp":"2022-01-08T18:30:57.262Z"}
+{"level":"error","message":"User already registered.","timestamp":"2022-01-08T18:30:57.273Z"}
+{"level":"error","message":"mail is not registered yet","timestamp":"2022-01-08T18:42:36.952Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2022-01-08T18:42:36.954Z"}
+{"level":"error","message":"Invalid User","timestamp":"2022-01-08T19:46:34.744Z"}
+{"level":"error","message":"Invalid Credential","timestamp":"2022-01-08T19:46:34.745Z"}
+{"level":"error","message":"Wrong Information entered...","timestamp":"2022-01-08T19:46:34.747Z"}

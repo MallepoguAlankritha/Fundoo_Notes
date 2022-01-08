@@ -38,4 +38,5 @@ module.exports = (app) => {
   app.put('/updatelabel/:id', helperclass.validateToken, label.updatelabelById);
   // api for Delete Label by Id  
   app.delete('/deletelabel/:id', helperclass.validateToken, label.deletelabelById);
+  app.get('/confirmRegister/:token', controllers.confirmRegister);
 }

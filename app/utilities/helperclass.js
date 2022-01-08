@@ -52,6 +52,22 @@ class Helper {
   comparePassword = (password, result) => {
     return bcrypt.compare(password, result);
 }
+jwtTokenVerifyMail = (payload, secretkey, callback) => {
+  jwt.sign(
+    { email: payload.email },
+    secretkey,
+    { expiresIn: "50h" },
+    (err, token) => {
+      if (err) {
+        console("11",err);
+        return callback("token not generated", null);
+      } else {
+        console.log("22",token);
+        return callback(null, token);
+      }
+    }
+  );
+};
 };
 
 

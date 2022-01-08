@@ -33,12 +33,14 @@ class Controller {
             }
         userService.registerUser(user, (error, data) => {
            if (error) {
+             console.log("dgwe",error)
             logger.error("User already registered.");
               return res.status(400).json({
               success: false,
               message: 'User already exist',
             });
           } else {
+            console.log("jshdd",data);
             logger.info("User registered");
             return res.status(200).json({
               success: true,
@@ -193,5 +195,26 @@ class Controller {
         });
       }
     }
-}
+
+    confirmRegister = (req, res) => {
+      const data = {
+        token: req.params.token}
+        userService.confirmRegister(data, (error, data) => {
+        if (error) {
+          console.log("1234",error);
+          return res.status(404).json({
+            success: false,
+            message: "error"
+          });
+        } else {
+          console.log("shdu",data);
+          return res.status(200).json({
+            success: true,
+            message: "Email Successfully Verified",
+            
+          });
+        }
+      });
+    }
+  };
 module.exports = new Controller();

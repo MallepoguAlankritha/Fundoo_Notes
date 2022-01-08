@@ -35,3 +35,32 @@ exports.sendEmail = (mailMessage) => {
     }
   });
 }; 
+exports.verifyMail = (token, data) => {
+  const link = `http://localhost:${process.env.PORT}/confirmregister/${token}`;
+  // create reusable transporter object using the default SMTP transport
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.EMAIL, // generated ethereal user
+      pass: process.env.PASSWORD // generated ethereal password
+    }
+  });
+
+  const info = {
+    from: "\"Fundoo Notes\" <no-reply@fundoonotes.com>", // sender address
+    to: data.email, // list of receivers
+    subject: "Verify Mail for your Fundoo Note Account",
+    html: `<b>Hello <h2> ${data.firstName} </h2><br><h1> Here is your link to Verify Mail:</h1><br> <button href="${link}"  style="background: #00466a;margin: 0 auto;width: max-content;padding: 0 10px;color: #fff;border-radius: 4px;"> <a href="${link}">click me for Verify </a></button></b>` // html body
+  };
+
+  // send mail with defined transport object
+   transporter.sendMail(info, (err, info) => {
+    if (err) {
+      logger.error(error);
+    } else {
+      logger.info("email has been sent");
+      return info.response;
+    }
+  });
+
+}
