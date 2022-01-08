@@ -23,8 +23,8 @@
         },
         "login": {
             
-           "email":"mallepogualankritha@gmail.com",
-           "password":"Alankritha@1234867"
+            "email":"mallepogualankritha@gmail.com",
+             "password":"Alankritha@1234867"
         },
         "loginWithImproperDetails": {
             "email": "ansh123@gmail.com",

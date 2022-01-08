@@ -14,7 +14,7 @@ class Redis {
     });
   };
 
-  fetchData = (key) => {
+  findAllData = (key) => {
     client.get(key + "fetchRedisById")
       .then(data => {
         return JSON.parse(data);
@@ -22,7 +22,7 @@ class Redis {
         console.log("Error while finding Data", error);
       })
   };
-};
+
 
 setData = (key, time, data) => {
   client.setEx(key, time, data);
@@ -36,5 +36,5 @@ cacheClear = (key) => {
       return false;
     })
 }
-
+}
 module.exports = new Redis()

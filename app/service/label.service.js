@@ -26,17 +26,25 @@ class LabelService {
         })
     }
     // Retrieve all labels by Id
-    getlabelById = (userId) => {
-        return new Promise((resolve, reject) => {
-            labelmodel.getlabelById(userId)
-            nodeRedis.setData('fetchRedisById',6000,JSON.stringify(data))
-                .then(data => {
+    getlabelById =  async (credential) => {
+        let data = await nodeRedis.findAllData('fetchRedisById')
+         if (!data) {
+             return new Promise((resolve, reject) => {
+               labelmodel.getlabelById(credential)
+                .then(data => {  
                     resolve(data)
-                }).catch(error => {
+                }).catch((error) => {
                     reject(error)
                 })
-        })
-    }
+            })
+        }
+         else if (data) {
+            nodeRedis.setData('fetchRedisById', 60, JSON.stringify(data))
+            resolve(data)
+            }
+            reject(error)
+        }
+
     updatelabelById = (updatelabel) => {
         return new Promise((resolve, reject) => {
             labelmodel.updatelabelById(updatelabel)

@@ -21,18 +21,22 @@ class NoteController {
         }
         const notes = await noteService.createNote(note);
       if (!notes) {
+        console.log("435",notes);
         return res.status(400).send({
           success: false,
           message: "error in  creating note"
         });
       } else {
+        console.log("4764",notes);
         return res.status(201).send({
+
           success: true,
           message: "Successfully....  creating note",
           data: notes
         });
       }
     } catch (error) {
+      console.log("743685",error);
       logger.error("Internal server error");
       return res.status(500).send({
         success: false,
