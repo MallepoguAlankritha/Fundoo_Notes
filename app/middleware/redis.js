@@ -14,7 +14,7 @@ class Redis {
     });
   };
 
-  findAllData = (key) => {
+  findAllData = async (key) => {
     client.get(key + "fetchRedisById")
       .then(data => {
         return JSON.parse(data);

@@ -22,9 +22,8 @@
             "password": "mafka$123"
         },
         "login": {
-            
-            "email":"mallepogualankritha@gmail.com",
-             "password":"Alankritha@1234867"
+            "email":"malankritha43@gmail.com",
+            "password":"Alankritha@123"
         },
         "loginWithImproperDetails": {
             "email": "ansh123@gmail.com",

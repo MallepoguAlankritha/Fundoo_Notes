@@ -22,22 +22,26 @@ class NoteService {
     });
   };
   getNoteById = (id, callback) => {
-    nodeRedis.findAllData('fetchRedisById', (err, data) => {
-      if (!data) {
-        noteModel.getNoteById(id, (err, data) => {
-          if (data) {
-            return callback(null, data)
-          } else {
-            logger.error(error);
-            return callback(err, null)
-          }
-        });
-      } else if (data) {
-        nodeRedis.setData('fetchRedisById', 60, JSON.stringify(data))
-        return callback(null, data)
-      }
-
-    })
+    console.log("sugd",id);
+    nodeRedis.findAllData('fetchRedisById')
+      .then(data=>{
+        if(!data){
+          noteModel.getNoteById(id, (err, data) => {
+            if (data) {
+              return callback(null, data)
+            } else {
+              logger.error(error);
+              return callback(err, null)
+            }
+          });
+        }
+        else if (data) {
+          nodeRedis.setData('fetchRedisById', 60, JSON.stringify(data))
+          return callback(null, data)
+        }
+      }).catch(error=>{
+        return callback(error,null)
+      })
   }
   updateNoteById = (updateNote, callback) => {
 

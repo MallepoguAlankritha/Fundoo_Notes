@@ -88,13 +88,8 @@ describe('registartion', () => {
   });
 });
 describe("Login", () => {
-    it.only("Should return status code - 200,When given Login details is true. ", (done) => {
+    it("Should return status code - 200,When given Login details is true. ", (done) => {
       const loginDetails = loginData.user.login;
-      const Crendential = {
-        email: faker.internet.email(),
-        password: faker.internet.password()
-
-      }
   
       chai
       .request(server)

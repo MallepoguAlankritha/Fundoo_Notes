@@ -331,7 +331,7 @@ describe("GetNoteById", () => {
         }
         res.should.have.status(500);
         return done();
-      });
+      }).timeout(10000);
   });
   it("when call getNoteById with validToken , should return appropriate response", (done) => {
     const token = noteData.notes.validToken;
@@ -421,7 +421,7 @@ describe("GetNoteById", () => {
         }
         res.should.have.status(201);
         return done();
-      });
+      }).timeout(10000);
   });
 });
 // api for update note by id

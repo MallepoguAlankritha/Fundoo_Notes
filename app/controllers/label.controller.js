@@ -26,18 +26,15 @@ class LabelController {
                 }
                 LabelService.addLabel(labelInfo, (error, data) => {
                     if (error) {
-                        console.log("controller",error);
                         logger.error('Some error occurred !')
                         const response = { sucess: false, message: 'Some error occured' }
                         return res.status(404).send(response)
                     }
                     else if (!data) {
-                        console.log("controller1",data);
                         logger.info('Some error occurred while adding label')
                         const response = { sucess: false, message: "Successfully added label !", data: data }
                         return res.status(400).json(response)
                     }
-                    console.log("controller2",data);
                     logger.info('Successfully added label !');
                     const response = { sucess: true, message: "Successfully added label !", data: data }
                     return res.status(200).json(response)
@@ -87,23 +84,19 @@ class LabelController {
             };
             const validationResult = validation.labelvalidator.validate(credentials)
             if (validationResult.error) {
-                console.log("111",validationResult.error);
                 const response = { sucess: false, message: "Wrong Credential  Validation" }
                 res.status(422).json(response)
             }
             LabelService.getlabelById(credentials)
                 .then(data=> {
-                    console.log("222",data);
                 const response = { sucess: true, message: "Succesfuly label is fetch", data: data }
                 return res.status(201).json(response);
             }).catch(error=>{
-                console.log("444",error);
                 const response = { sucess: false, message: "Succesfuly label is not fetch",error:error.message }
                 return res.status(400).json(response)
             })
         }
     }catch(error) {
-            console.log("888",error);
             const response = { sucess: false, message: "Internal  Server error" }
             return res.status(500).json(response)
         }

@@ -83,18 +83,14 @@ loginUser = (loginData, callBack) => {
   //To find a user email in the database
   User.findOne({ email: loginData.email }, (error, data) => {
       if (error) {
-        console.log("gy",error);
           logger.error('Find error while login user');
           return callBack(error, null);
       } else if (!data) {
-        console.log("hhs",data);
           logger.error('Invalid User');
           return callBack("Invalid Credential", null);
       } else {
-        console.log("dey",data);
           if (data.verified == true) {
               logger.info("data found in database");
-              console.log("sduhd",data);
               return callBack(null, data);
 
           } else {
@@ -159,11 +155,9 @@ forgotPassword = (data, callback) => {
 confirmRegister = (data, callback) => {
   User.findOneAndUpdate({email: data.email},{verified: true},(error, data) => {
       if (error) {
-        console.log("hd",error);
         logger.error("data not found in database");
         return callback(error, null);
       } else {
-        console.log("dfuh",data);
         logger.info("data found in database");
         return callback(null, data);
       }

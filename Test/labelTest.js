@@ -9,11 +9,14 @@ chai.should();
 describe('Add label by id api ', () => {
     it("when call label api, should return appropriate response from controller", (done) => {
         const token = labelDB.label.validToken
+        const labelname={
+            labelName:faker.lorem.words()
+        }
         chai
           .request(server)
-          .post("/addlabel/61d9109e5840212cf83a7226")
+          .post("/addlabel/61dac4a3c1b30d731a6d949f")
           .set({ authorization: token })
-          .send({ labelName: "fakeNamefff" })
+          .send(labelname)
           .end((err, res) => {
             if (err) {
               console.log("plz check your credential");
@@ -79,11 +82,14 @@ describe('Add label by id api ', () => {
     })
     it('Should give true when service layer is giving response', (done) => {
         const token = labelDB.label.validToken;
+        const labelname={
+            labelName:faker.lorem.words()
+        }
         chai
             .request(server)
-            .post('/addlabel/61d501ee90c595e6cfa6e638')
+            .post('/addlabel/61dac4a3c1b30d731a6d949f')
             .set({ authorization: token })
-            .send({labelName:"alankritha"})
+            .send(labelname)
             .end((err, res) => {
                 res.should.have.status(200);
                 done();
@@ -91,14 +97,14 @@ describe('Add label by id api ', () => {
     })
     it('Should give true when model layer is giving response', (done) => {
         const token = labelDB.label.validToken
-        const labelName = {
-            labelname: faker.lorem.word()
+        const labelname = {
+            labelName: faker.lorem.word()
         }
         chai
             .request(server)
             .post('/addlabel/61d28e1906b3b1ccde87b8ba')
             .set({ authorization: token })
-            .send({labelName:"alankritha"})
+            .send(labelname)
             .end((err, res) => {
                 res.should.have.status(200);
                 done();
@@ -106,14 +112,14 @@ describe('Add label by id api ', () => {
     })
     it('Should return true when note is belong to same user', (done) => {
         const token = labelDB.label.validToken
-        const labelName = {
-            labelname: faker.lorem.word()
+        const labelname = {
+            labelName: faker.lorem.word()
         }
         chai
             .request(server)
-            .post('/addlabel/61d28e1906b3b1ccde87b8ba')
+            .post('/addlabel/61dac4a3c1b30d731a6d949f')
             .set({ authorization: token })
-            .send({labelName : "alankritha"})
+            .send(labelname)
             .end((err, res) => {
                 res.should.have.status(200);
                 done();
@@ -121,14 +127,14 @@ describe('Add label by id api ', () => {
     })
     it('Should give true when fetched user is belong to labelInfo', (done) => {
         const token = labelDB.label.validToken
-        const labelName = {
-            labelname: faker.lorem.word()
+        const labelname = {
+            labelName: faker.lorem.word()
         }
         chai
             .request(server)
-            .post('/addlabel/61d28e1906b3b1ccde87b8ba')
+            .post('/addlabel/61dac4a3c1b30d731a6d949f')
             .set({ authorization: token })
-            .send({labelName:"alankritha"})
+            .send(labelname)
             .end((err, res) => {
                 res.should.have.status(200);
                 done();
@@ -136,14 +142,14 @@ describe('Add label by id api ', () => {
     })  
 it('Should give true when new label is created', (done) => {
     const token = labelDB.label.validToken
-    const labelName = {
-        labelname: faker.lorem.word()
+    const labelname = {
+        labelName: faker.lorem.word()
     }
     chai
         .request(server)
-        .post('/addlabel/61d28e1906b3b1ccde87b8ba')
+        .post('/addlabel/61dac4a3c1b30d731a6d949f')
         .set({ authorization: token })
-        .send({labelName:"alankritha"})
+        .send(labelname)
         .end((err, res) => {
             res.should.have.status(200);
             done();

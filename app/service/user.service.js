@@ -30,7 +30,6 @@ class userService {
         nodemailer.sendWelcomeMail(user);
         const secretkey = process.env.JWT_SECRET;
         utilities.jwtTokenVerifyMail(data, secretkey, (err, token) => {
-          console.log("dus",token);
           if (token) {
             rabbitMQ.sender(data, data.email);
             mailer.verifyMail(token, data);
@@ -74,7 +73,7 @@ class userService {
           return callback(error, null);
         } else {
           logger.info(data);
-          return callback(null,nodemailer.sendEmail(data));
+          return callback(null,mailer.sendEmail(data));
         }
       });
     };
@@ -90,19 +89,14 @@ class userService {
     };
     confirmRegister = (data, callback) => {
       const decode = jwt.verify(data.token, process.env.JWT_SECRET);
-      console.log("wygeue",decode);
       if (decode) {
-        console.log("usw",decode);
         rabbitMQ
           .receiver(decode.email)
           .then((val) => {
-            console.log("ud",val);
             userModel.confirmRegister(JSON.parse(val), (error, data) => {
               if (data) {
-                console.log("5463",data);
                 return callback(null, data);
               } else {
-                console.log("7382",error);
                 return callback(error, null);
               }
             });

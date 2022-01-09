@@ -24,15 +24,12 @@ class RabitMqServer {
       return new Promise((resolve, reject) => {
         amqplib.connect("amqp://localhost", (error, connection) => {
           if (error) {
-              console.log("sudh",error);
             throw error;
           } else {
             connection.createChannel((error, channel) => {
               if (error) {
-                  console.log("wsud",error);
                 reject(error);
               } else {
-                  console.log("jwhd",channel);
                 channel.assertQueue(queue);
                 channel.consume(queue, (msg) => {
                   resolve(msg.content.toString());
