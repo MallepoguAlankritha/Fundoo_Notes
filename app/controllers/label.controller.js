@@ -62,7 +62,7 @@ class LabelController {
                         return res.status(200).send(response)
                     }).catch((error) => {
                         const response = { sucess: false, message: 'Some error occured' }
-                        return res.status(200).send(response)
+                        return res.status(400).send(response)
                     })
             }
             else {
@@ -75,7 +75,7 @@ class LabelController {
             return res.status(500).json(response)
         }
     }
-    getlabelById = (req, res) => {
+    getlabelById = async (req, res) => {
         try {
             if(req.user){
             const credentials = {
@@ -87,16 +87,18 @@ class LabelController {
                 const response = { sucess: false, message: "Wrong Credential  Validation" }
                 res.status(422).json(response)
             }
-            LabelService.getlabelById(credentials)
-                .then(data=> {
-                const response = { sucess: true, message: "Succesfuly label is fetch", data: data }
+          let result =  await LabelService.findLabelById(credentials)
+                if (result) {
+                    
+                const response = { sucess: true, message: "Succesfuly label is fetch", data: result }
                 return res.status(201).json(response);
-            }).catch(error=>{
+            }
+            
                 const response = { sucess: false, message: "Succesfuly label is not fetch",error:error.message }
                 return res.status(400).json(response)
-            })
         }
     }catch(error) {
+        
             const response = { sucess: false, message: "Internal  Server error" }
             return res.status(500).json(response)
         }

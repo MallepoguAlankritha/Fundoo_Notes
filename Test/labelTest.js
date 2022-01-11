@@ -102,7 +102,7 @@ describe('Add label by id api ', () => {
         }
         chai
             .request(server)
-            .post('/addlabel/61d28e1906b3b1ccde87b8ba')
+            .post('/addlabel/61dac4a3c1b30d731a6d949f')
             .set({ authorization: token })
             .send(labelname)
             .end((err, res) => {

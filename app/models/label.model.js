@@ -73,16 +73,21 @@ class LabelModel {
                 })
         })
     }
-    getlabelById = (credential) => {
-        return new Promise((resolve, reject) => {
-            label.find({ userId: credential.userId, _id: credential.labelId })
-            .then(data => {
-                resolve(data)
-            }).catch(error => {
-                reject(error)
-            })
-        })
+   // Retrieve all labels
+   findLabelById = async (userId) => {
+    let findlabel = await label.find({ $and: [{ _id: userId.labelId }, { userId: userId.userId }] });
+    try {
+        if (!findlabel) {
+            return false;
+        }
+        
+        return findlabel;
     }
+    catch (error) {
+        logger.error("Error Occured while finding Label");
+    }
+    }
+    // update label byid api
     updatelabelById = (updatelabel) => {
         return new Promise((resolve, reject) => {
             label.findByIdAndUpdate(updatelabel.id , { labelName: updatelabel.labelName }, { new: true })
@@ -100,7 +105,7 @@ class LabelModel {
         }
         reject(null)
     })
-}
+    }
 }
 
     module.exports = new LabelModel();

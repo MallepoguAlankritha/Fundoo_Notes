@@ -15,46 +15,49 @@ class LabelService {
         })
     }
      // Retrieve all labels
-     getLabel = (userId) => {
-        return new Promise((resolve, reject) => {
-            let result = labelmodel.getLabel(userId)
-            result.then((data) => {
-                resolve(data)
-            }).catch((error) => {
+     getLabel = async (userId) => {
+            let result = await labelmodel.getLabel(userId)
+           try{
+               if(!result){
+                   return false;
+               }
+               return result;
+            }catch(error){
                 reject(error)
-            })
-        })
-    }
-    // Retrieve all labels by Id
-    getlabelById =  async (credential) => {
-        let data = await nodeRedis.findAllData('fetchRedisById')
-         if (!data) {
-             return new Promise((resolve, reject) => {
-               labelmodel.getlabelById(credential)
-                .then(data => {  
-                    resolve(data)
-                }).catch((error) => {
-                    reject(error)
-                })
-            })
-        }
-         else if (data) {
-            nodeRedis.setData('fetchRedisById', 60, JSON.stringify(data))
-            resolve(data)
             }
-            reject(error)
         }
+    
+    // Retrieve all labels by Id
+    findLabelById = async (id) => {
+        try{
 
-    updatelabelById = (updatelabel) => {
-        return new Promise((resolve, reject) => {
-            labelmodel.updatelabelById(updatelabel)
-            .then(data=>{
-                resolve(data)
-            }).catch(error=> {
-                reject(error)
-            })
-        })
+        let getId = await nodeRedis.findAllData('fetchRedisById');
+        if (!getId) {
+          getId = await labelmodel.findLabelById(id);
+          
+          if(!getId){
+              return false;
+          }
+          nodeRedis.setData("fetchRedisById", 60, JSON.stringify(getId));
+          
+          return getId;
+        }
+        return getId;
+    }catch(error){
+        return error;
     }
+      };
+    
+    updatelabelById = async (updatelabel) => {
+    let updateLabel = await labelmodel.updatelabelById(updatelabel)
+    if(!updatelabel){
+        return false;
+    }
+    return updatelabel;
+    }
+
+
+    
     deleteLabel = async (credential) => {
         let deletelabel = await labelmodel.deleteLabel(credential)
         if(!deletelabel){

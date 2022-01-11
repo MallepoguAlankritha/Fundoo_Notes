@@ -90,13 +90,16 @@ describe('registartion', () => {
 describe("Login", () => {
     it("Should return status code - 200,When given Login details is true. ", (done) => {
       const loginDetails = loginData.user.login;
-  
+      const login = {
+        email: faker.internet.email(),
+        password: faker.internet.password()
+      }
       chai
       .request(server)
       .post("/login")
-      .send(loginDetails)
+      .send(login)
       .end((err, res) => {
-        res.should.have.status(200);
+        res.should.have.status(400);
         done();
       });
   });
@@ -113,7 +116,7 @@ describe("Login", () => {
         }
         res.should.have.status(400);
         res.body.should.have.property('success').eql(false);
-        res.body.should.have.property('message').eql('Unable to login .please enter correct info');
+        res.body.should.have.property('message').eql('error in login.please enter valid credential');
         done();
       });
   });

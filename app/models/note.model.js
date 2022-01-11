@@ -45,18 +45,18 @@ class NoteModel {
     });
   }
 
-  getNoteById = (id, callback) => {
-    NoteRegister.find({ userId: id.userId, _id: id.noteId }, (error, data) => {
-      if (data) {
-       console.log("33",data); 
-        logger.info(data);
-        callback(null, data);
-      } else {
-        logger.error(error);
-        callback(error, null);
-      }
-    });
-  }
+  getNoteById = (id) => {
+    return new Promise((resolve,reject)=>{
+      NoteRegister.find({ userId: id.userId, _id: id.noteId })
+        .then(data=>{
+          logger.info(data);
+          resolve(data);
+        }).catch(error=>{
+          logger.error(error);
+          reject(error);
+        })
+  })
+}
 
   updateNoteById = (updatedNote, callback) => {
     NoteRegister.findByIdAndUpdate(updatedNote.id, { title: updatedNote.title, description: updatedNote.description }, { new: true }, (err, data) => {

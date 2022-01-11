@@ -37,7 +37,6 @@ class Helper {
           if (error) {
             return res.status(400).send({ success: false, message: 'Invalid Token' });
           } else {
-            console.log("token ", decoded);
             req.user = decoded;
             next();
           }

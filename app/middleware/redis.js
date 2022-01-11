@@ -24,7 +24,7 @@ class Redis {
   };
 
 
-setData = (key, time, data) => {
+setData = async (key, time, data) => {
   client.setEx(key, time, data);
 };
 

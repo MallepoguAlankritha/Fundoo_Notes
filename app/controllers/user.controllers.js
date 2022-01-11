@@ -78,9 +78,10 @@ class Controller {
           userService.userLogin(userLoginInfo, (error, data) => {
               if (error) {
                 logger.error("Wrong Information entered...");
+                console.log("333",userLoginInfo);
                   return res.status(400).json({
                       success: false,
-                      message: 'Unable to login .please enter correct info',
+                      message: 'error in login.please enter valid credential',
                   });
               }
               logger.info("User logged in successfully");
@@ -92,10 +93,10 @@ class Controller {
           });              
         }
       catch (error) {
-        logger.error("Error while Login");
+        logger.error("Internal server error");
           return res.status(500).json({
               success: false,
-              message: 'Error while Login', error,
+              message: 'Internal server error', error,
               data: null
           });
       }

@@ -90,6 +90,7 @@ loginUser = (loginData, callBack) => {
           return callBack("Invalid Credential", null);
       } else {
           if (data.verified == true) {
+              console.log("22",data);
               logger.info("data found in database");
               return callBack(null, data);
 

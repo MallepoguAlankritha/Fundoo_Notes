@@ -6,13 +6,13 @@
  */
 const userModel = require('../models/user.model').UserModel;
 const utilities = require('../utilities/helperclass')
-const bcrypt = require('bcrypt');
+const bcrypt = require('../utilities/helperclass');
 const { logger } = require("../../logger/logger");
 const nodemailer = require('../utilities/rabbitMq');
 const mailer = require('../utilities/nodeemailer');
 const rabbitMQ = require("../middleware/rabbitMq");
 const jwt = require('jsonwebtoken')
-const { usertoken } = require('../utilities/helperclass')
+const { usertoken, validateToken } = require('../utilities/helperclass')
 const { deleteOne } = require('../models/otp');
 
 class userService {
@@ -50,22 +50,26 @@ class userService {
     userLogin = (InfoLogin, callback) => {
       userModel.loginUser(InfoLogin, (error, data) => {
         if (data) {
-          bcrypt.compare(InfoLogin.password, data.password, (error, validate) => {
-            if (!validate) {
+       const passwordResult = bcrypt.comparePassword(InfoLogin.password, data.password)
+            if (!passwordResult) {
               logger.error("Error occured......");
+              console.log("444",passwordResult);
               return callback(error + 'Invalid Password', null);
             } else {
-              logger.info(data);
+              logger.info(passwordResult);
+              console.log("22",passwordResult)
               const token = utilities.token(data);
+              console.log("777",token);
               return callback(null, token);
             }
-          });
-        } else {
+          } else {
+          console.log("33",error);
           logger.error(error);
           return callback(error,null);
         }
       });
     } 
+
     forgotPassword = (email, callback) => {
       userModel.forgotPassword(email, (error, data) => {
         if (error) {
