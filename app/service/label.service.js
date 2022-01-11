@@ -1,5 +1,6 @@
 const { resolve } = require('bluebird')
 const labelmodel = require('../models/label.model')
+const { logger } = require('../../logger/logger');
 const nodeRedis = require('../middleware/redis')
 class LabelService {
     /**
@@ -23,6 +24,7 @@ class LabelService {
                }
                return result;
             }catch(error){
+                logger.error("Error Occured while finding Label");
                 reject(error)
             }
         }
@@ -39,7 +41,7 @@ class LabelService {
               return false;
           }
           nodeRedis.setData("fetchRedisById", 60, JSON.stringify(getId));
-          
+          logger.info("get data by id");
           return getId;
         }
         return getId;
@@ -51,6 +53,7 @@ class LabelService {
     updatelabelById = async (updatelabel) => {
     let updateLabel = await labelmodel.updatelabelById(updatelabel)
     if(!updatelabel){
+        logger.error(error);
         return false;
     }
     return updatelabel;
@@ -61,6 +64,7 @@ class LabelService {
     deleteLabel = async (credential) => {
         let deletelabel = await labelmodel.deleteLabel(credential)
         if(!deletelabel){
+            logger.error("Error Occured while finding Label");
             return false;
         }
         return deletelabel;
